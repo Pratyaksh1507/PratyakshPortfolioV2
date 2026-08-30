@@ -239,10 +239,10 @@ export default {
   display: table;
   width: fit-content;
   max-width: 100%;
-  margin: 0 0 24px vw(220);
+  margin: 0 0 24px vw(160);
 
   @include tab-vertical() {
-    margin: 0 0 24px vw(180);
+    margin: 0 0 24px vw(130);
   }
 }
 
