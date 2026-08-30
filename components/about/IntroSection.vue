@@ -491,15 +491,25 @@ export default {
   position: fixed;
   top: 50%;
   right: 40px;
+  max-width: calc(100vw - 80px);
   transform: translate3d(0, -50%, 0);
   color: #eae0cc;
-  font-size: vmin(128);
+  font-size: vmin(76);
   font-family: $sixcaps;
+
+  @include tab() {
+    font-size: vmin(68);
+  }
+
+  @include tab-vertical() {
+    font-size: vmin(60);
+  }
 
   @include sp() {
     top: calc(50% - 20px);
     right: 23px;
-    font-size: vmin(170);
+    max-width: calc(100vw - 46px);
+    font-size: vmin(140);
   }
 }
 

@@ -9,22 +9,25 @@
             </span>
             <span class="pc-only">
               <span class="about-title-wrapper about-title-wrapper-01">
-                <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'WITH A STRONG BASE IN FRONTEND DEVELOPMENT, I FOCUS ON'" :sp-animation="false" />
+                <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'WITH A STRONG BASE IN FRONTEND DEVELOPMENT,'" :sp-animation="false" />
               </span>
               <span class="about-title-wrapper about-title-wrapper-02">
                 <AppTextAnimation
                   :state="isTextSegmentState"
                   :start="0.12"
                   :rotate="$BASEROTATE.left"
-                  :text="'BUILDING MODERN WEB PRODUCTS, EXPANDING INTO BACKEND'"
+                  :text="'I FOCUS ON BUILDING MODERN WEB PRODUCTS,'"
                   :sp-animation="false"
                 />
               </span>
               <span class="about-title-wrapper about-title-wrapper-03">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" text="ENGINEERING, AND EXPLORING AI TO CREATE RELIABLE," :sp-animation="false" />
+                <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" :text="'EXPANDING INTO BACKEND ENGINEERING,'" :sp-animation="false" />
               </span>
               <span class="about-title-wrapper about-title-wrapper-04">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'PRACTICAL DIGITAL EXPERIENCES.'" :sp-animation="false" />
+                <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'AND EXPLORING AI TO CREATE RELIABLE,'" :sp-animation="false" />
+              </span>
+              <span class="about-title-wrapper about-title-wrapper-05">
+                <AppTextAnimation :state="isTextSegmentState" :start="0.48" :rotate="$BASEROTATE.right" :text="'PRACTICAL DIGITAL EXPERIENCES.'" :sp-animation="false" />
               </span>
             </span>
             <span class="sp-only">
@@ -116,25 +119,23 @@ export default {
 
 .about-title {
   position: relative;
-  width: vw(1090);
+  width: 100%;
+  max-width: 100%;
   margin: 0 0 85px 0;
-  padding: 0 56px 0 40px;
+  padding: 0 40px;
   color: $darkBlue;
-  font-size: vw(80);
+  font-size: vw(68);
   font-family: $sixcaps;
   text-transform: uppercase;
   line-height: 0.964;
 
   @include tab {
-    width: vw(1070);
-    padding: 0 vw(56) 0 vw(40);
-    font-size: vw(76);
+    font-size: vw(62);
     line-height: 1;
   }
 
   @include tab-vertical() {
-    width: vw(998);
-    font-size: vw(70);
+    font-size: vw(54);
   }
 
   @include sp() {
@@ -170,29 +171,26 @@ export default {
   text-align: right;
 }
 
-.about-title-wrapper-04 {
-  padding: 0 vw(150) 0 0;
-}
-
 .about-title-wrapper-01-sp {
   display: block;
   text-align: right;
 }
 
 .about-read-text {
-  width: vw(1090);
+  width: 100%;
+  max-width: 100%;
   color: $darkBlue;
-  padding: 0 56px 0 40px;
+  padding: 0 40px;
   font-size: 12px;
   text-align: right;
   letter-spacing: 0.02em;
 
   @include tab {
-    padding: 0 vw(75) 0 vw(40);
+    padding: 0 40px;
   }
 
   @include tab-vertical() {
-    padding: 0 vw(160) 0 40px;
+    padding: 0 40px;
   }
 
   @include sp() {
