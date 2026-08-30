@@ -266,6 +266,7 @@ export default {
 
 .contact-info-area {
   display: flex;
+  align-items: flex-start;
 
   @include sp() {
     justify-content: space-between;
@@ -273,14 +274,15 @@ export default {
 }
 
 .contact-info-index-area {
-  margin: vw(32) 40px 0 0;
+  flex-shrink: 0;
+  margin: vw(32) vw(32) 0 0;
 
   @include tab-vertical() {
-    margin: vw(16) 40px 0 0;
+    margin: vw(16) vw(20) 0 0;
   }
 
   @include sp() {
-    margin: 10px 40px 0 0;
+    margin: 10px 20px 0 0;
   }
 }
 
@@ -314,25 +316,28 @@ export default {
 
 .contact-info-name-area {
   position: relative;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .contact-name {
   margin: -26px 0 0 0;
   color: $darkPink;
-  font-size: vw(400);
+  font-size: vw(330);
   font-family: $sixcaps;
   letter-spacing: -0.02em;
+  white-space: nowrap;
 
   @include tab() {
-    font-size: vw(380);
+    font-size: vw(300);
   }
 
   @include tab-vertical() {
-    font-size: vw(320);
+    font-size: vw(260);
   }
 
   @include sp() {
-    font-size: vw_sp(400);
+    font-size: vw_sp(360);
     white-space: nowrap;
   }
 }
