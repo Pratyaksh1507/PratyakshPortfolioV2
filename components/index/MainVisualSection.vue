@@ -35,26 +35,34 @@
               <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'FOLIO OF'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-02-sp">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.176" :origin="'right'" :pc-animation="false" :width="586" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'PRATYAKSH KALSI'" :pc-animation="false" />
+              <AppBounceLine :state="isTextUnderlineState" :start="0.176" :origin="'right'" :pc-animation="false" :width="500" :modifier="'index-hero'" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'PRATYAKSH'" :pc-animation="false" />
+            </span>
+            <span class="hero-title-wrapper hero-title-wrapper-02b-sp">
+              <AppBounceLine :state="isTextUnderlineState" :start="0.22" :origin="'left'" :pc-animation="false" :width="340" :modifier="'index-hero'" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.22" :rotate="$BASEROTATE.right" :text="'KALSI'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-03-sp">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.264" :origin="'left'" :pc-animation="false" :width="504" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.264" :rotate="$BASEROTATE.right" :text="'SOFTWARE DEVELOPER'" :pc-animation="false" />
+              <AppBounceLine :state="isTextUnderlineState" :start="0.264" :origin="'right'" :pc-animation="false" :width="460" :modifier="'index-hero'" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.264" :rotate="$BASEROTATE.left" :text="'SOFTWARE'" :pc-animation="false" />
+            </span>
+            <span class="hero-title-wrapper hero-title-wrapper-03b-sp">
+              <AppBounceLine :state="isTextUnderlineState" :start="0.32" :origin="'left'" :pc-animation="false" :width="520" :modifier="'index-hero'" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.32" :rotate="$BASEROTATE.right" :text="'DEVELOPER'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-04-sp">
-              <AppTextAnimation :state="isTextSegmentState" :start="0.352" :rotate="$BASEROTATE.left" :text="'( BASED IN INDIA )'" :pc-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.38" :rotate="$BASEROTATE.left" :text="'( BASED IN INDIA )'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-05-sp">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.592" :origin="'right'" :pc-animation="false" :width="367" :modifier="'index-hero'" />
+              <AppBounceLine :state="isTextUnderlineState" :start="0.592" :origin="'right'" :pc-animation="false" :width="540" :modifier="'index-hero'" />
               <AppTextAnimation :state="isTextSegmentState" :start="0.592" :rotate="$BASEROTATE.right" :text="'BUILDING FOR'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-06-sp">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.672" :origin="'left'" :pc-animation="false" :width="420" :modifier="'index-hero'" />
+              <AppBounceLine :state="isTextUnderlineState" :start="0.672" :origin="'left'" :pc-animation="false" :width="440" :modifier="'index-hero'" />
               <AppTextAnimation :state="isTextSegmentState" :start="0.672" :rotate="$BASEROTATE.left" :text="'THE WEB &'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-07-sp">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.752" :origin="'right'" :pc-animation="false" :width="320" :modifier="'index-hero'" />
+              <AppBounceLine :state="isTextUnderlineState" :start="0.752" :origin="'right'" :pc-animation="false" :width="500" :modifier="'index-hero'" />
               <AppTextAnimation :state="isTextSegmentState" :start="0.752" :rotate="$BASEROTATE.right" :text="'EXPLORING AI'" :pc-animation="false" />
             </span>
           </span>
@@ -199,7 +207,8 @@ export default {
   }
 
   @include sp() {
-    font-size: vw_sp(220);
+    font-size: vw_sp(190);
+    line-height: 0.94;
   }
 }
 
@@ -210,7 +219,7 @@ export default {
   font-family: $helvetica;
 
   @include sp() {
-    top: -18px;
+    top: -24px;
     font-size: 10px;
   }
 }
@@ -230,7 +239,7 @@ export default {
   position: relative;
 
   @include sp() {
-    margin: 0 0 20px 0;
+    margin: 0 0 16px 0;
     white-space: nowrap;
   }
 }
@@ -270,38 +279,69 @@ export default {
 }
 
 .hero-title-wrapper-01-sp {
-  width: vw_sp(335);
-  margin: 0 0 vw_sp(40) auto;
+  display: table;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 vw_sp(32) auto;
 }
 
 .hero-title-wrapper-02-sp {
-  width: vw_sp(586);
-  margin: 0 0 vw_sp(34) 0;
+  display: table;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 vw_sp(24) 0;
+}
+
+.hero-title-wrapper-02b-sp {
+  display: table;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 vw_sp(28) auto;
 }
 
 .hero-title-wrapper-03-sp {
-  width: vw_sp(504);
-  margin: 0 0 vw_sp(28) vw_sp(84);
+  display: table;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 vw_sp(24) 0;
+}
+
+.hero-title-wrapper-03b-sp {
+  display: table;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 vw_sp(24) vw_sp(60);
 }
 
 .hero-title-wrapper-04-sp {
   position: relative;
-  margin: 0 0 vw_sp(76) vw_sp(90);
-  font-size: vw_sp(80);
+  margin: 0 0 vw_sp(56) vw_sp(30);
+  font-size: vw_sp(70);
+  letter-spacing: 0.02em;
 }
 
 .hero-title-wrapper-05-sp {
-  width: vw_sp(398);
-  margin: 0 0 vw_sp(40) vw_sp(36);
+  display: table;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 vw_sp(28) 0;
+  font-size: vw_sp(170);
 }
 
 .hero-title-wrapper-06-sp {
-  width: vw_sp(420);
-  margin: 0 0 vw_sp(40) vw_sp(120);
+  display: table;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 vw_sp(28) vw_sp(60);
+  font-size: vw_sp(170);
 }
 
 .hero-title-wrapper-07-sp {
-  width: vw_sp(320);
+  display: table;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 0 auto;
+  font-size: vw_sp(170);
 }
 
 .hero-title-wrapper-02-base-area {

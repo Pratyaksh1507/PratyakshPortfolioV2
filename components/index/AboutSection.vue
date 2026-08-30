@@ -28,7 +28,7 @@
               </span>
             </span>
             <span class="sp-only">
-              <span class="about-title-wrapper-sp about-title-wrapper-01-sp">WITH A STRONG BASE IN</span>FRONTEND DEVELOPMENT, I FOCUS<br />ON BUILDING MODERN WEB<br />PRODUCTS, EXPANDING INTO<br />BACKEND ENGINEERING, AND<br />EXPLORING AI TO CREATE<br />RELIABLE, PRACTICAL DIGITAL<br />EXPERIENCES.
+              <span class="about-title-wrapper-sp about-title-wrapper-01-sp">WITH A STRONG BASE IN</span>FRONTEND DEVELOPMENT,<br />I FOCUS ON BUILDING MODERN<br />WEB PRODUCTS, EXPANDING<br />INTO BACKEND ENGINEERING,<br />& EXPLORING AI TO CREATE<br />RELIABLE, PRACTICAL<br />DIGITAL EXPERIENCES.
             </span>
             <span class="pc-only">
               <AppBounceLine :state="isTextUnderlineState" :start="0.6" :width="1000" :origin="'left'" :sp-animation="false" :modifier="'index-about'" />
@@ -138,11 +138,12 @@ export default {
   }
 
   @include sp() {
-    width: auto;
+    width: 100%;
     margin: 0 0 54px 0;
-    padding: 0 vw_sp(20);
-    font-size: vw_sp(120);
-    white-space: nowrap;
+    padding: 0;
+    font-size: vw_sp(84);
+    white-space: normal;
+    line-height: 1.06;
   }
 }
 

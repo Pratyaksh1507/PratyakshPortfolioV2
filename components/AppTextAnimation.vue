@@ -180,7 +180,7 @@ export default {
 
   @include sp() {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
   }
 }
 
@@ -188,6 +188,7 @@ export default {
   display: inline-block;
   position: relative;
   overflow: hidden;
+  max-width: 100%;
 }
 
 .app-text-animation-block {

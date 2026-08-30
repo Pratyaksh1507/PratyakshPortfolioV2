@@ -179,7 +179,8 @@ export default {
   }
 
   @include sp() {
-    font-size: vw_sp(220);
+    font-size: vw_sp(170);
+    line-height: 0.94;
   }
 }
 
@@ -200,7 +201,9 @@ export default {
   @include sp() {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto 18px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 16px;
     text-align: center;
     white-space: nowrap;
   }
@@ -248,27 +251,33 @@ export default {
 }
 
 .hero-title-wrapper-01-sp {
-  width: vw_sp(550);
+  width: 100%;
+  max-width: 100%;
 }
 
 .hero-title-wrapper-02-sp {
-  width: vw_sp(670);
+  width: 100%;
+  max-width: 100%;
 }
 
 .hero-title-wrapper-03-sp {
-  width: vw_sp(590);
+  width: 100%;
+  max-width: 100%;
 }
 
 .hero-title-wrapper-04-sp {
-  width: vw_sp(670);
+  width: 100%;
+  max-width: 100%;
 }
 
 .hero-title-wrapper-05-sp {
-  width: vw_sp(573);
+  width: 100%;
+  max-width: 100%;
 }
 
 .hero-title-wrapper-06-sp {
-  width: vw_sp(452);
+  width: 100%;
+  max-width: 100%;
 }
 
 .hero-text-underline {
