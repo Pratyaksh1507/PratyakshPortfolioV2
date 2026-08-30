@@ -299,7 +299,10 @@ export default {
 }
 
 .hero-full-title-sp {
-  font-size: 108px;
+  display: block;
+  font-size: vw_sp(140);
   font-family: $sixcaps;
+  line-height: 0.94;
+  word-break: break-word;
 }
 </style>

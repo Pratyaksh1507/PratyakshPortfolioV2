@@ -148,17 +148,19 @@ export default class Mesh {
 
   onResize() {
     this._setMeshScale();
+    if (this.composer) {
+      this.composer.setSize(this.stage.renderParam.width, this.stage.renderParam.height);
+    }
   }
 
   _render() {
-    if(this.config.isPc){
+    if(this.config.isPc && this.composer){
       this.diff.x = Math.abs((this.mouse.x - this.tween.x));
       this.diff.y = Math.abs((this.mouse.y - this.tween.y));
       this.mesh.material.uniforms.u_diffmouse.value.x = this.diff.x;
       this.mesh.material.uniforms.u_diffmouse.value.y = this.diff.y;
       this.customPass.uniforms.u_diffmouse.value.x = this.diff.x;
       this.customPass.uniforms.u_diffmouse.value.y = this.diff.y;
-      this.composer.setSize(this.stage.renderParam.width, this.stage.renderParam.height);
       this.composer.render();
     }
   }

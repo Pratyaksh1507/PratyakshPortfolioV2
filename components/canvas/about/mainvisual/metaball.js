@@ -229,13 +229,6 @@ export default class Particle {
     return index * (0.01 * ratio)
   }
 
-  _destroy() {
-    this.stage.scene.remove(this.mesh);
-    this.texture.dispose();
-    this.geometry.dispose();
-    this.material.dispose();
-  }
-
   onResize() {
     this.width = this.stage.renderParam.width * this.stage.devicePixelRatio;
     this.height = this.stage.renderParam.height * this.stage.devicePixelRatio;
@@ -262,6 +255,27 @@ export default class Particle {
         this.mesh.material.uniforms.u_metaballsPos.value[this.lastIndex + 1.0] = this.mouse.y;
       }
     });
+  }
+
+  _destroy() {
+    if (this.video) {
+      this.video.pause();
+      this.video.removeAttribute('src');
+      this.video.load();
+      this.video = null;
+    }
+    if (this.texture) {
+      this.texture.dispose();
+      this.texture = null;
+    }
+    if (this.mesh) {
+      if (this.mesh.geometry) this.mesh.geometry.dispose();
+      if (this.mesh.material) this.mesh.material.dispose();
+      if (this.stage && this.stage.scene) {
+        this.stage.scene.remove(this.mesh);
+      }
+      this.mesh = null;
+    }
   }
 
   onRaf() {

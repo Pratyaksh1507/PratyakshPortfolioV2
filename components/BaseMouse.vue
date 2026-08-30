@@ -129,6 +129,8 @@ export default {
     imageLoaded() {
       // タッチイベントではない時
       if (this.$SITECONFIG.isNoTouch) {
+        this.removeTargetListeners()
+
         // クリックできる要素を全てのコンポーネントから取得
         this.mouseClickTarget = document.querySelectorAll('.js-click-target')
         // ホールドできる要素を全てのコンポーネントから取得
@@ -136,29 +138,25 @@ export default {
 
         // イベント付与
         setTimeout(() => {
-          this.$gsap.set(this.$refs.MouseArea, {
-            opacity: 1,
-          })
-          this.$gsap.to(this.$refs.MouseArea, {
-            duration: this.$SITECONFIG.baseDuration,
-            ease: this.$EASING.transform,
-            scale: 1,
-          })
+          if (this.$refs.MouseArea) {
+            this.$gsap.set(this.$refs.MouseArea, {
+              opacity: 1,
+            })
+            this.$gsap.to(this.$refs.MouseArea, {
+              duration: this.$SITECONFIG.baseDuration,
+              ease: this.$EASING.transform,
+              scale: 1,
+            })
+          }
         }, 200)
 
         for (let i = 0; i < this.mouseClickTarget.length; i++) {
           this.mouseClickTarget[i].addEventListener('mousedown', this.onMouseDown)
-        }
-
-        for (let i = 0; i < this.mouseClickTarget.length; i++) {
           this.mouseClickTarget[i].addEventListener('mouseup', this.onMouseUp)
         }
 
         for (let i = 0; i < this.mouseHoldTarget.length; i++) {
           this.mouseHoldTarget[i].addEventListener('mousedown', this.onMouseHoldDown)
-        }
-
-        for (let i = 0; i < this.mouseHoldTarget.length; i++) {
           this.mouseHoldTarget[i].addEventListener('mouseup', this.onMouseHoldUp)
         }
       }
@@ -176,13 +174,37 @@ export default {
     this.mouseLoadingWrapper = this.$refs.MouseLoadingWrapper
     this.mouseLoadingBlock = this.$refs.MouseLoadingBlock
     this.mouseArea = this.$refs.MouseArea
-    this.mouseHalfWidth = this.mouseArea.clientWidth / 2
-    this.mouseHalfHeight = this.mouseArea.clientHeight / 2
+    this.mouseHalfWidth = this.mouseArea ? this.mouseArea.clientWidth / 2 : 20
+    this.mouseHalfHeight = this.mouseArea ? this.mouseArea.clientHeight / 2 : 20
 
     // タッチイベントではない時、マウス追従
     if (this.$SITECONFIG.isNoTouch) window.addEventListener('mousemove', this.onMouseMove)
   },
+
+  beforeDestroy() {
+    if (this.$SITECONFIG.isNoTouch) {
+      window.removeEventListener('mousemove', this.onMouseMove)
+      this.removeTargetListeners()
+    }
+  },
+
   methods: {
+    removeTargetListeners() {
+      if (this.mouseClickTarget) {
+        for (let i = 0; i < this.mouseClickTarget.length; i++) {
+          this.mouseClickTarget[i].removeEventListener('mousedown', this.onMouseDown)
+          this.mouseClickTarget[i].removeEventListener('mouseup', this.onMouseUp)
+        }
+        this.mouseClickTarget = null
+      }
+      if (this.mouseHoldTarget) {
+        for (let i = 0; i < this.mouseHoldTarget.length; i++) {
+          this.mouseHoldTarget[i].removeEventListener('mousedown', this.onMouseHoldDown)
+          this.mouseHoldTarget[i].removeEventListener('mouseup', this.onMouseHoldUp)
+        }
+        this.mouseHoldTarget = null
+      }
+    },
     onMouseDown() {
       this.$gsap.to(this.mouseClick, {
         duration: 0.2,

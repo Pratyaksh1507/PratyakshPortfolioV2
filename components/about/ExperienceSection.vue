@@ -116,11 +116,21 @@ export default {
     )
     this.iObserver.observe(this.observe)
 
+    this.bounds = null
+    this.onResize = () => {
+      this.calcBoundaries()
+    }
+    window.addEventListener('resize', this.onResize)
+    this.$nextTick(() => {
+      this.calcBoundaries()
+    })
+
     if (this.$SITECONFIG.isNoTouch) {
       this.animationObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
+              this.calcBoundaries()
               this.$gsap.ticker.add(this.cardScrollPos)
               this.$gsap.ticker.add(this.cardScrollAnimation)
               window.removeEventListener('mousemove', this.saveMousemove)
@@ -140,6 +150,7 @@ export default {
   },
 
   beforeDestroy() {
+    window.removeEventListener('resize', this.onResize)
     if (this.iObserver) {
       this.iObserver.unobserve(this.observe)
       this.iObserver = null
@@ -157,6 +168,36 @@ export default {
   },
 
   methods: {
+    calcBoundaries() {
+      if (!this.items || !this.$refs.ExperienceList || !this.experience) return
+      const list = this.$refs.ExperienceList
+      const rect = list.getBoundingClientRect()
+      const startPosY = this.experience.offsetTop + list.offsetTop - this.cardHalfHeight
+      const startPosX = rect.left - this.cardHalfWidth
+      const endPosY = startPosY + rect.height
+      const endPosX = startPosX + rect.width
+
+      const itemBounds = []
+      for (let i = 0; i < this.items.length; i++) {
+        const target = this.items[i]
+        const startPosItemY = this.experience.offsetTop + target.offsetTop - this.cardHalfHeight
+        const startPosItemX = rect.left - this.cardHalfWidth
+        itemBounds.push({
+          startPosItemY,
+          startPosItemX,
+          endPosItemY: startPosItemY + target.offsetHeight,
+          endPosItemX: startPosItemX + rect.width,
+        })
+      }
+
+      this.bounds = {
+        startPosY,
+        startPosX,
+        endPosY,
+        endPosX,
+        items: itemBounds,
+      }
+    },
     cardScrollPos() {
       if (this.hambergerMenuState) return
       this.currentY = this.mouseY + this.$asscroll.targetPos
@@ -170,13 +211,10 @@ export default {
     },
     cardScrollAnimation() {
       if (this.hambergerMenuState || !this.items) return
+      if (!this.bounds) this.calcBoundaries()
+      if (!this.bounds) return
 
-      const list = this.$refs.ExperienceList
-      const rect = list.getBoundingClientRect()
-      const startPosY = this.experience.offsetTop + list.offsetTop - this.cardHalfHeight
-      const startPosX = rect.left - this.cardHalfWidth
-      const endPosY = startPosY + rect.height
-      const endPosX = startPosX + rect.width
+      const { startPosY, startPosX, endPosY, endPosX, items } = this.bounds
 
       if (this.currentY < startPosY || this.mouseX < startPosX) {
         this.allCardFadeOut()
@@ -188,15 +226,13 @@ export default {
 
       for (let i = 0; i < this.items.length; i++) {
         const target = this.items[i]
-        const startPosItemY = this.experience.offsetTop + target.offsetTop - this.cardHalfHeight
-        const startPosItemX = rect.left - this.cardHalfWidth
-        const endPosItemY = startPosItemY + target.offsetHeight
-        const endPosItemX = startPosItemX + rect.width
+        const itemBound = items[i]
+        if (!itemBound) continue
 
-        if (this.currentY < startPosItemY || this.mouseX < startPosItemX) {
+        if (this.currentY < itemBound.startPosItemY || this.mouseX < itemBound.startPosItemX) {
           this.colorFadeOut(target)
           this.cardFadeOut(i)
-        } else if (this.currentY >= startPosItemY && this.currentY < endPosItemY && this.mouseX >= startPosItemX && this.mouseX < endPosItemX) {
+        } else if (this.currentY >= itemBound.startPosItemY && this.currentY < itemBound.endPosItemY && this.mouseX >= itemBound.startPosItemX && this.mouseX < itemBound.endPosItemX) {
           this.colorFadeIn(target)
           this.cardFadeIn(this.cards[i], i)
         } else {

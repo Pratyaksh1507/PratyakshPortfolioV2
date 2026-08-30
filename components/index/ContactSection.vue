@@ -202,7 +202,8 @@ export default {
 
   @include sp() {
     margin: 0 0 58px 0;
-    font-size: vw_sp(180);
+    font-size: vw_sp(145);
+    line-height: 0.96;
   }
 }
 
@@ -222,6 +223,9 @@ export default {
   display: block;
 
   @include sp() {
+    display: table;
+    width: fit-content;
+    max-width: 100%;
     white-space: nowrap;
   }
 }
@@ -243,7 +247,7 @@ export default {
 }
 
 .contact-title-wrapper-01-sp {
-  margin: 0 0 0 48px;
+  margin: 0 0 0 vw_sp(24);
 }
 
 .contact-info-area {

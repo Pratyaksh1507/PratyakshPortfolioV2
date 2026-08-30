@@ -5,7 +5,6 @@ import { CustomEase } from '../vendor/CustomEase'
 import { Draggable } from '../vendor/Draggable'
 import { InertiaPlugin } from '../vendor/InertiaPlugin'
 gsap.registerPlugin(CustomEase, Draggable, InertiaPlugin, ScrollTrigger);
-gsap.ticker.fps(60);
 
 const EASING = {
   transform: CustomEase.create('transform', 'M0,0 C0.44,0.05 0.17,1 1,1'),

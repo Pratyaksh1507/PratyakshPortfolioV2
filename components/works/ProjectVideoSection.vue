@@ -4,7 +4,7 @@
       <span ref="ContentsLoopVideo" class="contents-loop-video">
         <span class="contents-loop-video-shadow" :style="`box-shadow:0 22px 60px 0px ${currentProject.siteColor.shadowColor}`"></span>
         <span class="contents-loop-video-wrapper"
-          ><video :poster="`/images/poster-${currentProject.id}.webp`" :src="`/movie/${currentProject.id}.mp4`" playsinline autoplay loop muted disablePictureInPicture disableRemotePlayback></video
+          ><video ref="ProjectVideo" :poster="`/images/poster-${currentProject.id}.webp`" :src="`/movie/${currentProject.id}.mp4`" playsinline autoplay loop muted disablePictureInPicture disableRemotePlayback></video
         ></span>
       </span>
       <AppLoopText :loop="isLoopTextState" :text="currentProject.title.short" />
@@ -99,6 +99,26 @@ export default {
     )
     this.iObserverLoopText.observe(this.observe)
 
+    // ビデオの自動再生/一時停止の管理（画面外では一時停止してGPU/CPUを節約）
+    this.videoEl = this.$refs.ProjectVideo
+    if (this.videoEl) {
+      this.videoObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              if (this.videoEl && typeof this.videoEl.play === 'function') {
+                this.videoEl.play().catch(() => {})
+              }
+            } else if (this.videoEl && typeof this.videoEl.pause === 'function') {
+              this.videoEl.pause()
+            }
+          })
+        },
+        { rootMargin: '50px' }
+      )
+      this.videoObserver.observe(this.videoEl)
+    }
+
     // ビデオのマウスアニメーション、画面内に侵入してきた時のみ発火させる
     if (this.$SITECONFIG.isPc && this.$SITECONFIG.isNoTouch) {
       this.iObserverLoopVideo = new IntersectionObserver(
@@ -119,6 +139,10 @@ export default {
 
   beforeDestroy() {
     // リセット
+    if (this.videoObserver && this.videoEl) {
+      this.videoObserver.unobserve(this.videoEl)
+      this.videoObserver = null
+    }
     this.iObserverTextSegment.unobserve(this.observe)
     this.iObserverTextSegment = null
     this.iObserverLoopText.unobserve(this.observe)

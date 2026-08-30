@@ -105,6 +105,14 @@ export default {
       yPercent: 103.8,
     })
 
+    this.standard = 0
+    this.onResize = () => {
+      if (this.blockEl) {
+        this.standard = this.blockEl.getBoundingClientRect().width
+      }
+    }
+    window.addEventListener('resize', this.onResize)
+
     this.initText()
     this.observe()
   },
@@ -112,7 +120,10 @@ export default {
   beforeDestroy() {
     this.$asscroll.off('scroll', this.onScroll)
     this.$gsap.ticker.remove(this.render)
-    this.iObserver.unobserve(this.observer)
+    window.removeEventListener('resize', this.onResize)
+    if (this.iObserver && this.observer) {
+      this.iObserver.unobserve(this.observer)
+    }
   },
 
   methods: {
@@ -138,6 +149,14 @@ export default {
       this.createText()
       for (let i = 0; i < 2; i++) {
         this.cloneText()
+      }
+      this.standard = this.blockEl.getBoundingClientRect().width
+      if (typeof document !== 'undefined' && document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(() => {
+          if (this.blockEl) {
+            this.standard = this.blockEl.getBoundingClientRect().width
+          }
+        })
       }
     },
     /**
@@ -195,8 +214,8 @@ export default {
     render() {
       if (this.hambergerMenuState) return
 
-      // 基準となるテキストブロックの横幅を取得
-      const standard = this.blockEl.getBoundingClientRect().width
+      // 基準となるテキストブロックの横幅を取得 (キャッシュ済みの値を使用)
+      const standard = this.standard || (this.blockEl ? this.blockEl.getBoundingClientRect().width : 300)
       this.position.value += Math.floor(this.initDirection * (this.scrollSpeed * this.scrollDirection.value - (this.$asscroll.currentPos - this.tweenPosition.value) * this.tweenScrollSpeed))
 
       // テキストブロックの横幅分、移動したら中心に戻す

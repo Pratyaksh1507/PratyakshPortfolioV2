@@ -72,13 +72,6 @@ export default {
 
   mounted() {
     this.$nextTick(() => {
-      // Update ScrollTrigger on RAF for smooth scrolling in About page
-      const render = () => {
-        this.raf = window.requestAnimationFrame(render)
-        this.$ScrollTrigger.update()
-      }
-      render()
-
       const images = document.querySelectorAll('.about img')
       const imagesLoaded = ImagesLoaded(images)
 
@@ -95,8 +88,11 @@ export default {
   },
 
   beforeDestroy() {
-    // Reset RAF and smooth scroll state
-    window.cancelAnimationFrame(this.raf)
+    // Reset smooth scroll state
+    if (this.raf) {
+      window.cancelAnimationFrame(this.raf)
+      this.raf = null
+    }
     this.$preDefaultEvent(false)
     this.$asscroll.disable()
     this.$store.commit('imageLoaded/init')
