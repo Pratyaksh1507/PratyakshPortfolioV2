@@ -24,9 +24,11 @@ export default {
       e.preventDefault()
 
       // 同一URLは処理を返す
-      if (this.url === '/' && this.$route.name === 'index') return
-      if (this.url === '/about' && this.$route.name === 'about') return
-      if (this.url === '/archive' && this.$route.name === 'archive') return
+      const targetUrl = this.url.startsWith('/') ? this.url : `/${this.url}`
+      if (targetUrl === '/' && this.$route.name === 'index') return
+      if (targetUrl === '/about' && this.$route.name === 'about') return
+      if (targetUrl === '/resume' && this.$route.name === 'resume') return
+      if (targetUrl === '/archive' && (this.$route.name === 'archive' || this.$route.name === 'resume')) return
 
       this.$preDefaultEvent(true)
       this.$asscroll.disable()
@@ -34,7 +36,7 @@ export default {
       this.$store.commit('mouse/loading')
 
       setTimeout(() => {
-        this.$router.push(`${this.url}`)
+        this.$router.push(targetUrl)
       }, this.$SITECONFIG.pageTransitionDuration)
     },
   },

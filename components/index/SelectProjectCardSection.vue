@@ -40,10 +40,10 @@
                 <div class="project-card-item" :class="`project-card-item-0${projectData.length}`">
                   <AppCard
                     :component-name="'project'"
-                    :type="'archive'"
-                    :name="'ARCHIVE'"
-                    :title="'ARCVE'"
-                    :desc="`I'M PUTTING TOGETHER A DYNAMIC ARCHIVE PAGE OF THE WORK I'M SUBMITTING TO CODEPEN.`"
+                    :type="'resume'"
+                    :name="'RESUME'"
+                    :title="'RESUME'"
+                    :desc="`VIEW AND DOWNLOAD MY UPDATED RESUME AND TECHNICAL CREDENTIALS (PDF).`"
                     :rotate="8"
                     :xspeed="0.18"
                     :yspeed="0.17"

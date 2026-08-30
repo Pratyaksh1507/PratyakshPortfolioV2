@@ -557,7 +557,7 @@ export default {
      * リサイズ
      */
     pickupResize() {
-      // リサイズした時に一番目の円の位置と大きさを更新する
+      // Update first circle position and scale on resize
       if (this.$SITECONFIG.isPc) {
         this.$gsap.set(this.$refs.PickupCircleEnter, {
           y: window.innerHeight / 2,
@@ -568,16 +568,6 @@ export default {
           scale: 1.2,
         })
       }
-
-      // リサイズした時に位置を更新する
-      // const pickupPos = this.$refs.Pickup.offsetTop
-      // this.scroll.value = pickupPos
-      // this.$asscroll.scrollTo(this.scroll.value)
-      // 背景固定の位置も更新
-      // if (this.$SITECONFIG.isTouch)
-      //   this.$backfaceScroll(false, this.scroll.value, 0)
-
-      // if (this.$SITECONFIG.isTouch) this.$store.commit('indexPickup/setPickupPos', pickupPos)
     },
 
     /**

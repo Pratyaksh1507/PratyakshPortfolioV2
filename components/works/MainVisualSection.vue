@@ -165,7 +165,6 @@ export default {
   --viewportHeight: 100vh;
 }
 
-/////////////////////// PC STYLE //////////////////////////
 .hero-bg {
   position: relative;
   height: var(--viewportHeight, 100vh);
@@ -247,9 +246,7 @@ export default {
   font-size: 12px;
   font-family: $helvetica;
 }
-///////////////////////////////////////////////////////////
 
-/////////////////////// SP STYLE //////////////////////////
 .hero-title-sp {
   margin: 0 0 23px 0;
   font-size: vw_sp(120);
@@ -301,14 +298,8 @@ export default {
   text-indent: -4px;
 }
 
-// .is-android .hero-index-sp-01 {
-//   position: relative;
-//   left: -4px;
-// }
-
 .hero-full-title-sp {
   font-size: 108px;
   font-family: $sixcaps;
 }
-///////////////////////////////////////////////////////////
 </style>

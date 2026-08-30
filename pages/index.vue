@@ -43,16 +43,16 @@ export default {
   watch: {
     openningEnd() {
       setTimeout(() => {
-        // スクロール可能にする
+        // Enable smooth scrolling
         if (this.$SITECONFIG.isTouch) this.$backfaceScroll(true)
         this.$asscroll.enable({ reset: true })
       }, 1200)
     },
     imageLoaded() {
       if (this.imageLoaded) {
-        if (!this.openningEnd) return // アクセス時はopenningEndが発火するので、処理を返す
+        if (!this.openningEnd) return // Return if opening animation is still active
 
-        // スクロール可能にする
+        // Enable smooth scrolling
         if (this.$SITECONFIG.isTouch) this.$backfaceScroll(true)
         this.$asscroll.enable({ reset: true })
       }
@@ -64,9 +64,9 @@ export default {
       const images = document.querySelectorAll('.index img')
       const imagesLoaded = ImagesLoaded(images)
 
-      // 画像の読み込みが全て完了した時
+      // When all images finish loading
       imagesLoaded.on('always', () => {
-        // 遷移のアニメーションを終了させる
+        // Complete transitions
         if (this.defaultTransitionState) this.$store.commit('bg-transition/end')
         if (this.imageTransitionState) this.$store.commit('image-transition/end')
         this.$store.commit('mouse/loadend')
@@ -77,7 +77,7 @@ export default {
   },
 
   beforeDestroy() {
-    // リセット
+    // Reset scroll and load state
     this.$preDefaultEvent(false)
     this.$asscroll.disable()
     this.$store.commit('imageLoaded/init')

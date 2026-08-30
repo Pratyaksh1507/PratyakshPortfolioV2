@@ -6,33 +6,27 @@
       <div class="l-container">
         <h1 class="hero-title">
           <span class="hero-title-read-area">
-            <AppReadTitle :state="isTextSegmentState" :text="['・', 'AUTHOR : HISAMI KURITA', 'FRAMEWORK : VUE/NUXT', 'LIBRARY : GSAP/THREE.JS', 'CMS : MICROCMS']" :modifier="'section'" />
+            <AppReadTitle :state="isTextSegmentState" :text="['・', 'AUTHOR : PRATYAKSH KALSI', 'ROLE : SOFTWARE DEVELOPER', 'FOCUS : WEB & AI']" :modifier="'section'" />
           </span>
           <span class="pc-only">
             <span class="hero-title-wrapper hero-title-wrapper-01">
               <AppBounceLine :state="isTextUnderlineState" :origin="'left'" :sp-animation="false" :width="840" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'FOLIO OF HISAMI KURITA'" :sp-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'FOLIO OF PRATYAKSH KALSI'" :sp-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-02">
               <AppBounceLine :state="isTextUnderlineState" :start="0.176" :origin="'right'" :width="1080" :sp-animation="false" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'19/AUG.1996'" :sp-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'SOFTWARE DEVELOPER'" :sp-animation="false" />
               <span class="hero-title-wrapper-02-base-area">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.264" :rotate="$BASEROTATE.left" :text="'( BASED IN TOKYO AND KAWASAKI )'" :sp-animation="false" />
-                <span class="hero-title-wrapper-02-base-area-helvetica hero-title-wrapper-02-base-area-helvetica-sometimes">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.352" :rotate="$BASEROTATE.left" :text="'SOMETIMES'" :sp-animation="false" />
-                </span>
-                <span class="hero-title-wrapper-02-base-area-helvetica hero-title-wrapper-02-base-area-helvetica-allways">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.432" :rotate="$BASEROTATE.left" :text="'ALLWAYS'" :sp-animation="false" />
-                </span>
+                <AppTextAnimation :state="isTextSegmentState" :start="0.264" :rotate="$BASEROTATE.left" :text="'( BASED IN INDIA )'" :sp-animation="false" />
               </span>
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-03">
               <AppBounceLine :state="isTextUnderlineState" :start="0.4" :origin="'left'" :width="700" :sp-animation="false" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.4" :rotate="$BASEROTATE.right" :text="'FRONTEND DEVELOPER'" :sp-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.4" :rotate="$BASEROTATE.right" :text="'BUILDING FOR THE WEB'" :sp-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-04">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.42" :width="350" :origin="'right'" :sp-animation="false" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.42" :rotate="$BASEROTATE.left" :text="'AT LIG INC'" :sp-animation="false" />
+              <AppBounceLine :state="isTextUnderlineState" :start="0.42" :width="280" :origin="'right'" :sp-animation="false" :modifier="'index-hero'" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.42" :rotate="$BASEROTATE.left" :text="'& EXPLORING AI'" :sp-animation="false" />
             </span>
           </span>
           <span class="sp-only">
@@ -42,40 +36,34 @@
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-02-sp">
               <AppBounceLine :state="isTextUnderlineState" :start="0.176" :origin="'right'" :pc-animation="false" :width="586" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'HISAMI KURITA'" :pc-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'PRATYAKSH KALSI'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-03-sp">
               <AppBounceLine :state="isTextUnderlineState" :start="0.264" :origin="'left'" :pc-animation="false" :width="504" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.264" :rotate="$BASEROTATE.right" :text="'19/AUG.1996'" :pc-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.264" :rotate="$BASEROTATE.right" :text="'SOFTWARE DEVELOPER'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-04-sp">
-              <AppTextAnimation :state="isTextSegmentState" :start="0.352" :rotate="$BASEROTATE.left" :text="'( BASED IN TOKYO AND KAWASAKI )'" :pc-animation="false" />
-              <span class="hero-title-wrapper-04-01-sp">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.432" :rotate="$BASEROTATE.left" :text="'SOMETIMES'" :pc-animation="false" />
-              </span>
-              <span class="hero-title-wrapper-04-02-sp">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.512" :rotate="$BASEROTATE.left" :text="'ALLWAYS'" :pc-animation="false" />
-              </span>
+              <AppTextAnimation :state="isTextSegmentState" :start="0.352" :rotate="$BASEROTATE.left" :text="'( BASED IN INDIA )'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-05-sp">
               <AppBounceLine :state="isTextUnderlineState" :start="0.592" :origin="'right'" :pc-animation="false" :width="367" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.592" :rotate="$BASEROTATE.right" :text="'FRONTEND'" :pc-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.592" :rotate="$BASEROTATE.right" :text="'BUILDING FOR'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-06-sp">
               <AppBounceLine :state="isTextUnderlineState" :start="0.672" :origin="'left'" :pc-animation="false" :width="420" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.672" :rotate="$BASEROTATE.left" :text="'DEVELOPER'" :pc-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.672" :rotate="$BASEROTATE.left" :text="'THE WEB &'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-07-sp">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.752" :origin="'right'" :pc-animation="false" :width="431" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.752" :rotate="$BASEROTATE.right" :text="'AT LIG INC'" :pc-animation="false" />
+              <AppBounceLine :state="isTextUnderlineState" :start="0.752" :origin="'right'" :pc-animation="false" :width="320" :modifier="'index-hero'" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.752" :rotate="$BASEROTATE.right" :text="'EXPLORING AI'" :pc-animation="false" />
             </span>
           </span>
         </h1>
         <div ref="HeroCardItem" class="hero-card-item">
           <AppCard
             :component-name="'mv'"
-            :name="['・', 'HISAMIKURITA']"
-            :title="'HSMKRT'"
+            :name="['・', 'PRATYAKSH KALSI']"
+            :title="'PRTYKSH'"
             :subtitle="'(ABOUT ME)'"
             :desc="['YOU CAN CLICK AND,', 'SHOW ABOUT ME.', 'BY THE WAY,', 'YOU CAN THROW', 'THIS CARD AWAY']"
             :rotate="8"
@@ -138,12 +126,8 @@ export default {
 
   methods: {
     mvItemViewIn() {
-      // テキストアニメーション
       this.isTextSegmentState = 'center'
-      // ラインアニメーション
       this.isTextUnderlineState = 'extend'
-
-      // サークルアニメーション①
       this.$gsap.to(this.$refs.HeroBgCircle01, {
         duration: this.$SITECONFIG.baseDuration,
         delay: 0.2,
@@ -241,13 +225,6 @@ export default {
   }
 }
 
-// .is-android .hero-title-read-block-sp {
-//   &:nth-of-type(1) {
-//     position: relative;
-//     left: -8px;
-//   }
-// }
-
 .hero-title-wrapper {
   display: block;
   position: relative;
@@ -324,25 +301,7 @@ export default {
 }
 
 .hero-title-wrapper-07-sp {
-  width: vw_sp(406);
-}
-
-.hero-title-wrapper-04-01-sp {
-  position: absolute;
-  top: 120%;
-  left: vw_sp(140);
-  font-size: vw_sp(20);
-  font-family: $helvetica;
-  letter-spacing: 0.02em;
-}
-
-.hero-title-wrapper-04-02-sp {
-  position: absolute;
-  top: 120%;
-  left: vw_sp(340);
-  font-size: vw_sp(20);
-  font-family: $helvetica;
-  letter-spacing: 0.02em;
+  width: vw_sp(320);
 }
 
 .hero-title-wrapper-02-base-area {
@@ -350,25 +309,6 @@ export default {
   padding: 12px 0 0 0;
   font-size: vw(80);
   letter-spacing: 0.0025em;
-}
-
-.hero-title-wrapper-02-base-area-helvetica {
-  position: absolute;
-  top: vw(98);
-  font-family: $helvetica;
-  font-size: vw(14);
-
-  @include tab-vertical() {
-    top: vw(104);
-  }
-}
-
-.hero-title-wrapper-02-base-area-helvetica-sometimes {
-  left: vw(169);
-}
-
-.hero-title-wrapper-02-base-area-helvetica-allways {
-  left: vw(380);
 }
 
 .hero-text-underline {

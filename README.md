@@ -1,31 +1,59 @@
-# Hisamikurita Portfoliosite v2022
+# Pratyaksh Kalsi Portfolio
 
-![](./static//images//ogp.webp)
+Interactive 3D creative developer portfolio showcasing full-stack engineering, generative AI SaaS platforms, WebGL shader interactions, and fluid GSAP physics.
 
-## Technorogy
+---
 
-### Front End
+## 🚀 Tech Stack
 
-Framework : [Vue.js](https://jp.vuejs.org/index.html), [Nuxt.js](https://nuxtjs.org/)<br>
-Library : [Three.js](https://threejs.org/), [GSAP](https://greensock.com/gsap/), [ASSCROLL](https://github.com/ashthornton/asscroll), [imagesLoaded](https://imagesloaded.desandro.com/)
+### Frontend & Creative Coding
+- **Framework**: [Nuxt.js](https://nuxtjs.org/) (Vue 2)
+- **3D & WebGL**: [Three.js](https://threejs.org/) (GLSL shaders, custom point cloud particles, orbital scenes)
+- **Motion & Physics**: [GSAP](https://greensock.com/gsap/) (Draggable, InertiaPlugin, CustomEase, ScrollTrigger)
+- **Smooth Scrolling**: [ASScroll](https://github.com/ashthornton/asscroll)
+- **Typography & Styling**: SCSS, Google Font Six Caps, Helvetica Neue
 
-### Back End
+### Data Architecture
+- **Content Store**: Local JSON data model (`store/data.json`) with optional microCMS headless integration
+- **State Management**: Vuex Store modules
 
-Cms : [microCMS](https://microcms.io/)
+---
 
-### HOSTING
+## 🛠️ Getting Started
 
-Hosting : [AWS Amplify](https://aws.amazon.com/jp/amplify/hosting/)
+### Prerequisites
+- Node.js `16.x`
+- npm `6.x` or higher
 
-## Overview
+### Installation & Development
 
-This is the repository of [Hisami Kurita](https://hsmkrt1996.com/) portfolio. This site was created using Vue.js/Nuxt.js, but since this was my first attempt, there is a lot of redundant code that is not best practice. If you use it as a reference, please be very careful.
+```bash
+# Install dependencies
+npm install
 
-## Award
+# Start local development server with hot-reload
+npm run dev
 
-- [Awwwwards SOTD & DEVAWARD](https://www.awwwards.com/sites/hisami-kurita-portfolio/)
-- [CSSDesignAwards WOTD](https://www.cssdesignawards.com/sites/hisami-kurita-portfolio/41510/)
-- [FWA FOTD](https://thefwa.com/cases/hisami-kurita-portfolio)
-- [Nominated for DEVELOPER OF THE YEAR 2022](https://annual.awwwards.com/developer-nominees/hisami-kurita-portfolio)
+# Run JS & SCSS linting
+npm run lint
 
-Thank You.
+# Generate production static bundle
+npm run generate
+```
+
+---
+
+## 🌟 Featured Projects
+
+1. **`COUNSEL AI`** &mdash; AI SaaS & 3D Orbital Legal Intelligence Platform
+2. **`HORIZON STAY`** &mdash; Luxury Cabin Hospitality & Reservation Platform
+3. **`CAFE EXPERIENCE`** &mdash; Artisanal Coffee Culture & Digital Ordering Platform
+4. **`WORLDWISE`** &mdash; Geolocation Travel Logger & Interactive Map
+5. **`MY PORTFOLIO`** &mdash; Creative Coding & 3D Interactive Showcase
+6. **`FAST REACT PIZZA`** &mdash; High-Performance Cart & Delivery Engine
+7. **`THE REDUX BANK`** &mdash; Fintech Simulator & Real-time Forex Converter
+
+---
+
+## 📄 License
+MIT &copy; [Pratyaksh Kalsi](https://github.com/Pratyaksh1507)

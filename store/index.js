@@ -1,55 +1,38 @@
+import defaultData from './data.json'
+
 export const state = () => ({
-  projectData: {},
-  contactData: {},
-  pickupData: {},
-  awardData: {},
-  awardDataLength: {},
+  projectData: defaultData.projectData,
+  contactData: defaultData.contactData,
+  pickupData: defaultData.pickupData,
+  experienceData: defaultData.experienceData,
+  experienceSummary: defaultData.experienceSummary,
 });
 
 export const actions = {
   async nuxtServerInit({ commit }, { app }) {
-
-    const projectResponse = await app.$axios.$get(`https://${process.env.serviceDomain}.microcms.io/api/v1/works?limit=200`, {
-      headers: {
-        'X-MICROCMS-API-KEY': process.env.apiKey
-      }
-    })
-    const contactResponse = await app.$axios.$get(`https://${process.env.serviceDomain}.microcms.io/api/v1/contact?limit=200`, {
-      headers: {
-        'X-MICROCMS-API-KEY': process.env.apiKey
-      }
-    })
-    const pickupData = projectResponse.contents.filter((v) => v.pickup.pickupFlag)
-    const awardResponse = await app.$axios.$get(`https://${process.env.serviceDomain}.microcms.io/api/v1/award?limit=200`, {
-      headers: {
-        'X-MICROCMS-API-KEY': process.env.apiKey
-      }
-    })
-    let awwwwardsLength = 0
-    let cssdesignawardsLength = 0
-    let csswinnerLength = 0
-
-    awardResponse.contents.forEach((v) => {
-      if (v.group === 'AWWWARDS') {
-        awwwwardsLength++
-      } else if (v.group === 'CSS DESIGN AWARDS') {
-        cssdesignawardsLength++
-      } else if (v.group === 'CSS WINNER') {
-        csswinnerLength++
-      }
-    })
-
-    const awardDataLength = {
-      awwwwardsTotalLength: awwwwardsLength,
-      cssdesignawardsTotalLength: cssdesignawardsLength,
-      csswinnerTotalLength: csswinnerLength,
+    if (!process.env.serviceDomain || !process.env.apiKey) {
+      return
     }
 
-    commit('getProjectData', projectResponse.contents)
-    commit('getContactData', contactResponse.contents)
-    commit('getPickupData', pickupData)
-    commit('getAwardData', awardResponse.contents)
-    commit('getAwardDataLength', awardDataLength)
+    try {
+      const projectResponse = await app.$axios.$get(`https://${process.env.serviceDomain}.microcms.io/api/v1/works?limit=200`, {
+        headers: {
+          'X-MICROCMS-API-KEY': process.env.apiKey
+        }
+      })
+      const contactResponse = await app.$axios.$get(`https://${process.env.serviceDomain}.microcms.io/api/v1/contact?limit=200`, {
+        headers: {
+          'X-MICROCMS-API-KEY': process.env.apiKey
+        }
+      })
+      const pickupData = projectResponse.contents.filter((v) => v.pickup.pickupFlag)
+
+      commit('getProjectData', projectResponse.contents)
+      commit('getContactData', contactResponse.contents)
+      commit('getPickupData', pickupData)
+    } catch (err) {
+      // microCMS API request failed, fallback to default state
+    }
   }
 }
 
@@ -63,11 +46,11 @@ export const mutations = {
   getPickupData(state, data) {
     state.pickupData = data
   },
-  getAwardData(state, data) {
-    state.awardData = data
+  getExperienceData(state, data) {
+    state.experienceData = data
   },
-  getAwardDataLength(state, data) {
-    state.awardDataLength = data
+  getExperienceSummary(state, data) {
+    state.experienceSummary = data
   },
 }
 
@@ -81,10 +64,10 @@ export const getters = {
   pickupData(state) {
     return state.pickupData;
   },
-  awardData(state) {
-    return state.awardData;
+  experienceData(state) {
+    return state.experienceData;
   },
-  awardDataLength(state) {
-    return state.awardDataLength;
+  experienceSummary(state) {
+    return state.experienceSummary;
   },
 };

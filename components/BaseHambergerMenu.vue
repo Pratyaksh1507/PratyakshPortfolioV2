@@ -13,7 +13,7 @@
         <div class="hambergerMenu-title">
           <div class="hambergerMenu-title-wrapper-01 js-click-target" @click="hambergerMenuOnClose">
             <AppPageTransitionBg url="/" color="#f0efeb">
-              <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'HISAMIKURITA'" />
+              <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'PRATYAKSH KALSI'" />
             </AppPageTransitionBg>
           </div>
           <div class="hambergerMenu-title-wrapper-02 js-click-target" @click="hambergerMenuOnClose">
@@ -29,16 +29,16 @@
           <ul class="hambergerMenu-list">
             <li v-for="(data, index) in projectAndArchiveDatas" :key="index" class="hambergerMenu-item">
               <div ref="HambergerMenuItemWrapper" class="hambergerMenu-item-wrapper js-click-target" @click="hambergerMenuOnClose">
-                <!--アーカイブページの時-->
-                <AppPageTransitionBg v-if="index === projectAndArchiveData.length - 1.0" :url="`/archive`" :color="'#000000'" class="hambergerMenu-item-link">
+                <!--Resume ページの時-->
+                <AppPageTransitionBg v-if="index === projectAndArchiveData.length - 1.0" :url="`/resume`" :color="'#000000'" class="hambergerMenu-item-link">
                   <span class="hambergerMenu-item-img">
                     <picture>
-                      <img :src="`/images/hambergermenu-archive.webp`" :width="`180`" :height="`180`" :alt="`archive`" />
+                      <img :src="`/images/hambergermenu-archive.webp`" :width="`180`" :height="`180`" :alt="`resume`" />
                     </picture>
                   </span>
                   <span>
-                    <span class="hambergerMenu-item-title">ARCHIVE</span>
-                    <span class="hambergerMenu-item-desc"> I'M PUTTING TOGETHER A DYNAMIC ARCHIVE PAGE OF THE WORK I'M SUBMITTING TO CODEPEN. </span>
+                    <span class="hambergerMenu-item-title">RESUME</span>
+                    <span class="hambergerMenu-item-desc"> VIEW AND DOWNLOAD PRATYAKSH KALSI'S UPDATED RESUME (PDF) &amp; CREDENTIALS. </span>
                   </span>
                 </AppPageTransitionBg>
                 <!--アーカイブページ以外の時-->

@@ -25,9 +25,9 @@ export default {
 
   head() {
     return {
-      title: `Hisami Kurita Portfolio | ${this.currentProject.title.full}`,
+      title: `Pratyaksh Kalsi Portfolio | ${this.currentProject.title.full}`,
       meta: [
-        { hid: 'og:title', property: 'og:title', content: `Hisami Kurita Portfolio | ${this.currentProject.title.full}` },
+        { hid: 'og:title', property: 'og:title', content: `Pratyaksh Kalsi Portfolio | ${this.currentProject.title.full}` },
       ]
     }
   },
@@ -85,16 +85,16 @@ export default {
   watch: {
     openningEnd() {
       setTimeout(() => {
-        // スクロール可能にする
+        // Enable smooth scrolling
         if (this.$SITECONFIG.isTouch) this.$backfaceScroll(true)
         this.$asscroll.enable({ reset: true })
       }, 1200)
     },
     imageLoaded() {
       if (this.imageLoaded) {
-        if (!this.openningEnd) return // アクセス時はopenningEndが発火するので、処理を返す
+        if (!this.openningEnd) return // Return if opening transition is still active
 
-        // スクロール可能にする
+        // Enable smooth scrolling
         if (this.$SITECONFIG.isTouch) this.$backfaceScroll(true)
         this.$asscroll.enable({ reset: true })
       }
@@ -106,27 +106,27 @@ export default {
       const images = document.querySelectorAll('.works img')
       const imagesLoaded = ImagesLoaded(images)
 
-      // 画像の読み込みが全て完了した時
+      // When all project images finish loading
       imagesLoaded.on('always', () => {
         setTimeout(() => {
-          // 遷移のアニメーションを終了させる
+          // Complete page transitions
           if (this.defaultTransitionState) this.$store.commit('bg-transition/end')
           if (this.imageTransitionState) this.$store.commit('image-transition/end')
           if (this.pickupTransitionState) this.$store.commit('indexPickup/transition', false)
           this.$store.commit('mouse/loadend')
 
           this.$store.commit('imageLoaded/loaded')
-        }, 100) // worksのみ慣性スクロールがバグりがちなので、処理を0.1s遅らせる
+        }, 100) // Delay by 100ms for smooth momentum scroll registration
 
         setTimeout(() => {
           if (this.indexPickupIsAnimation) this.$store.commit('indexPickup/sceneAnimationState', false)
-        }, 1200) // パーティクルを時間差で削除
+        }, 1200) // Cleanup particle scene after transition delay
       })
     })
   },
 
   beforeDestroy() {
-    // リセット
+    // Reset scroll and scene state
     this.$preDefaultEvent(false)
     this.$asscroll.disable()
     this.$store.commit('indexPickup/setScene', 'init')

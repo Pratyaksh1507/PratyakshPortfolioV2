@@ -1,0 +1,73 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 2880 >>
+stream
+BT
+/F1 22 Tf 50 790 Td (PRATYAKSH KALSI) Tj
+/F1 12 Tf 0 -22 Td (SOFTWARE & FRONTEND DEVELOPER) Tj
+/F2 9 Tf 0 -16 Td (India | Email: contact@pratyakshkalsi.com | Portfolio: pratyakshkalsi.com | GitHub: github.com/Pratyaksh1507) Tj
+ET
+0.7 0.7 0.7 RG 1 w 50 735 m 545 735 l S
+BT
+/F1 11 Tf 0 0 0 rg 50 715 Td (PROFESSIONAL SUMMARY) Tj
+/F2 9 Tf 0 -15 Td (Software Developer focused on high-performance frontend engineering, WebGL 3D interactions, and modern AI integrations.) Tj
+0 -13 Td (Experienced in Next.js, React, TypeScript, GSAP physics, and full-stack web applications.) Tj
+/F1 11 Tf 0 -24 Td (EXPERIENCE & EMPLOYMENT) Tj
+/F1 10 Tf 0 -16 Td (Freelance Web Developer (Self Employed)) Tj
+/F2 8.5 Tf 0 -13 Td (May 2026 - Present | Remote / India) Tj
+0 -12 Td (- Designing and engineering responsive, high-performance web applications and interactive 3D WebGL interfaces.) Tj
+0 -12 Td (- Building custom client platforms using Next.js 15, React, TypeScript, Tailwind CSS, and GSAP.) Tj
+/F1 10 Tf 0 -18 Td (Frontend Developer (Part-Time) - SForger) Tj
+/F2 8.5 Tf 0 -13 Td (Apr 2026 - Present | Remote) Tj
+0 -12 Td (- Building modular frontend components, architecting client-side logic, and ensuring seamless responsive user experiences.) Tj
+0 -12 Td (- Implementing state management, clean architecture, and REST API integration.) Tj
+/F1 10 Tf 0 -18 Td (Frontend Developer Intern - Flickerlink Technologies (OPC) Pvt Ltd) Tj
+/F2 8.5 Tf 0 -13 Td (Nov 2025 - Apr 2026 | India) Tj
+0 -12 Td (- Contributed to frontend product development, integrated RESTful APIs, and resolved cross-browser compatibility issues.) Tj
+0 -12 Td (- Collaborated in team code reviews, Git workflows, and UI optimizations.) Tj
+/F1 11 Tf 0 -24 Td (EDUCATION) Tj
+/F1 10 Tf 0 -16 Td (NIT Srinagar (National Institute of Technology)) Tj
+/F2 9 Tf 0 -13 Td (Bachelor of Technology (B.Tech) in Electronics & Communication Engineering | 2020 - 2024) Tj
+0 -12 Td (Foundational coursework: Data Structures, Algorithms, Computational Logic, Signals & Systems, Embedded Systems) Tj
+/F1 11 Tf 0 -24 Td (TECHNICAL SKILLS) Tj
+/F2 9 Tf 0 -15 Td (- Languages & Frameworks: JavaScript (ES6+), TypeScript, React, Next.js, HTML5, CSS3, SCSS, Tailwind CSS, Python) Tj
+0 -13 Td (- Creative & 3D: Three.js, WebGL GLSL Shaders, GSAP, ASScroll) Tj
+0 -13 Td (- Tools & Backend: Node.js, Express, Supabase pgvector, OpenAI API, Git, GitHub, REST APIs, Vercel) Tj
+/F1 11 Tf 0 -24 Td (FEATURED PROJECTS) Tj
+/F1 9.5 Tf 0 -15 Td (1. Counsel AI - Legal AI workspace with Next.js, Supabase pgvector, OpenAI API, and Three.js) Tj
+0 -13 Td (2. Horizon Stay - Luxury cabin hospitality and reservation platform with fluid animations) Tj
+0 -13 Td (3. Artisan Cafe - Coffee experience and digital ordering web application) Tj
+0 -13 Td (4. Interactive 3D Portfolio - High-performance editorial portfolio with GLSL shaders and GSAP physics) Tj
+ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000263 00000 n 
+0000000338 00000 n 
+0000000408 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+3339
+%%EOF

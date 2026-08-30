@@ -9,27 +9,26 @@
             </span>
             <span class="pc-only">
               <span class="about-title-wrapper about-title-wrapper-01">
-                <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'IN THE SUMMER OF 22, I STARTED PROGRAMMING. IT WAS LA'" :sp-animation="false" />
+                <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'WITH A STRONG BASE IN FRONTEND DEVELOPMENT, I FOCUS ON'" :sp-animation="false" />
               </span>
               <span class="about-title-wrapper about-title-wrapper-02">
                 <AppTextAnimation
                   :state="isTextSegmentState"
                   :start="0.12"
                   :rotate="$BASEROTATE.left"
-                  :text="'TER THAN MOST, BUT I THINK I FOUND SOMETHING THAT I WAS PASSION'"
+                  :text="'BUILDING MODERN WEB PRODUCTS, EXPANDING INTO BACKEND'"
                   :sp-animation="false"
                 />
               </span>
               <span class="about-title-wrapper about-title-wrapper-03">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" text="ATE ABOUT. I'VE BEEN WRITING CODE EVERY DAY EVER SINCE. MY STREN" :sp-animation="false" />
+                <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" text="ENGINEERING, AND EXPLORING AI TO CREATE RELIABLE," :sp-animation="false" />
               </span>
               <span class="about-title-wrapper about-title-wrapper-04">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'GTH IS INSATIABLE CURIOSITY.'" :sp-animation="false" />
+                <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'PRACTICAL DIGITAL EXPERIENCES.'" :sp-animation="false" />
               </span>
             </span>
             <span class="sp-only">
-              <span class="about-title-wrapper-sp about-title-wrapper-01-sp">IN THE SUMMER OF 22, I</span>STARTED PROGRAMMING. IT WA<br />S LATER THAN MOST, BUT I THI<br />NK I FOUND SOMETHING THAT
-              I<br />WAS PASSIONATE ABOUT. I'VE B<br />EEN WRITING CODE EVERY DAY<br />EVER SINCE. MY STRENGTH IS<br />INSATIABLE CURIOSITY.
+              <span class="about-title-wrapper-sp about-title-wrapper-01-sp">WITH A STRONG BASE IN</span>FRONTEND DEVELOPMENT, I FOCUS<br />ON BUILDING MODERN WEB<br />PRODUCTS, EXPANDING INTO<br />BACKEND ENGINEERING, AND<br />EXPLORING AI TO CREATE<br />RELIABLE, PRACTICAL DIGITAL<br />EXPERIENCES.
             </span>
             <span class="pc-only">
               <AppBounceLine :state="isTextUnderlineState" :start="0.6" :width="1000" :origin="'left'" :sp-animation="false" :modifier="'index-about'" />
@@ -44,17 +43,15 @@
                 :state="isTextSegmentState"
                 :start="0.48"
                 :text="[
-                  'THE VISUAL EXPRESSIONS THAT I AM EXPLORING ON A DAILY BASIS ARE AVAILABLE ON CODEPEN AND',
-                  'GITHUB, RANGING FROM CSS ANIMATION TO EXPRESSIONS IN THREE.JS. NOT',
-                  'ALL OF MY WORK IS AVAILABLE ON GITHUB OR CODEPEN,',
-                  'BUT YOU CAN FIND LINKS TO IT IN MY PORTFOLIO.',
+                  'STARTED IN SOFTWARE DEVELOPMENT THROUGH FRONTEND ENGINEERING AND MODERN WEB FRAMEWORKS,',
+                  'NOW GROWING INTO BACKEND ARCHITECTURE AND EXPLORING GENERATIVE AI',
+                  'TO BUILD PRACTICAL, USEFUL DIGITAL PRODUCTS.',
                 ]"
                 :sp-animation="false"
               />
             </span>
             <span class="sp-only"
-              >THE VISUAL EXPRESSIONS THAT I AM EXPLORING ON A DAILY BASIS ARE AVAILABLE ON CODEPEN AND GITHUB, RANGING FROM CSS ANIMATION TO EXPRESSIONS IN THREE.JS. NOT ALL OF MY WORK IS AVAILABLE
-              ON GITHUB OR CODEPEN, BUT YOU CAN FIND LINKS TO IT IN MY PORTFOLIO.</span
+              >STARTED IN SOFTWARE DEVELOPMENT THROUGH FRONTEND ENGINEERING AND MODERN WEB FRAMEWORKS, NOW GROWING INTO BACKEND ARCHITECTURE AND EXPLORING GENERATIVE AI TO BUILD PRACTICAL, USEFUL DIGITAL PRODUCTS.</span
             >
           </p>
         </div>
@@ -169,7 +166,6 @@ export default {
 }
 
 .about-title-wrapper-01 {
-  // padding: 0 0 0 vw(156);
   text-align: right;
 }
 

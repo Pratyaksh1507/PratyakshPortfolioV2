@@ -2,7 +2,7 @@
   <div class="about">
     <AboutMainVisualSection />
     <AboutIntroSection />
-    <AboutAwardSection :award-data="getAwardData" :award-data-length="getAwardDataLength" />
+    <AboutExperienceSection :experience-data="getExperienceData" :experience-summary="getExperienceSummary" />
     <AboutSelectProjectSideScrollSection :project-data="getProjectData" />
   </div>
 </template>
@@ -15,9 +15,9 @@ export default {
 
   head() {
     return {
-      title: 'Hisami Kurita Portfolio | About',
+      title: 'Pratyaksh Kalsi Portfolio | About',
       meta: [
-        { hid: 'og:title', property: 'og:title', content: 'Hisami Kurita Portfolio | About' },
+        { hid: 'og:title', property: 'og:title', content: 'Pratyaksh Kalsi Portfolio | About' },
       ]
     }
   },
@@ -26,11 +26,11 @@ export default {
     getProjectData() {
       return this.$store.getters.projectData
     },
-    getAwardData() {
-      return this.$store.getters.awardData
+    getExperienceData() {
+      return this.$store.getters.experienceData
     },
-    getAwardDataLength() {
-      return this.$store.getters.awardDataLength
+    getExperienceSummary() {
+      return this.$store.getters.experienceSummary
     },
     defaultTransitionState() {
       return this.$store.getters['bg-transition/state']
@@ -52,18 +52,18 @@ export default {
   watch: {
     openningEnd() {
       setTimeout(() => {
-        // スクロール可能にする
+        // Enable smooth scrolling
         if (this.$SITECONFIG.isTouch) this.$backfaceScroll(true)
         this.$asscroll.enable({ reset: true })
       }, 1200)
     },
     imageLoaded() {
       if (this.imageLoaded) {
-        // アクセス時はopenningEndが発火するので、処理を返す
+        // Return if opening transition is still firing on initial access
         if (!this.openningEnd) return
 
         this.$store.commit('mouse/loadend')
-        // スクロール可能にする
+        // Enable smooth scrolling
         if (this.$SITECONFIG.isTouch) this.$backfaceScroll(true)
         this.$asscroll.enable({ reset: true })
       }
@@ -72,7 +72,7 @@ export default {
 
   mounted() {
     this.$nextTick(() => {
-      // aboutページのみカクツキ防止のためscrolltriggerをupdateする
+      // Update ScrollTrigger on RAF for smooth scrolling in About page
       const render = () => {
         this.raf = window.requestAnimationFrame(render)
         this.$ScrollTrigger.update()
@@ -82,9 +82,9 @@ export default {
       const images = document.querySelectorAll('.about img')
       const imagesLoaded = ImagesLoaded(images)
 
-      // 画像の読み込みが全て完了した時
+      // When all images have completed loading
       imagesLoaded.on('always', () => {
-        // 遷移のアニメーションを終了させる
+        // Complete transitions
         if (this.defaultTransitionState) this.$store.commit('bg-transition/end')
         if (this.imageTransitionState) this.$store.commit('image-transition/end')
         if (this.pickupTransitionState) this.$store.commit('indexPickup/transition', false)
@@ -95,7 +95,7 @@ export default {
   },
 
   beforeDestroy() {
-    // リセット
+    // Reset RAF and smooth scroll state
     window.cancelAnimationFrame(this.raf)
     this.$preDefaultEvent(false)
     this.$asscroll.disable()

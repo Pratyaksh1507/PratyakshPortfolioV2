@@ -1,34 +1,57 @@
 <template>
-  <div ref="Award" class="award">
-    <div ref="AwardCardArea" class="award-card-area">
-      <div v-for="award in awardData" :key="award.id" ref="AwardCardItem" class="award-card-item">
-        <CardAward :group="award.group" :title="award.title" :rank="award.rank" :date="award.date" :modifier="award.modifier" />
+  <div ref="Experience" class="experience">
+    <div ref="ExperienceCardArea" class="experience-card-area">
+      <div v-for="exp in experienceData" :key="exp.id" ref="ExperienceCardItem" class="experience-card-item">
+        <CardExperience
+          :role="exp.role"
+          :short-role="exp.shortRole"
+          :company="exp.company"
+          :type="exp.type"
+          :period="exp.period"
+          :date="exp.date"
+          :location="exp.location"
+          :skills="exp.skills"
+          :description="exp.description"
+          :badge="exp.badge"
+          :modifier="exp.modifier"
+        />
       </div>
     </div>
-    <div class="award-bg">
-      <div class="award-inner">
+    <div class="experience-bg">
+      <div class="experience-inner">
         <div class="l-container">
-          <span class="award-title-read-area">
-            <AppReadTitle :state="isTextSegmentState" :text="['・', 'AWARDS']" :modifier="'award-section'" />
+          <span class="experience-title-read-area">
+            <AppReadTitle :state="isTextSegmentState" :text="['・', 'EXPERIENCE & ROLES']" :modifier="'award-section'" />
           </span>
-          <div class="award-list-wrapper">
-            <div ref="AwardList" class="award-list">
-              <div v-for="(award, index) in awardData" :key="award.id" ref="AwardItem" class="award-item" :data-id="index">
+          <div class="experience-list-wrapper">
+            <div ref="ExperienceList" class="experience-list">
+              <div v-for="(exp, index) in experienceData" :key="exp.id" ref="ExperienceItem" class="experience-item" :data-id="index">
                 <AppBounceLine :state="'expand'" :pc-animation="false" :sp-animation="false" :width="1000" :modifier="'about-award'" />
-                <p class="award-group">{{ award.group }}</p>
-                <p class="award-title">{{ award.title }}</p>
-                <p class="award-rank">{{ award.rank }}</p>
+                <div class="experience-item-left">
+                  <p class="experience-period">{{ exp.period }}</p>
+                  <span class="experience-type-pill">{{ exp.type }}</span>
+                </div>
+                <h3 class="experience-role">{{ exp.role }}</h3>
+                <div class="experience-company-wrapper">
+                  <p class="experience-company">{{ exp.company }}</p>
+                  <p class="experience-location sp-only">{{ exp.location }}</p>
+                  <div class="experience-sp-skills sp-only">
+                    <span v-for="(skill, sIdx) in exp.skills.slice(0, 3)" :key="sIdx" class="experience-sp-skill-pill">
+                      {{ skill }}
+                    </span>
+                  </div>
+                </div>
               </div>
-              <div class="award-list-bottom-line">
+              <div class="experience-list-bottom-line">
                 <AppBounceLine :state="'expand'" :pc-animation="false" :sp-animation="false" :width="1000" :modifier="'about-award-last'" />
               </div>
             </div>
           </div>
           <div class="pc-only">
-            <ul class="award-total-list">
-              <li class="award-total-item">AWWWARDS*{{ awardDataLength.awwwwardsTotalLength }}</li>
-              <li class="award-total-item">CSSDA*{{ awardDataLength.cssdesignawardsTotalLength }}</li>
-              <li class="award-total-item">CSSWINNER*{{ awardDataLength.csswinnerTotalLength }}</li>
+            <ul v-if="experienceSummary" class="experience-total-list">
+              <li class="experience-total-item">EXPERIENCE * {{ experienceSummary.years }}</li>
+              <li class="experience-total-item">CORE STACK * {{ experienceSummary.focus }}</li>
+              <li class="experience-total-item">EDUCATION * {{ experienceSummary.education }}</li>
             </ul>
           </div>
         </div>
@@ -40,13 +63,13 @@
 <script>
 export default {
   props: {
-    awardData: {
+    experienceData: {
       type: Array,
       required: true,
     },
-    awardDataLength: {
+    experienceSummary: {
       type: Object,
-      required: true,
+      default: () => ({}),
     },
   },
 
@@ -62,21 +85,22 @@ export default {
     },
   },
   mounted() {
-    // init
-    this.award = this.$refs.Award
-    this.cards = this.$refs.AwardCardItem
-    this.items = this.$refs.AwardItem
-    this.itemsHeight = this.items[0].getBoundingClientRect().height
-    this.cardHalfWidth = 117
-    this.cardHalfHeight = 160
+    this.experience = this.$refs.Experience
+    this.cards = this.$refs.ExperienceCardItem
+    this.items = this.$refs.ExperienceItem
+    this.itemsHeight = this.items && this.items[0] ? this.items[0].getBoundingClientRect().height : 60
+    this.cardHalfWidth = 125
+    this.cardHalfHeight = 165
     this.animationFlags = []
     this.isAllResetAnimation = false
     this.mouseX = window.innerWidth / 2
     this.mouseY = 0
-    for (let i = 0; i < this.items.length; i++) {
-      this.animationFlags.push(false)
+    if (this.items) {
+      for (let i = 0; i < this.items.length; i++) {
+        this.animationFlags.push(false)
+      }
     }
-    this.observe = this.$refs.Award
+    this.observe = this.$refs.Experience
 
     /* text-animation */
     this.iObserver = new IntersectionObserver(
@@ -116,15 +140,19 @@ export default {
   },
 
   beforeDestroy() {
-    this.iObserver.unobserve(this.observe)
-    this.iObserver = null
+    if (this.iObserver) {
+      this.iObserver.unobserve(this.observe)
+      this.iObserver = null
+    }
     if (this.$SITECONFIG.isNoTouch) {
       this.$gsap.ticker.remove(this.cardScrollPos)
       this.$gsap.ticker.remove(this.cardScrollAnimation)
       window.removeEventListener('mousemove', this.onMousemove)
       window.removeEventListener('mousemove', this.saveMousemove)
-      this.animationObserver.unobserve(this.observe)
-      this.animationObserver = null
+      if (this.animationObserver) {
+        this.animationObserver.unobserve(this.observe)
+        this.animationObserver = null
+      }
     }
   },
 
@@ -133,7 +161,7 @@ export default {
       if (this.hambergerMenuState) return
       this.currentY = this.mouseY + this.$asscroll.targetPos
 
-      this.$gsap.to(this.$refs.AwardCardArea, {
+      this.$gsap.to(this.$refs.ExperienceCardArea, {
         duration: 0.4,
         ease: 'none',
         x: this.mouseX,
@@ -141,35 +169,34 @@ export default {
       })
     },
     cardScrollAnimation() {
-      if (this.hambergerMenuState) return
+      if (this.hambergerMenuState || !this.items) return
 
-      const list = this.$refs.AwardList
+      const list = this.$refs.ExperienceList
       const rect = list.getBoundingClientRect()
-      const startPosY = this.award.offsetTop + list.offsetTop - this.cardHalfHeight
+      const startPosY = this.experience.offsetTop + list.offsetTop - this.cardHalfHeight
       const startPosX = rect.left - this.cardHalfWidth
       const endPosY = startPosY + rect.height
       const endPosX = startPosX + rect.width
-      // prettier-ignore
+
       if (this.currentY < startPosY || this.mouseX < startPosX) {
         this.allCardFadeOut()
       } else if (this.currentY >= startPosY && this.currentY < endPosY && this.mouseX >= startPosX && this.mouseX < endPosX) {
-        ; // 何もしない
+        // inside active area
       } else {
         this.allCardFadeOut()
       }
 
       for (let i = 0; i < this.items.length; i++) {
         const target = this.items[i]
-        const rect = target.getBoundingClientRect()
-        const startPosY = this.award.offsetTop + target.offsetTop - this.cardHalfHeight
-        const startPosX = rect.left - this.cardHalfWidth
-        const endPosY = startPosY + rect.height
-        const endPosX = startPosX + rect.width
+        const startPosItemY = this.experience.offsetTop + target.offsetTop - this.cardHalfHeight
+        const startPosItemX = rect.left - this.cardHalfWidth
+        const endPosItemY = startPosItemY + target.offsetHeight
+        const endPosItemX = startPosItemX + rect.width
 
-        if (this.currentY < startPosY || this.mouseX < startPosX) {
+        if (this.currentY < startPosItemY || this.mouseX < startPosItemX) {
           this.colorFadeOut(target)
           this.cardFadeOut(i)
-        } else if (this.currentY >= startPosY && this.currentY < endPosY && this.mouseX >= startPosX && this.mouseX < endPosX) {
+        } else if (this.currentY >= startPosItemY && this.currentY < endPosItemY && this.mouseX >= startPosItemX && this.mouseX < endPosItemX) {
           this.colorFadeIn(target)
           this.cardFadeIn(this.cards[i], i)
         } else {
@@ -189,7 +216,7 @@ export default {
       this.mouseY = e.clientY - this.cardHalfHeight
       this.currentY = this.mouseY + this.$asscroll.targetPos
 
-      this.$gsap.to(this.$refs.AwardCardArea, {
+      this.$gsap.to(this.$refs.ExperienceCardArea, {
         duration: 0.4,
         ease: 'none',
         x: this.mouseX,
@@ -262,19 +289,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.award {
+.experience {
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
 
-.award-bg {
+.experience-bg {
   position: relative;
   padding: 0 0 vw(600) 0;
   background-color: $darkBlack;
 }
 
-.award-inner {
+.experience-inner {
   padding: 152px 40px;
 
   @include sp() {
@@ -282,17 +309,17 @@ export default {
   }
 }
 
-.award-card-area {
+.experience-card-area {
   position: fixed;
   top: 0;
   left: 150px;
-  width: 293px;
-  height: 400px;
+  width: 250px;
+  height: 330px;
   pointer-events: none;
   z-index: 3;
 }
 
-.award-card-item {
+.experience-card-item {
   position: absolute;
   top: 0;
   left: 0;
@@ -302,7 +329,7 @@ export default {
   z-index: 10;
 }
 
-.award-title-read-area {
+.experience-title-read-area {
   display: block;
   margin: 0 0 36px 0;
 
@@ -311,11 +338,11 @@ export default {
   }
 }
 
-.award-list-wrapper {
+.experience-list-wrapper {
   margin: 0 0 40px 0;
 }
 
-.award-list {
+.experience-list {
   width: vw(1000);
 
   @include tab-vertical() {
@@ -327,54 +354,76 @@ export default {
   }
 }
 
-.award-item {
+.experience-item {
   display: flex;
+  align-items: baseline;
   position: relative;
-  padding: 15px 0;
+  padding: 18px 0;
   color: $gray;
 
   @include sp() {
     display: block;
-    padding: 18px 0;
+    padding: 20px 0;
   }
 }
 
-.award-list-bottom-line {
-  display: flex;
-  position: relative;
-  width: 100%;
-  height: 1px;
-  z-index: 1;
-}
-
-.award-group {
-  position: relative;
-  top: 2px;
+.experience-item-left {
   flex-shrink: 0;
   width: vw(238);
-  color: $white;
-  font-size: 14px;
-  letter-spacing: 0.02em;
 
   @include tab-vertical() {
     width: vw(218);
+  }
+
+  @include sp() {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+    margin: 0 0 8px 0;
+  }
+}
+
+.experience-period {
+  position: relative;
+  color: $white;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0 0 4px 0;
+
+  @include tab-vertical() {
     font-size: 10px;
   }
 
   @include sp() {
-    top: auto;
-    width: auto;
-    margin: 0 0 10px 0;
-    font-size: 10px;
+    margin: 0;
+    font-size: 11px;
   }
 }
 
-.award-title {
+.experience-type-pill {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  color: #9ca3af;
+  text-transform: uppercase;
+
+  @include sp() {
+    font-size: 8.5px;
+    padding: 1px 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 3px;
+  }
+}
+
+.experience-role {
   flex-shrink: 0;
   width: vw(440);
-  font-size: 60px;
+  font-size: 56px;
   font-family: $sixcaps;
   letter-spacing: 0.02em;
+  line-height: 1;
 
   @include tab-vertical() {
     width: vw(360);
@@ -384,27 +433,62 @@ export default {
   @include sp() {
     width: auto;
     margin: 0 0 8px 0;
-    font-size: vw_sp(100);
+    font-size: vw_sp(84);
+    line-height: 1.1;
   }
 }
 
-.award-rank {
-  flex-shrink: 0;
-  font-size: 60px;
-  font-family: $sixcaps;
-  letter-spacing: 0.02em;
+.experience-company-wrapper {
+  flex: 1;
+}
+
+.experience-company {
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  line-height: 1.35;
+  color: $white;
 
   @include tab-vertical() {
-    font-size: 32px;
+    font-size: 11px;
   }
 
   @include sp() {
-    width: auto;
-    font-size: vw_sp(100);
+    font-size: 12px;
+    margin: 0 0 6px 0;
   }
 }
 
-.award-total-item {
+.experience-location {
+  font-size: 10px;
+  color: $gray;
+  letter-spacing: 0.02em;
+  margin: 0 0 6px 0;
+}
+
+.experience-sp-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 4px 0 0 0;
+}
+
+.experience-sp-skill-pill {
+  font-size: 9px;
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  color: #d1d5db;
+}
+
+.experience-list-bottom-line {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 1px;
+  z-index: 1;
+}
+
+.experience-total-item {
   color: $gray;
   font-size: 12px;
   letter-spacing: 0.02em;

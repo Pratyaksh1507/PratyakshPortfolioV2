@@ -27,8 +27,8 @@
                     >
                       <span ref="ProjectItemCircle" class="project-item-circle"></span>
                       <span ref="ProjectItemWrapper" class="project-item-wraper">
-                        <!--アーカイブページの時-->
-                        <AppPageTransitionBg v-if="index === projectAndArchiveData.length - 1.0" :url="`/archive`" :color="'#000000'" class="project-link">ARCHIVE </AppPageTransitionBg>
+                        <!--Resume ページの時-->
+                        <AppPageTransitionBg v-if="index === projectAndArchiveData.length - 1.0" :url="`/resume`" :color="'#000000'" class="project-link">RESUME </AppPageTransitionBg>
                         <!--アーカイブページ以外の時-->
                         <AppPageTransitionImage v-else :url="`/works/${data.id}`" :index="index" class="project-link">{{ data.title.full }} </AppPageTransitionImage>
                       </span>

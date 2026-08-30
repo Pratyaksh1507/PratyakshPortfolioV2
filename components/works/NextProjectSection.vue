@@ -168,51 +168,30 @@ export default {
   }
 }
 
-.next-loop-card-mtrust {
+.next-loop-card-counsel-ai {
   @include sp() {
     top: 59%;
     left: calc(50% - #{vw_sp(350)});
   }
 }
 
-.next-loop-card-ketakuma {
+.next-loop-card-horizon-stay {
   @include sp() {
     top: 57%;
     left: calc(50% - #{vw_sp(130)});
   }
 }
 
-.next-loop-card-redandgreen {
+.next-loop-card-artisan-cafe {
   @include sp() {
     top: 61%;
     left: calc(50% - #{vw_sp(370)});
   }
 }
 
-.next-loop-card-asovision {
+.next-loop-card-portfolio-v1 {
   @include sp() {
     left: calc(50% - #{vw_sp(80)});
-  }
-}
-
-.next-loop-card-basta {
-  @include sp() {
-    top: 58%;
-    left: calc(50% - #{vw_sp(250)});
-  }
-}
-
-.next-loop-card-frontier {
-  @include sp() {
-    top: 61%;
-    left: calc(50% - #{vw_sp(400)});
-  }
-}
-
-.next-loop-card-yakudoh {
-  @include sp() {
-    top: 61%;
-    left: calc(50% - #{vw_sp(-40)});
   }
 }
 

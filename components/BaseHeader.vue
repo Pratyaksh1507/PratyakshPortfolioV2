@@ -2,16 +2,16 @@
   <div ref="HeaderLogo" class="header-logo is-top is-op">
     <button class="header-link js-click-target" @click="onClickSameUrlReload">
       <span
-        v-for="(char, index) of name"
+        v-for="(item, index) of nameData"
         :key="index"
         ref="HeaderLogoText"
         class="header-logo-text"
         style="transform: translateY(60px)"
         :class="{
-          'header-logo-fade-text': index % 2 === 1,
-          'header-logo-move-text': index % 2 === 0,
+          'header-logo-fade-text': item.fade,
+          'header-logo-move-text': !item.fade,
         }"
-        >{{ char }}</span
+        >{{ item.char }}</span
       >
     </button>
   </div>
@@ -20,7 +20,23 @@
 export default {
   data: () => {
     return {
-      name: ['H', 'I', 'S', 'A', 'M', 'I', 'K', 'U', 'R', 'I', 'T', 'A'],
+      nameData: [
+        { char: 'P', fade: false },
+        { char: 'R', fade: true },
+        { char: 'A', fade: true },
+        { char: 'T', fade: true },
+        { char: 'Y', fade: true },
+        { char: 'A', fade: true },
+        { char: 'K', fade: true },
+        { char: 'S', fade: true },
+        { char: 'H', fade: true },
+        { char: ' ', fade: true },
+        { char: 'K', fade: false },
+        { char: 'A', fade: true },
+        { char: 'L', fade: true },
+        { char: 'S', fade: true },
+        { char: 'I', fade: true },
+      ],
     }
   },
   computed: {
@@ -78,7 +94,7 @@ export default {
           each: 0.04,
         },
         y: 0,
-        clearProps: 'all',
+        clearProps: 'transform',
         onComplete: () => {
           this.$refs.HeaderLogo.classList.remove('is-op')
         },
@@ -144,7 +160,8 @@ export default {
 <style scoped lang="scss">
 .header-logo-text {
   display: inline-block;
-  transition: transform $base-duration $transform-easing;
+  vertical-align: top;
+  transition: transform $base-duration $transform-easing, max-width $base-duration $transform-easing, opacity $base-duration $transform-easing;
 }
 
 .header-logo.is-op {
@@ -160,37 +177,22 @@ export default {
   transition-delay: $base-duration * 0.25;
 }
 
-.header-logo-move-text:nth-of-type(3) {
-  transform: translateX(-10px);
-}
-
-.header-logo-move-text:nth-of-type(5) {
-  transform: translateX(-24px);
-}
-
-.header-logo-move-text:nth-of-type(7) {
-  transform: translateX(-34.5px);
-}
-
-.header-logo-move-text:nth-of-type(9) {
-  transform: translateX(-49.6px);
-}
-
-.header-logo-move-text:nth-of-type(11) {
-  transform: translateX(-60px);
-}
-
 .is-top .header-logo-move-text {
   transform: translateX(0);
   transition-delay: 0s;
 }
 
 .header-logo-fade-text {
+  max-width: 0;
+  opacity: 0;
   transform: translateY(-100%);
+  overflow: hidden;
   transition-delay: 0s;
 }
 
 .is-top .header-logo-fade-text {
+  max-width: 1em;
+  opacity: 1;
   transform: translateY(0);
   transition-delay: $base-duration * 0.25;
 }
@@ -216,7 +218,8 @@ export default {
   }
 
   & .header-link {
-    display: block;
+    display: flex;
+    align-items: center;
     color: $black;
     font-size: 50px;
     font-family: $sixcaps;
@@ -229,6 +232,8 @@ export default {
       }
 
       & .header-logo-fade-text {
+        max-width: 1em;
+        opacity: 1;
         transform: translateY(0);
         transition-delay: $base-duration * 0.25;
       }

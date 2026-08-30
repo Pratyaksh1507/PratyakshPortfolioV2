@@ -10,26 +10,26 @@
             </span>
             <span class="pc-only">
               <span class="contact-title-wrapper contact-title-wrapper-01">
-                <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'I AM FRONTEND DEVELOPER'" :sp-animation="false" />
+                <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'I AM A SOFTWARE DEVELOPER'" :sp-animation="false" />
               </span>
               <span class="contact-title-wrapper contact-title-wrapper-02">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.12" :rotate="$BASEROTATE.left" :text="'FOCUSED ON CREATING THINGS'" :sp-animation="false" />
+                <AppTextAnimation :state="isTextSegmentState" :start="0.12" :rotate="$BASEROTATE.left" :text="'FOCUSED ON BUILDING USEFUL'" :sp-animation="false" />
               </span>
               <span class="contact-title-wrapper contact-title-wrapper-03">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" :text="'WITH INTERACTION & ANIMATION'" :sp-animation="false" />
+                <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" :text="'DIGITAL EXPERIENCES'" :sp-animation="false" />
               </span>
               <span class="contact-title-wrapper contact-title-wrapper-04">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'AS MY MAIN FOCUS.'" :sp-animation="false" />
+                <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'BASED IN INDIA.'" :sp-animation="false" />
               </span>
             </span>
             <span class="sp-only">
-              <span class="contact-title-wrapper contact-title-wrapper-01-sp"> I AM FRONTEND </span>
+              <span class="contact-title-wrapper contact-title-wrapper-01-sp"> I AM A SOFTWARE </span>
               <span class="contact-title-wrapper contact-title-wrapper-02-sp"> DEVELOPER </span>
               <span class="contact-title-wrapper contact-title-wrapper-03-sp"> FOCUSED ON </span>
-              <span class="contact-title-wrapper contact-title-wrapper-04-sp"> CREATING THINGS </span>
-              <span class="contact-title-wrapper contact-title-wrapper-05-sp"> WITH INTERACTION </span>
-              <span class="contact-title-wrapper contact-title-wrapper-06-sp"> & ANIMATION </span>
-              <span class="contact-title-wrapper contact-title-wrapper-07-sp"> AS MY MAINN FOCUS. </span>
+              <span class="contact-title-wrapper contact-title-wrapper-04-sp"> BUILDING USEFUL </span>
+              <span class="contact-title-wrapper contact-title-wrapper-05-sp"> DIGITAL </span>
+              <span class="contact-title-wrapper contact-title-wrapper-06-sp"> EXPERIENCES </span>
+              <span class="contact-title-wrapper contact-title-wrapper-07-sp"> BASED IN INDIA. </span>
             </span>
           </h2>
           <div class="contact-info-area">
@@ -44,8 +44,8 @@
                   </AppPageTransitionImage>
                 </li>
                 <li class="contact-info-item js-click-target">
-                  <AppPageTransitionBg :url="`archive`" color="#000000">
-                    <AppTextAnimation :state="isTextSegmentState" :start="0.48 + projectData.length * 0.12" :rotate="$BASEROTATE.right" :text="'ARCHIVE'" />
+                  <AppPageTransitionBg :url="`resume`" color="#000000">
+                    <AppTextAnimation :state="isTextSegmentState" :start="0.48 + projectData.length * 0.12" :rotate="$BASEROTATE.right" :text="'RESUME'" />
                   </AppPageTransitionBg>
                 </li>
               </ul>
@@ -53,18 +53,18 @@
             <div class="contact-info-name-area">
               <span class="pc-only">
                 <span class="contact-name">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.48" :rotate="$BASEROTATE.right" :text="'HISAMI KURITA'" :sp-animation="false" />
+                  <AppTextAnimation :state="isTextSegmentState" :start="0.48" :rotate="$BASEROTATE.right" :text="'PRATYAKSH KALSI'" :sp-animation="false" />
                 </span>
               </span>
               <span class="sp-only">
-                <span class="contact-name"> HISAMI<br />KURITA </span>
+                <span class="contact-name"> PRATYAKSH<br />KALSI </span>
               </span>
             </div>
           </div>
           <div class="contact-card-item-01">
             <AppCard
               :component-name="'contact'"
-              :name="['・', 'DESIGNED BY', '(KENTO ISHIDUKA)']"
+              :name="['・', 'DESIGNED BY', '(PRATYAKSH KALSI)']"
               :info="[
                 {
                   link: contactData[1].list01.link,
@@ -92,7 +92,7 @@
           <div class="contact-card-item-02">
             <AppCard
               :component-name="'contact'"
-              :name="['・', 'CODED BY', '(HISAMI KURITA)']"
+              :name="['・', 'CODED BY', '(PRATYAKSH KALSI)']"
               :info="[
                 {
                   link: contactData[0].list01.link,

@@ -2,11 +2,10 @@
   <div ref="Hero" class="hero">
     <div class="hero-inner">
       <div class="l-container">
-        <div ref="HeroCanvas" class="hero-canvas"></div>
         <h1 ref="HeroTitle" class="hero-title">
           <span class="pc-only">
             <span class="hero-title-read-area">
-              <AppReadTitle :state="isTextSegmentState" :text="['・', 'MYSKILL', 'HTML/CSS/JAVASCRIPT', 'VUE/NUXT/THREE.JS']" :sp-animation="false" :modifier="'section'" />
+              <AppReadTitle :state="isTextSegmentState" :text="['・', 'TECHNOLOGIES', 'HTML / CSS / JAVASCRIPT', 'REACT / NEXT.JS / TYPESCRIPT / NODE', 'AI / GENERATIVE AI']" :sp-animation="false" :modifier="'section'" />
             </span>
           </span>
           <span class="pc-only">
@@ -16,17 +15,17 @@
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-02">
               <AppBounceLine :state="isTextUnderlineState" :start="0.176" :origin="'right'" :sp-animation="false" :width="820" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'HISAMI'" :sp-animation="false" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.4" :rotate="$BASEROTATE.left" :text="'KURITA'" :sp-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'PRATYAKSH'" :sp-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.4" :rotate="$BASEROTATE.left" :text="'KALSI'" :sp-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-03">
               <AppBounceLine :state="isTextUnderlineState" :start="0.42" :origin="'left'" :sp-animation="false" :width="900" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.42" :rotate="$BASEROTATE.right" :text="'IS  FRO'" :sp-animation="false" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.6" :rotate="$BASEROTATE.right" :text="'NTEND'" :sp-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.42" :rotate="$BASEROTATE.right" :text="'IS  SOFTWARE'" :sp-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.6" :rotate="$BASEROTATE.right" :text="'DEVELOPER'" :sp-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-04">
               <AppBounceLine :state="isTextUnderlineState" :start="0.7" :origin="'right'" :sp-animation="false" :width="1200" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.7" :rotate="$BASEROTATE.right" :text="'DEVELOPER AT LIG INC SINCE 2020'" :sp-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.7" :rotate="$BASEROTATE.right" :text="'BUILDING FOR THE WEB & EXPLORING AI'" :sp-animation="false" />
             </span>
           </span>
           <span class="sp-only">
@@ -36,26 +35,25 @@
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-02-sp">
               <AppBounceLine :state="isTextUnderlineState" :start="0.176" :origin="'right'" :pc-animation="false" :width="670" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'HISAMI'" :pc-animation="false" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.4" :rotate="$BASEROTATE.left" :text="'KURITA'" :pc-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'PRATYAKSH'" :pc-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.4" :rotate="$BASEROTATE.left" :text="'KALSI'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-03-sp">
               <AppBounceLine :state="isTextUnderlineState" :start="0.42" :origin="'left'" :pc-animation="false" :width="590" :modifier="'about-hero'" />
               <AppTextAnimation :state="isTextSegmentState" :start="0.42" :rotate="$BASEROTATE.right" :text="'IS'" :pc-animation="false" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.42" :rotate="$BASEROTATE.right" :text="'FRO'" :pc-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.42" :rotate="$BASEROTATE.right" :text="'SOFTWARE'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-04-sp">
               <AppBounceLine :state="isTextUnderlineState" :start="0.6" :origin="'right'" :pc-animation="false" :width="670" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.6" :rotate="$BASEROTATE.right" :text="'NTEND'" :pc-animation="false" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.6" :rotate="$BASEROTATE.right" :text="'DEVELO'" :pc-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.6" :rotate="$BASEROTATE.right" :text="'DEVELOPER'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-05-sp">
               <AppBounceLine :state="isTextUnderlineState" :start="0.72" :origin="'left'" :pc-animation="false" :width="573" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.72" :rotate="$BASEROTATE.right" :text="'PER AT LIG INC'" :pc-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.72" :rotate="$BASEROTATE.right" :text="'BUILDING FOR'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-06-sp">
               <AppBounceLine :state="isTextUnderlineState" :start="0.84" :origin="'right'" :pc-animation="false" :width="452" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.84" :rotate="$BASEROTATE.right" :text="'SINCE 2020.'" :pc-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.84" :rotate="$BASEROTATE.right" :text="'THE WEB & AI.'" :pc-animation="false" />
             </span>
           </span>
         </h1>
@@ -63,11 +61,11 @@
           <div class="hero-card-item">
             <AppCard
               :component-name="'company'"
-              :name="['・', 'LIG INC']"
-              :title="'LIG INC.'"
-              :subtitle="'(VISIT SITE)'"
-              :link="'https://liginc.co.jp'"
-              :desc="['WEB PRODUCTION,', 'SYSTEM DEVELOPMENT,', 'MARKETING SUPPORT,', 'WEB CREATOR SCHOOL,', 'WERE ROLLING IT OUT.']"
+              :name="['・', 'PRATYAKSH KALSI']"
+              :title="'PRTYKSH'"
+              :subtitle="'(PORTFOLIO)'"
+              :link="'https://pratyakshkalsi.com'"
+              :desc="['SOFTWARE DEVELOPER,', 'BUILDING FOR WEB & AI,', 'BASED IN INDIA,', 'OPEN TO COLLABORATION,', '& OPPORTUNITIES.']"
               :rotate="8"
               :xspeed="0.01"
               :yspeed="0.14"
@@ -80,10 +78,6 @@
   </div>
 </template>
 <script>
-import Mesh from '../canvas/about/mainvisual/metaball'
-import Stage from '../canvas/stage'
-import { aboutMv } from '../../assets/js/metaball'
-
 export default {
   data: () => {
     return {
@@ -121,40 +115,12 @@ export default {
 
   mounted() {
     this.$nextTick(() => {
-      this.stage = new Stage(this.$refs.HeroCanvas, this.$refs.HeroCanvas)
-      this.stage.init()
-
-      this.mesh = new Mesh(this.stage, this.$SITECONFIG, aboutMv)
-      this.mesh.init()
-
-      this.mResize = () => {
-        this.stage.onResize()
-        this.mesh.onResize()
-      }
-
-      this.mRaf = () => {
-        this.stage.onRaf()
-        this.mesh.onRaf()
-      }
-
-      this.mMouse = (e) => {
-        if (this.hambergerMenuState) return
-
-        this.mesh.onMouseMove(e, this.$asscroll.currentPos)
-      }
-
-      window.addEventListener('resize', this.mResize)
-
       this.observe = this.$refs.Hero
       this.iObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              this.$gsap.ticker.add(this.mRaf)
-              window.addEventListener('mousemove', this.mMouse)
-            } else {
-              this.$gsap.ticker.remove(this.mRaf)
-              window.removeEventListener('mousemove', this.mMouse)
+              this.mvItemViewIn()
             }
           })
         },
@@ -167,25 +133,16 @@ export default {
   },
 
   beforeDestroy() {
-    // リセット
-    this.iObserver.unobserve(this.observe)
-    this.iObserver = null
-
-    // メタボールリセット
-    window.removeEventListener('mousemove', this.mMouse)
-    window.removeEventListener('resize', this.mResize)
-    this.$gsap.ticker.remove(this.mRaf)
-    this.stage._destroy()
-    this.stage = null
-    this.mesh._destroy()
-    this.mesh = null
+    if (this.iObserver && this.observe) {
+      this.iObserver.unobserve(this.observe)
+      this.iObserver = null
+    }
   },
 
   methods: {
     mvItemViewIn() {
       this.isTextSegmentState = 'center'
       this.isTextUnderlineState = 'extend'
-      this.mesh.fadeIn()
     },
   },
 }
@@ -200,16 +157,6 @@ export default {
 
 .hero .l-container {
   position: relative;
-}
-
-.hero-canvas {
-  position: absolute;
-  top: -92px;
-  left: 0;
-  width: 100%;
-  height: calc(100% + (92px * 2));
-  z-index: 100;
-  pointer-events: none;
 }
 
 .hero-inner {

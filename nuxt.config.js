@@ -3,10 +3,11 @@ import axios from 'axios'
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  ssr: false,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Hisami Kurita Portfolio',
+    title: 'Pratyaksh Kalsi | Software Developer',
     htmlAttrs: {
       lang: 'en'
     },
@@ -24,12 +25,12 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Folio of Hisami Kurita 19/Aug.1996 (based in Tokyo and Kawasaki) frontend developer at LIG inc',
+        content: 'Folio of Pratyaksh Kalsi (based in India) — Software Developer building for the web and exploring AI.',
       },
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: 'Hisami Kurita Portfolio',
+        content: 'Pratyaksh Kalsi Portfolio',
       },
       {
         hid: 'og:type',
@@ -39,26 +40,30 @@ export default {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://hsmkrt1996.com/',
+        content: 'https://pratyakshkalsi.com/',
       },
       {
         hid: 'og:title',
         property: 'og:title',
-        content: 'Hisami Kurita Portfolio',
+        content: 'Pratyaksh Kalsi | Software Developer',
       },
       {
         hid: 'og:description',
         property: 'og:description',
-        content: 'Folio of Hisami Kurita 19/Aug.1996 (based in Tokyo and Kawasaki) frontend developer at LIG inc',
+        content: 'Folio of Pratyaksh Kalsi (based in India) — Software Developer building for the web and exploring AI.',
       },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://hsmkrt1996.com/images/ogp.webp',
+        content: 'https://pratyakshkalsi.com/images/ogp.webp',
       },
       {
         name: 'twitter:card',
         content: 'summary_large_image'
+      },
+      {
+        name: 'twitter:creator',
+        content: '@pratyaksh_kalsi'
       },
     ],
     link: [{
@@ -163,18 +168,35 @@ export default {
     async routes() {
       const generates = []
 
-      await axios.get(`https://${process.env.SERVICE_DOMAIN}.microcms.io/api/v1/works?limit=200`, {
-          headers: {
-            'X-MICROCMS-API-KEY': process.env.API_KEY
-          }
-        })
-        .then((res) => {
-          res.data.contents.map((content) => {
-            return generates.push({
+      if (process.env.SERVICE_DOMAIN && process.env.API_KEY) {
+        try {
+          const res = await axios.get(`https://${process.env.SERVICE_DOMAIN}.microcms.io/api/v1/works?limit=200`, {
+            headers: {
+              'X-MICROCMS-API-KEY': process.env.API_KEY
+            }
+          })
+          res.data.contents.forEach((content) => {
+            generates.push({
               route: 'works/' + content.id,
             })
           })
-        })
+          return generates
+        } catch (e) {
+          // fallback to local data.json
+        }
+      }
+
+      try {
+        const defaultData = require('./store/data.json')
+        if (defaultData && Array.isArray(defaultData.projectData)) {
+          defaultData.projectData.forEach((content) => {
+            generates.push({
+              route: 'works/' + content.id,
+            })
+          })
+        }
+      } catch (e) {}
+
       return generates
     }
   }

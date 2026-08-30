@@ -70,7 +70,7 @@ export default {
     setTagName() {
       if (this.type === 'works') {
         return 'AppPageTransitionImage'
-      } else if (this.type === 'archive') {
+      } else if (this.type === 'archive' || this.type === 'resume') {
         return 'AppPageTransitionBg'
       } else {
         return ''
@@ -79,8 +79,10 @@ export default {
     setUrl() {
       if (this.type === 'works') {
         return `/works/${this.id}`
+      } else if (this.type === 'resume') {
+        return '/resume'
       } else if (this.type === 'archive') {
-        return '/archive'
+        return '/resume'
       } else {
         return ''
       }
@@ -93,7 +95,7 @@ export default {
       }
     },
     setColor() {
-      if (this.type === 'archive') {
+      if (this.type === 'archive' || this.type === 'resume') {
         return '#000000'
       } else {
         return ''

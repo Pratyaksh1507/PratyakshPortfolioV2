@@ -27,14 +27,14 @@
     </div>
     <div ref="OpenningName" class="openning-name">
       <span
-        v-for="char of name"
-        :key="char"
+        v-for="(char, idx) of name"
+        :key="idx"
         ref="OpenningNameBlock"
         class="openning-name-block"
         >{{ char }}</span
       >
     </div>
-    <div ref="OpenningPortfolio" class="openning-portfolio">PORTFORIO 2022</div>
+    <div ref="OpenningPortfolio" class="openning-portfolio">PORTFOLIO 2026</div>
     <div ref="OpenningCircleLine01" class="openning-circle-line-01"></div>
     <div ref="OpenningCircleLine02" class="openning-circle-line-02"></div>
     <div ref="OpenningCircle" class="openning-circle"></div>
@@ -46,7 +46,7 @@ export default {
   data: () => {
     return {
       index: 0,
-      name: ['H', 'I', 'S', 'A', 'M', 'I', 'K', 'U', 'R', 'I', 'T', 'A'],
+      name: ['P', 'R', 'A', 'T', 'Y', 'A', 'K', 'S', 'H', ' ', 'K', 'A', 'L', 'S', 'I'],
     }
   },
 
@@ -59,10 +59,10 @@ export default {
 
     // works詳細ページに直アクセスした場合を考慮して、そのページのインデックスを取得する
     const projectResponse = this.$store.getters.projectData
-    const index = projectResponse.findIndex((content) => content.id === this.$router.history.current.params.slug)
+    const index = Array.isArray(projectResponse) ? projectResponse.findIndex((content) => content.id === this.$router.history.current.params.slug) : -1
 
-    // 読み込み完了後
-    window.addEventListener('load', () => {
+    const startAnimation = () => {
+      if (!this.$refs.OpenningName) return
       this.$gsap.set(this.$refs.OpenningName, {
         opacity: 1,
       })
@@ -236,7 +236,7 @@ export default {
               if (this.$route.name === 'works-slug') {
                 this.$store.commit('image-transition/start', index)
               }
-              else if(this.$route.name === 'archive'){
+              else if(this.$route.name === 'archive' || this.$route.name === 'resume'){
                 this.$store.commit('bg-transition/start', '#000000')
               }
               else {
@@ -248,7 +248,7 @@ export default {
               if (this.$route.name === 'works-slug') {
                 this.$store.commit('image-transition/end')
               }
-              else if(this.$route.name === 'archive'){
+              else if(this.$route.name === 'archive' || this.$route.name === 'resume'){
                 this.$store.commit('bg-transition/end')
               }
               else {
@@ -266,7 +266,7 @@ export default {
           if (this.$route.name === 'works-slug') {
             this.$store.commit('image-transition/start', index)
           }
-          else if(this.$route.name === 'archive'){
+          else if(this.$route.name === 'archive' || this.$route.name === 'resume'){
             this.$store.commit('bg-transition/start', '#000000')
           }
           else {
@@ -278,7 +278,7 @@ export default {
           if (this.$route.name === 'works-slug') {
             this.$store.commit('image-transition/end')
           }
-          else if(this.$route.name === 'archive'){
+          else if(this.$route.name === 'archive' || this.$route.name === 'resume'){
             this.$store.commit('bg-transition/end')
           }
           else {
@@ -287,7 +287,13 @@ export default {
           this.$refs.Openning.remove()
         }, 900)
       }
-    })
+    }
+
+    if (document.readyState === 'complete') {
+      startAnimation()
+    } else {
+      window.addEventListener('load', startAnimation)
+    }
   },
 }
 </script>

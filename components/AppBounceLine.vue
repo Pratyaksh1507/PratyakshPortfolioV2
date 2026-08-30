@@ -83,17 +83,16 @@ export default {
     this.isFadeInAnimationActive = false
     this.isMouseLeaveBounceAnimationActive = false
 
-    // アニメーションさせない場合は基準位置にする
+    // Set baseline position if animation is disabled
     if (!this.pcAnimation && !this.spAnimation) this.path.y = this.baseLine
   },
 
   methods: {
     onMousemove(e) {
-      // SPデバイスかフェードインアニメーション中は処理を返す
-      // SVGに触れている時だけ実行
+      // Return during fade-in or if disabled on mobile
       if ((!this.spAnimation && this.$SITECONFIG.isMobile) || this.isFadeInAnimationActive || !(e.target === this.svg && !this.isMouseLeaveBounceAnimationActive)) return
       if (this.mouseLeaveBounceAnimation) this.mouseLeaveBounceAnimation.kill()
-      // Y軸の値をマウスの位置から吸着させてるように動かす
+      // Morph rubber-band curve towards cursor position
       this.mouseMoveBounceAnimation = this.$gsap.to(this.path, {
         duration: 0.3,
         ease: 'power1.out',
@@ -101,11 +100,11 @@ export default {
       })
     },
     onMouseLeave() {
-      // SPデバイスかフェードインアニメーション中は処理を返す
+      // Return during fade-in or if disabled on mobile
       if ((!this.spAnimation && this.$SITECONFIG.isMobile) || this.isFadeInAnimationActive) return
       if (this.mouseMoveBounceAnimation) this.mouseMoveBounceAnimation.kill()
       this.isMouseLeaveBounceAnimationActive = true
-      // Y軸の値をバウンスさせて元に戻す
+      // Elastic snap-back bounce animation
       this.mouseLeaveBounceAnimation = this.$gsap.to(this.path, {
         duration: 1.0,
         ease: 'elastic.out(1, 0.3)',
@@ -116,7 +115,7 @@ export default {
       }, 100)
     },
     fadeInAnimation() {
-      // propsの設定でアニメーションをさせない場合は処理を返す
+      // Return if animation is disabled by props
       if ((!this.spAnimation && this.$SITECONFIG.isMobile) || (!this.pcAnimation && this.$SITECONFIG.isPc)) return
 
       this.isFadeInAnimationActive = true

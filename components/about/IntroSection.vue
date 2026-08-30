@@ -17,50 +17,48 @@
               </span>
               <span class="pc-only">
                 <span class="intro-title-wrapper intro-title-wrapper-01">
-                  <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'HI, I WORK FULL REMOTE'" :sp-animation="false" />
+                  <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'HI, I AM A SOFTWARE DEVELOPER'" :sp-animation="false" />
                 </span>
                 <span class="intro-title-wrapper intro-title-wrapper-02">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.12" :rotate="$BASEROTATE.left" :text="'DURING THE WEEK, BUT I ALSO DO CREA'" :sp-animation="false" />
+                  <AppTextAnimation :state="isTextSegmentState" :start="0.12" :rotate="$BASEROTATE.left" :text="'BASED IN INDIA. BACKGROUND IN ELECTRONICS &'" :sp-animation="false" />
                 </span>
                 <span class="intro-title-wrapper intro-title-wrapper-03">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" :text="'TIVE CODING AS A HOBBY ON MY DAYS O'" :sp-animation="false" />
+                  <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" :text="'COMMUNICATION FROM NIT SRINAGAR. I BUILT A'" :sp-animation="false" />
                 </span>
                 <span class="intro-title-wrapper intro-title-wrapper-04">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'FF. OTHER THAN THAT, I PLAY ANIME AND'" :sp-animation="false" />
+                  <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'STRONG BASE IN FRONTEND, AND AM EXPANDING'" :sp-animation="false" />
                 </span>
                 <span class="intro-title-wrapper intro-title-wrapper-05">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.48" :rotate="$BASEROTATE.right" :text="'GAMES. MY SPECIAL SKILL IS GO.'" :sp-animation="false" />
+                  <AppTextAnimation :state="isTextSegmentState" :start="0.48" :rotate="$BASEROTATE.right" :text="'INTO BACKEND ENGINEERING AND EXPLORING AI.'" :sp-animation="false" />
                 </span>
               </span>
               <span class="sp-only">
                 <span class="intro-title-wrapper intro-title-wrapper-sp-01">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0" :rotate="$BASEROTATE.right" :text="'HI, I WORK'" :pc-animation="false" />
+                  <AppTextAnimation :state="isTextSegmentState" :start="0" :rotate="$BASEROTATE.right" :text="'HI, I AM A'" :pc-animation="false" />
                 </span>
                 <span class="intro-title-wrapper intro-title-wrapper-sp-02">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.12" :rotate="$BASEROTATE.left" :text="'FULL REMOTE DURING'" :pc-animation="false" />
+                  <AppTextAnimation :state="isTextSegmentState" :start="0.12" :rotate="$BASEROTATE.left" :text="'SOFTWARE DEVELOPER'" :pc-animation="false" />
                 </span>
                 <span class="intro-title-wrapper intro-title-wrapper-sp-03">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" :text="'THE WEEK, BUT I ALSO'" :pc-animation="false" />
+                  <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" :text="'BASED IN INDIA.'" :pc-animation="false" />
                 </span>
                 <span class="intro-title-wrapper intro-title-wrapper-sp-04">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'DO CREATIVE CODING'" :pc-animation="false" />
+                  <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'ECE NIT SRINAGAR.'" :pc-animation="false" />
                 </span>
                 <span class="intro-title-wrapper intro-title-wrapper-sp-05">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.48" :rotate="$BASEROTATE.right" :text="'AS A HOBBY ON MY D'" :pc-animation="false"> </AppTextAnimation>
+                  <AppTextAnimation :state="isTextSegmentState" :start="0.48" :rotate="$BASEROTATE.right" :text="'FRONTEND, BACKEND'" :pc-animation="false"> </AppTextAnimation>
                 </span>
                 <span class="intro-title-wrapper intro-title-wrapper-sp-06">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.6" :rotate="$BASEROTATE.left" :text="'AYS OFF.'" :pc-animation="false" />
+                  <AppTextAnimation :state="isTextSegmentState" :start="0.6" :rotate="$BASEROTATE.left" :text="'& EXPLORING AI.'" :pc-animation="false" />
                 </span>
               </span>
             </h2>
             <p class="intro-note">
               <span class="pc-only">
-                THE REASON WHY I STARTED CREATIVE CODING WAS BECAUSE I SAW A GREAT WE SITE THAT USED CSSANIMATION AND WEBGL. THEIR WORK STILL LOOKS GREAT AND I WANTED TO CREATE SOMETHING LIKE THAT, SO
-                I STARTED CSSANIMATION. I COULDN'T WRITE JAVASCRIPT BACK THEN. NOW I'M STUDYING WEBGL HARD. I HOPE TO MEET THEM AND WORK WITH THEM ONE DAY!
+                I AM A SOFTWARE DEVELOPER WITH A BACKGROUND IN ELECTRONICS & COMMUNICATION ENGINEERING FROM NIT SRINAGAR. WITH A STRONG FOUNDATION IN FRONTEND DEVELOPMENT, I FOCUS ON BUILDING INTUITIVE, PRACTICAL WEB APPLICATIONS. I AM CURRENTLY EXPANDING MY SKILLS INTO BACKEND DEVELOPMENT AND EXPLORING GENERATIVE AI TECHNOLOGIES TO BUILD USEFUL, RELIABLE SOFTWARE.
               </span>
               <span class="sp-only">
-                THE REASON WHY I STARTED CREATIVE CODING WAS BECAUSE I SAW A GREAT WE SITE THAT USED CSSANIMATION AND WEBGL. THEIR WORK STILL LOOKS GREAT AND I WANTED TO CREATE SOMETHING LIKE THAT, I
-                HOPE TO MEET THEM AND WORK WITH THEM ONE DAY!
+                I AM A SOFTWARE DEVELOPER WITH A BACKGROUND IN ECE FROM NIT SRINAGAR. GROUNDED IN FRONTEND DEVELOPMENT, EXPANDING INTO BACKEND AND EXPLORING GENERATIVE AI TO BUILD PRACTICAL DIGITAL PRODUCTS.
               </span>
             </p>
           </div>

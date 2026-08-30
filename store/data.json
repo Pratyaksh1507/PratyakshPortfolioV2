@@ -1,0 +1,1174 @@
+{
+  "projectData": [
+    {
+      "id": "counsel-ai",
+      "createdAt": "2021-12-25T13:21:16.320Z",
+      "updatedAt": "2023-01-12T15:32:12.431Z",
+      "publishedAt": "2021-12-25T13:36:48.161Z",
+      "revisedAt": "2023-01-12T15:32:12.431Z",
+      "title": {
+        "fieldId": "title",
+        "full": "COUNSEL AI",
+        "short": "COUNSEL"
+      },
+      "desc": "AN AI WORKSPACE FOR LEGAL DOCUMENT ANALYSIS, INTERACTIVE PDF CHAT, AND AUTOMATED DRAFTING.",
+      "siteLink": "https://counsel-ai-kappa.vercel.app/",
+      "projectNum": {
+        "fieldId": "projectSectionNum",
+        "rotate": 8,
+        "xspeed": 0.11,
+        "yspeed": 0.21
+      },
+      "pickup": {
+        "fieldId": "pickup",
+        "pickupFlag": true,
+        "title": [
+          {
+            "fieldId": "textArray",
+            "text01": "COUNSEL AI IS AN",
+            "text02": "AI WORKSPACE FOR LEGAL",
+            "text03": "DOCUMENT ANALYSIS, PDF",
+            "text04": "CHAT & BRIEF DRAFTING",
+            "text05": "WITH SUPABASE PGVECTOR."
+          }
+        ],
+        "text": [
+          {
+            "fieldId": "textArray",
+            "text01": "COUNSEL AI INTEGRATES",
+            "text02": "NEXT.JS 16, OPENAI,",
+            "text03": "SUPABASE PGVECTOR,",
+            "text04": "AND THREE.JS INTO A",
+            "text05": "LEGAL AI WORKSPACE.",
+            "text06": ""
+          }
+        ],
+        "color01": "#3730a3",
+        "color02": "#818cf8"
+      },
+      "siteColor": {
+        "fieldId": "color",
+        "bodyContentsColor": "#4f46e5",
+        "allTextColor": "#1e1b4b",
+        "mvTextColor": "#ffffff",
+        "shadowColor": "#0f172a"
+      },
+      "hambergerMenuImg": {
+        "url": "/images/projects/counsel-ai/thumbnail.webp",
+        "height": 720,
+        "width": 720
+      },
+      "aboutImages": {
+        "fieldId": "aboutImages",
+        "img01": {
+          "url": "/images/projects/counsel-ai/about-01.webp",
+          "height": 820,
+          "width": 1120
+        },
+        "img02": {
+          "url": "/images/projects/counsel-ai/about-02.webp",
+          "height": 820,
+          "width": 1120
+        }
+      },
+      "heroImg": {
+        "fieldId": "heroImages",
+        "pc": {
+          "url": "/images/projects/counsel-ai/hero.webp",
+          "height": 1600,
+          "width": 2560
+        },
+        "sp": {
+          "url": "/images/projects/counsel-ai/hero-sp.webp",
+          "height": 1106,
+          "width": 750
+        }
+      },
+      "detailsMainTextPc": {
+        "fieldId": "textArray",
+        "text01": "COUNSEL AI IS AN AI",
+        "text02": "WORKSPACE FOR LEGAL DOCUMENT",
+        "text03": "ANALYSIS, INTERACTIVE PDF CHAT,",
+        "text04": "AND AUTOMATED BRIEF DRAFTING.",
+        "text05": ""
+      },
+      "detailsMainTextSp": {
+        "fieldId": "textArray",
+        "text01": "COUNSEL AI IS AN AI",
+        "text02": "WORKSPACE FOR LEGAL",
+        "text03": "DOCUMENT ANALYSIS AND",
+        "text04": "PDF CHAT WITH OPENAI.",
+        "text05": ""
+      },
+      "detailsMainDescPc": {
+        "fieldId": "textArray",
+        "text01": "BUILT WITH NEXT.JS 16 (APP ROUTER), REACT 19, OPENAI API, AND SUPABASE PGVECTOR TO ENABLE ",
+        "text02": "TEXT EXTRACTION, SEMANTIC SEARCH, AND AI-POWERED BRIEF DRAFTING."
+      },
+      "detailsMainDescSp": {
+        "fieldId": "textArray",
+        "text01": "BUILT WITH NEXT.JS 16, REACT 19,",
+        "text02": "OPENAI API, AND SUPABASE PGVECTOR",
+        "text03": "FOR LEGAL DOCUMENT ANALYSIS."
+      },
+      "client": "AI WORKSPACE & LEGAL TECH",
+      "freeArea": "COUNSEL AI IS A FULL-STACK LEGAL WORKSPACE BUILT WITH NEXT.JS 16, REACT 19, AND TYPESCRIPT. IT INTEGRATES OPENAI AND HUGGING FACE FOR CONTEXTUAL PDF CHAT, CLAUSE RISK EXTRACTION, AND CASE ARGUMENT DRAFTING. SUPABASE PROVIDES USER AUTHENTICATION, POSTGRESQL VECTOR EMBEDDINGS (PGVECTOR), AND SERVER-SIDE USAGE QUOTA TRACKING. AN INTERACTIVE THREE.JS ORBITAL SCENE AND PARTICLE BACKGROUND ARE EMBEDDED IN THE INTERFACE.",
+      "contentsImg": [
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/counsel-ai/content-01.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/counsel-ai/content-02.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/counsel-ai/content-03.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/counsel-ai/content-04.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/counsel-ai/content-05.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        }
+      ]
+    },
+    {
+      "id": "horizon-stay",
+      "createdAt": "2021-12-26T02:30:37.180Z",
+      "updatedAt": "2023-01-12T15:32:28.995Z",
+      "publishedAt": "2021-12-26T02:31:54.862Z",
+      "revisedAt": "2023-01-12T15:32:28.995Z",
+      "title": {
+        "fieldId": "title",
+        "full": "HORIZON STAY",
+        "short": "HORIZON"
+      },
+      "desc": "AN ALL-IN-ONE HOTEL OPERATIONS DASHBOARD FOR MANAGING BOOKINGS, CABINS, GUESTS, AND FINANCIAL ANALYTICS.",
+      "siteLink": "https://horizon-stay.vercel.app/",
+      "projectNum": {
+        "fieldId": "projectSectionNum",
+        "rotate": -7,
+        "xspeed": -0.05,
+        "yspeed": 0.23
+      },
+      "pickup": {
+        "fieldId": "pickup",
+        "pickupFlag": true,
+        "title": [
+          {
+            "fieldId": "textArray",
+            "text01": "HORIZON STAY IS AN",
+            "text02": "OPERATIONS DASHBOARD FOR",
+            "text03": "BOOKINGS, INVENTORY,",
+            "text04": "AND REVENUE ANALYTICS",
+            "text05": "POWERED BY SUPABASE."
+          }
+        ],
+        "text": [
+          {
+            "fieldId": "textArray",
+            "text01": "BUILT WITH REACT 18,",
+            "text02": "VITE, TANSTACK QUERY,",
+            "text03": "SUPABASE, AND RECHARTS",
+            "text04": "FOR HOTEL OPERATIONS.",
+            "text05": "",
+            "text06": ""
+          }
+        ],
+        "color01": "#047857",
+        "color02": "#34d399"
+      },
+      "siteColor": {
+        "fieldId": "color",
+        "bodyContentsColor": "#059669",
+        "allTextColor": "#064e3b",
+        "mvTextColor": "#ffffff",
+        "shadowColor": "#064e3b"
+      },
+      "hambergerMenuImg": {
+        "url": "/images/projects/horizon-stay/thumbnail.webp",
+        "height": 720,
+        "width": 720
+      },
+      "aboutImages": {
+        "fieldId": "aboutImages",
+        "img01": {
+          "url": "/images/projects/horizon-stay/about-01.webp",
+          "height": 820,
+          "width": 1120
+        },
+        "img02": {
+          "url": "/images/projects/horizon-stay/about-02.webp",
+          "height": 820,
+          "width": 1120
+        }
+      },
+      "heroImg": {
+        "fieldId": "heroImages",
+        "pc": {
+          "url": "/images/projects/horizon-stay/hero.webp",
+          "height": 1600,
+          "width": 2560
+        },
+        "sp": {
+          "url": "/images/projects/horizon-stay/hero-sp.webp",
+          "height": 1106,
+          "width": 750
+        }
+      },
+      "detailsMainTextPc": {
+        "fieldId": "textArray",
+        "text01": "HORIZON STAY IS AN",
+        "text02": "OPERATIONS DASHBOARD FOR",
+        "text03": "MANAGING BOOKINGS, CABINS,",
+        "text04": "AND REVENUE ANALYTICS.",
+        "text05": ""
+      },
+      "detailsMainTextSp": {
+        "fieldId": "textArray",
+        "text01": "HORIZON STAY IS AN",
+        "text02": "OPERATIONS DASHBOARD",
+        "text03": "FOR BOOKINGS, CABINS,",
+        "text04": "AND REVENUE ANALYTICS.",
+        "text05": ""
+      },
+      "detailsMainDescPc": {
+        "fieldId": "textArray",
+        "text01": "BUILT WITH REACT 18, VITE, TANSTACK QUERY, AND SUPABASE TO PROVIDE ",
+        "text02": "SERVER-STATE FETCHING, CACHING, PAGINATION, AND INTERACTIVE GEOGRAPHIC ANALYTICS."
+      },
+      "detailsMainDescSp": {
+        "fieldId": "textArray",
+        "text01": "BUILT WITH REACT 18, VITE,",
+        "text02": "TANSTACK QUERY, AND SUPABASE",
+        "text03": "FOR HOTEL MANAGEMENT."
+      },
+      "client": "MANAGEMENT DASHBOARD",
+      "freeArea": "HORIZON STAY IS A HOTEL OPERATIONS DASHBOARD BUILT WITH REACT 18, VITE, AND TAILWIND CSS V4. IT USES TANSTACK REACT QUERY FOR ASYNCHRONOUS SERVER-STATE SYNCHRONIZATION, QUERY CACHING, AND OPTIMISTIC UPDATES. CONNECTED TO A SUPABASE POSTGRESQL BACKEND FOR STAFF AUTHENTICATION, BOOKINGS MANAGEMENT, CABIN CRUD OPERATIONS WITH IMAGE STORAGE, AND GUEST CHECK-IN/OUT WORKFLOWS. FINANCIAL ANALYTICS AND GEOGRAPHIC CHARTS ARE POWERED BY RECHARTS AND VISX/D3-GEO.",
+      "contentsImg": [
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/horizon-stay/content-01.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/horizon-stay/content-02.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/horizon-stay/content-03.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/horizon-stay/content-04.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/horizon-stay/content-05.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        }
+      ]
+    },
+    {
+      "id": "artisan-cafe",
+      "createdAt": "2021-12-26T02:45:28.885Z",
+      "updatedAt": "2023-01-12T15:32:43.315Z",
+      "publishedAt": "2021-12-26T02:51:45.802Z",
+      "revisedAt": "2023-01-12T15:32:43.315Z",
+      "title": {
+        "fieldId": "title",
+        "full": "ARTISAN CAFE",
+        "short": "ARTISAN"
+      },
+      "desc": "A COMMERCIAL WEBSITE FOR A CAFE FEATURING DYNAMIC MENU FILTERING, CART MANAGEMENT, AND SUPABASE RESERVATIONS.",
+      "siteLink": "https://cafe-site-five.vercel.app/",
+      "projectNum": {
+        "fieldId": "projectSectionNum",
+        "rotate": -6,
+        "xspeed": 0.14,
+        "yspeed": 0.17
+      },
+      "pickup": {
+        "fieldId": "pickup",
+        "pickupFlag": true,
+        "title": [
+          {
+            "fieldId": "textArray",
+            "text01": "ARTISAN CAFE IS A",
+            "text02": "COMMERCIAL WEB PLATFORM",
+            "text03": "WITH DYNAMIC MENU, CART,",
+            "text04": "AND SUPABASE TABLE",
+            "text05": "RESERVATIONS."
+          }
+        ],
+        "text": [
+          {
+            "fieldId": "textArray",
+            "text01": "DEVELOPED WITH NEXT.JS 15,",
+            "text02": "REACT 19, TAILWIND,",
+            "text03": "SUPABASE DATABASE,",
+            "text04": "AND LENIS MOTION.",
+            "text05": "",
+            "text06": ""
+          }
+        ],
+        "color01": "#b45309",
+        "color02": "#fbbf24"
+      },
+      "siteColor": {
+        "fieldId": "color",
+        "bodyContentsColor": "#d97706",
+        "allTextColor": "#451a03",
+        "mvTextColor": "#ffffff",
+        "shadowColor": "#451a03"
+      },
+      "hambergerMenuImg": {
+        "url": "/images/projects/artisan-cafe/thumbnail.webp",
+        "height": 720,
+        "width": 720
+      },
+      "aboutImages": {
+        "fieldId": "aboutImages",
+        "img01": {
+          "url": "/images/projects/artisan-cafe/about-01.webp",
+          "height": 820,
+          "width": 1120
+        },
+        "img02": {
+          "url": "/images/projects/artisan-cafe/about-02.webp",
+          "height": 820,
+          "width": 1120
+        }
+      },
+      "heroImg": {
+        "fieldId": "heroImages",
+        "pc": {
+          "url": "/images/projects/artisan-cafe/hero.webp",
+          "height": 1600,
+          "width": 2560
+        },
+        "sp": {
+          "url": "/images/projects/artisan-cafe/hero-sp.webp",
+          "height": 1106,
+          "width": 750
+        }
+      },
+      "detailsMainTextPc": {
+        "fieldId": "textArray",
+        "text01": "ARTISAN CAFE IS A",
+        "text02": "COMMERCIAL WEBSITE WITH",
+        "text03": "DYNAMIC MENU FILTERING,",
+        "text04": "AND SUPABASE RESERVATIONS.",
+        "text05": ""
+      },
+      "detailsMainTextSp": {
+        "fieldId": "textArray",
+        "text01": "ARTISAN CAFE IS A",
+        "text02": "COMMERCIAL PLATFORM",
+        "text03": "WITH DYNAMIC MENU",
+        "text04": "AND RESERVATIONS.",
+        "text05": ""
+      },
+      "detailsMainDescPc": {
+        "fieldId": "textArray",
+        "text01": "BUILT WITH NEXT.JS 15 (APP ROUTER), REACT 19, TAILWIND CSS, AND SUPABASE TO DELIVER ",
+        "text02": "RESPONSIVE PRODUCT BROWSING AND INQUIRY HANDLING."
+      },
+      "detailsMainDescSp": {
+        "fieldId": "textArray",
+        "text01": "BUILT WITH NEXT.JS 15, REACT 19,",
+        "text02": "TAILWIND CSS, AND SUPABASE",
+        "text03": "FOR DINING RESERVATIONS."
+      },
+      "client": "COMMERCIAL WEB APPLICATION",
+      "freeArea": "ARTISAN CAFE IS A COMMERCIAL WEB APPLICATION DEVELOPED WITH NEXT.JS 15 (APP ROUTER), REACT 19, AND TAILWIND CSS V3. IT FEATURES AN INTERACTIVE MENU WITH DYNAMIC CATEGORY FILTERING, A RESPONSIVE CART DRAWER, AND AN OPERATING HOURS BADGE THAT CALCULATES STORE STATUS FROM CURRENT TIME. INTEGRATED WITH SUPABASE DATABASE FOR TABLE RESERVATIONS, CONTACT INQUIRIES, AND NEWSLETTER SUBSCRIPTIONS, WITH LENIS PROVIDING SMOOTH PAGE SCROLLING.",
+      "contentsImg": [
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/artisan-cafe/content-01.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/artisan-cafe/content-02.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/artisan-cafe/content-03.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/artisan-cafe/content-04.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        }
+      ]
+    },
+    {
+      "id": "portfolio-v1",
+      "createdAt": "2021-12-26T03:03:06.333Z",
+      "updatedAt": "2023-01-12T15:33:30.454Z",
+      "publishedAt": "2021-12-26T03:08:12.932Z",
+      "revisedAt": "2023-01-12T15:33:30.454Z",
+      "title": {
+        "fieldId": "title",
+        "full": "PORTFOLIO V1",
+        "short": "PORTFOLIO"
+      },
+      "desc": "A PREVIOUS VERSION OF MY DEVELOPER PORTFOLIO BUILT WITH REACT 19, VITE, TAILWIND CSS, AND FRAMER MOTION.",
+      "siteLink": "https://my-portfolio-delta-three-93.vercel.app/",
+      "projectNum": {
+        "fieldId": "projectSectionNum",
+        "rotate": -9,
+        "xspeed": -0.08,
+        "yspeed": 0.25
+      },
+      "pickup": {
+        "fieldId": "pickup",
+        "pickupFlag": false,
+        "title": [],
+        "text": []
+      },
+      "siteColor": {
+        "fieldId": "color",
+        "bodyContentsColor": "#0f172a",
+        "allTextColor": "#0284c7",
+        "mvTextColor": "#ffffff",
+        "shadowColor": "#0f172a"
+      },
+      "hambergerMenuImg": {
+        "url": "/images/projects/portfolio-v1/thumbnail.webp",
+        "height": 720,
+        "width": 720
+      },
+      "aboutImages": {
+        "fieldId": "aboutImages",
+        "img01": {
+          "url": "/images/projects/portfolio-v1/about-01.webp",
+          "height": 820,
+          "width": 1120
+        },
+        "img02": {
+          "url": "/images/projects/portfolio-v1/about-02.webp",
+          "height": 820,
+          "width": 1120
+        }
+      },
+      "heroImg": {
+        "fieldId": "heroImages",
+        "pc": {
+          "url": "/images/projects/portfolio-v1/hero.webp",
+          "height": 1600,
+          "width": 2560
+        },
+        "sp": {
+          "url": "/images/projects/portfolio-v1/hero-sp.webp",
+          "height": 1106,
+          "width": 750
+        }
+      },
+      "detailsMainTextPc": {
+        "fieldId": "textArray",
+        "text01": "PORTFOLIO V1 IS A",
+        "text02": "PREVIOUS DEVELOPER PORTFOLIO",
+        "text03": "EXPLORING CUSTOM CURSORS,",
+        "text04": "PARTICLES, AND MOTION.",
+        "text05": ""
+      },
+      "detailsMainTextSp": {
+        "fieldId": "textArray",
+        "text01": "PORTFOLIO V1 IS A",
+        "text02": "PREVIOUS PORTFOLIO",
+        "text03": "EXPLORING CURSORS",
+        "text04": "AND CANVAS PARTICLES.",
+        "text05": ""
+      },
+      "detailsMainDescPc": {
+        "fieldId": "textArray",
+        "text01": "A PREVIOUS VERSION OF MY PERSONAL DEVELOPER PORTFOLIO BUILT TO EXPLORE ",
+        "text02": "MODERN FRONTEND INTERACTIONS, ANIMATED INTERFACES, CUSTOM CURSOR EFFECTS, CANVAS PARTICLES, AND SMOOTH SCROLLING."
+      },
+      "detailsMainDescSp": {
+        "fieldId": "textArray",
+        "text01": "BUILT WITH REACT 19, VITE,",
+        "text02": "TAILWIND CSS, AND FRAMER MOTION",
+        "text03": "FOR INTERACTIVE UI."
+      },
+      "client": "FRONTEND & INTERACTION DESIGN",
+      "freeArea": "PORTFOLIO V1 IS A PREVIOUS VERSION OF MY PERSONAL DEVELOPER PORTFOLIO BUILT TO EXPLORE MODERN FRONTEND INTERACTIONS, ANIMATED INTERFACES, CUSTOM CURSOR EFFECTS, CANVAS PARTICLES, AND SMOOTH SCROLLING. DEVELOPED WITH REACT 19, VITE, AND TAILWIND CSS V4, WITH EMAILJS PROVIDING CLIENT-SIDE CONTACT FORM HANDLING WITHOUT A BACKEND SERVER.",
+      "contentsImg": [
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/portfolio-v1/content-01.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/portfolio-v1/content-02.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/portfolio-v1/content-03.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/portfolio-v1/content-04.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        }
+      ]
+    }
+  ],
+  "contactData": [
+    {
+      "id": "pratyakshkalsi",
+      "createdAt": "2022-01-01T14:00:00.000Z",
+      "updatedAt": "2026-01-01T14:00:00.000Z",
+      "publishedAt": "2022-01-01T14:00:00.000Z",
+      "revisedAt": "2026-01-01T14:00:00.000Z",
+      "list01": {
+        "fieldId": "textlink",
+        "text": "GITHUB @PRATYAKSH1507",
+        "link": "https://github.com/Pratyaksh1507"
+      },
+      "list02": {
+        "fieldId": "textlink",
+        "text": "LINKEDIN @PRATYAKSHKALSI",
+        "link": "https://linkedin.com/in/pratyakshkalsi"
+      },
+      "list03": {
+        "fieldId": "textlink",
+        "text": "TWITTER @PRATYAKSH_KALSI",
+        "link": "https://twitter.com/pratyaksh_kalsi"
+      },
+      "mainTitle": {
+        "fieldId": "contact-main",
+        "title": "PRTYKSH",
+        "subtitle": "(CONTACT)",
+        "link": "mailto:kalsi.pratyaksh@gmail.com"
+      }
+    },
+    {
+      "id": "pratyakshkalsi-design",
+      "createdAt": "2022-01-01T14:00:00.000Z",
+      "updatedAt": "2026-01-01T14:00:00.000Z",
+      "publishedAt": "2022-01-01T14:00:00.000Z",
+      "revisedAt": "2026-01-01T14:00:00.000Z",
+      "list01": {
+        "fieldId": "textlink",
+        "text": "PORTFOLIO @PRATYAKSHKALSI.COM",
+        "link": "https://pratyakshkalsi.com"
+      },
+      "list02": {
+        "fieldId": "textlink",
+        "text": "GITHUB @PRATYAKSH1507",
+        "link": "https://github.com/Pratyaksh1507"
+      },
+      "list03": {
+        "fieldId": "textlink",
+        "text": "EMAIL @PRATYAKSHKALSI",
+        "link": "mailto:kalsi.pratyaksh@gmail.com"
+      },
+      "mainTitle": {
+        "fieldId": "contact-main",
+        "title": "PRTYKSH",
+        "subtitle": "(CONNECT)",
+        "link": "https://pratyakshkalsi.com"
+      }
+    }
+  ],
+  "pickupData": [
+    {
+      "id": "counsel-ai",
+      "createdAt": "2021-12-25T13:21:16.320Z",
+      "updatedAt": "2023-01-12T15:32:12.431Z",
+      "publishedAt": "2021-12-25T13:36:48.161Z",
+      "revisedAt": "2023-01-12T15:32:12.431Z",
+      "title": {
+        "fieldId": "title",
+        "full": "COUNSEL AI",
+        "short": "COUNSEL"
+      },
+      "desc": "AN AI WORKSPACE FOR LEGAL DOCUMENT ANALYSIS, INTERACTIVE PDF CHAT, AND AUTOMATED DRAFTING.",
+      "siteLink": "https://counsel-ai-kappa.vercel.app/",
+      "projectNum": {
+        "fieldId": "projectSectionNum",
+        "rotate": 8,
+        "xspeed": 0.11,
+        "yspeed": 0.21
+      },
+      "pickup": {
+        "fieldId": "pickup",
+        "pickupFlag": true,
+        "title": [
+          {
+            "fieldId": "textArray",
+            "text01": "COUNSEL AI IS AN",
+            "text02": "AI WORKSPACE FOR LEGAL",
+            "text03": "DOCUMENT ANALYSIS, PDF",
+            "text04": "CHAT & BRIEF DRAFTING",
+            "text05": "WITH SUPABASE PGVECTOR."
+          }
+        ],
+        "text": [
+          {
+            "fieldId": "textArray",
+            "text01": "COUNSEL AI INTEGRATES",
+            "text02": "NEXT.JS 16, OPENAI,",
+            "text03": "SUPABASE PGVECTOR,",
+            "text04": "AND THREE.JS INTO A",
+            "text05": "LEGAL AI WORKSPACE.",
+            "text06": ""
+          }
+        ],
+        "color01": "#3730a3",
+        "color02": "#818cf8"
+      },
+      "siteColor": {
+        "fieldId": "color",
+        "bodyContentsColor": "#4f46e5",
+        "allTextColor": "#1e1b4b",
+        "mvTextColor": "#ffffff",
+        "shadowColor": "#0f172a"
+      },
+      "hambergerMenuImg": {
+        "url": "/images/projects/counsel-ai/thumbnail.webp",
+        "height": 720,
+        "width": 720
+      },
+      "aboutImages": {
+        "fieldId": "aboutImages",
+        "img01": {
+          "url": "/images/projects/counsel-ai/about-01.webp",
+          "height": 820,
+          "width": 1120
+        },
+        "img02": {
+          "url": "/images/projects/counsel-ai/about-02.webp",
+          "height": 820,
+          "width": 1120
+        }
+      },
+      "heroImg": {
+        "fieldId": "heroImages",
+        "pc": {
+          "url": "/images/projects/counsel-ai/hero.webp",
+          "height": 1600,
+          "width": 2560
+        },
+        "sp": {
+          "url": "/images/projects/counsel-ai/hero-sp.webp",
+          "height": 1106,
+          "width": 750
+        }
+      },
+      "detailsMainTextPc": {
+        "fieldId": "textArray",
+        "text01": "COUNSEL AI IS AN AI",
+        "text02": "WORKSPACE FOR LEGAL DOCUMENT",
+        "text03": "ANALYSIS, INTERACTIVE PDF CHAT,",
+        "text04": "AND AUTOMATED BRIEF DRAFTING.",
+        "text05": ""
+      },
+      "detailsMainTextSp": {
+        "fieldId": "textArray",
+        "text01": "COUNSEL AI IS AN AI",
+        "text02": "WORKSPACE FOR LEGAL",
+        "text03": "DOCUMENT ANALYSIS AND",
+        "text04": "PDF CHAT WITH OPENAI.",
+        "text05": ""
+      },
+      "detailsMainDescPc": {
+        "fieldId": "textArray",
+        "text01": "BUILT WITH NEXT.JS 16 (APP ROUTER), REACT 19, OPENAI API, AND SUPABASE PGVECTOR TO ENABLE ",
+        "text02": "TEXT EXTRACTION, SEMANTIC SEARCH, AND AI-POWERED BRIEF DRAFTING."
+      },
+      "detailsMainDescSp": {
+        "fieldId": "textArray",
+        "text01": "BUILT WITH NEXT.JS 16, REACT 19,",
+        "text02": "OPENAI API, AND SUPABASE PGVECTOR",
+        "text03": "FOR LEGAL DOCUMENT ANALYSIS."
+      },
+      "client": "AI WORKSPACE & LEGAL TECH",
+      "freeArea": "COUNSEL AI IS A FULL-STACK LEGAL WORKSPACE BUILT WITH NEXT.JS 16, REACT 19, AND TYPESCRIPT. IT INTEGRATES OPENAI AND HUGGING FACE FOR CONTEXTUAL PDF CHAT, CLAUSE RISK EXTRACTION, AND CASE ARGUMENT DRAFTING. SUPABASE PROVIDES USER AUTHENTICATION, POSTGRESQL VECTOR EMBEDDINGS (PGVECTOR), AND SERVER-SIDE USAGE QUOTA TRACKING. AN INTERACTIVE THREE.JS ORBITAL SCENE AND PARTICLE BACKGROUND ARE EMBEDDED IN THE INTERFACE.",
+      "contentsImg": [
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/counsel-ai/content-01.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/counsel-ai/content-02.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/counsel-ai/content-03.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/counsel-ai/content-04.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/counsel-ai/content-05.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        }
+      ]
+    },
+    {
+      "id": "horizon-stay",
+      "createdAt": "2021-12-26T02:30:37.180Z",
+      "updatedAt": "2023-01-12T15:32:28.995Z",
+      "publishedAt": "2021-12-26T02:31:54.862Z",
+      "revisedAt": "2023-01-12T15:32:28.995Z",
+      "title": {
+        "fieldId": "title",
+        "full": "HORIZON STAY",
+        "short": "HORIZON"
+      },
+      "desc": "AN ALL-IN-ONE HOTEL OPERATIONS DASHBOARD FOR MANAGING BOOKINGS, CABINS, GUESTS, AND FINANCIAL ANALYTICS.",
+      "siteLink": "https://horizon-stay.vercel.app/",
+      "projectNum": {
+        "fieldId": "projectSectionNum",
+        "rotate": -7,
+        "xspeed": -0.05,
+        "yspeed": 0.23
+      },
+      "pickup": {
+        "fieldId": "pickup",
+        "pickupFlag": true,
+        "title": [
+          {
+            "fieldId": "textArray",
+            "text01": "HORIZON STAY IS AN",
+            "text02": "OPERATIONS DASHBOARD FOR",
+            "text03": "BOOKINGS, INVENTORY,",
+            "text04": "AND REVENUE ANALYTICS",
+            "text05": "POWERED BY SUPABASE."
+          }
+        ],
+        "text": [
+          {
+            "fieldId": "textArray",
+            "text01": "BUILT WITH REACT 18,",
+            "text02": "VITE, TANSTACK QUERY,",
+            "text03": "SUPABASE, AND RECHARTS",
+            "text04": "FOR HOTEL OPERATIONS.",
+            "text05": "",
+            "text06": ""
+          }
+        ],
+        "color01": "#047857",
+        "color02": "#34d399"
+      },
+      "siteColor": {
+        "fieldId": "color",
+        "bodyContentsColor": "#059669",
+        "allTextColor": "#064e3b",
+        "mvTextColor": "#ffffff",
+        "shadowColor": "#064e3b"
+      },
+      "hambergerMenuImg": {
+        "url": "/images/projects/horizon-stay/thumbnail.webp",
+        "height": 720,
+        "width": 720
+      },
+      "aboutImages": {
+        "fieldId": "aboutImages",
+        "img01": {
+          "url": "/images/projects/horizon-stay/about-01.webp",
+          "height": 820,
+          "width": 1120
+        },
+        "img02": {
+          "url": "/images/projects/horizon-stay/about-02.webp",
+          "height": 820,
+          "width": 1120
+        }
+      },
+      "heroImg": {
+        "fieldId": "heroImages",
+        "pc": {
+          "url": "/images/projects/horizon-stay/hero.webp",
+          "height": 1600,
+          "width": 2560
+        },
+        "sp": {
+          "url": "/images/projects/horizon-stay/hero-sp.webp",
+          "height": 1106,
+          "width": 750
+        }
+      },
+      "detailsMainTextPc": {
+        "fieldId": "textArray",
+        "text01": "HORIZON STAY IS AN",
+        "text02": "OPERATIONS DASHBOARD FOR",
+        "text03": "MANAGING BOOKINGS, CABINS,",
+        "text04": "AND REVENUE ANALYTICS.",
+        "text05": ""
+      },
+      "detailsMainTextSp": {
+        "fieldId": "textArray",
+        "text01": "HORIZON STAY IS AN",
+        "text02": "OPERATIONS DASHBOARD",
+        "text03": "FOR BOOKINGS, CABINS,",
+        "text04": "AND REVENUE ANALYTICS.",
+        "text05": ""
+      },
+      "detailsMainDescPc": {
+        "fieldId": "textArray",
+        "text01": "BUILT WITH REACT 18, VITE, TANSTACK QUERY, AND SUPABASE TO PROVIDE ",
+        "text02": "SERVER-STATE FETCHING, CACHING, PAGINATION, AND INTERACTIVE GEOGRAPHIC ANALYTICS."
+      },
+      "detailsMainDescSp": {
+        "fieldId": "textArray",
+        "text01": "BUILT WITH REACT 18, VITE,",
+        "text02": "TANSTACK QUERY, AND SUPABASE",
+        "text03": "FOR HOTEL MANAGEMENT."
+      },
+      "client": "MANAGEMENT DASHBOARD",
+      "freeArea": "HORIZON STAY IS A HOTEL OPERATIONS DASHBOARD BUILT WITH REACT 18, VITE, AND TAILWIND CSS V4. IT USES TANSTACK REACT QUERY FOR ASYNCHRONOUS SERVER-STATE SYNCHRONIZATION, QUERY CACHING, AND OPTIMISTIC UPDATES. CONNECTED TO A SUPABASE POSTGRESQL BACKEND FOR STAFF AUTHENTICATION, BOOKINGS MANAGEMENT, CABIN CRUD OPERATIONS WITH IMAGE STORAGE, AND GUEST CHECK-IN/OUT WORKFLOWS. FINANCIAL ANALYTICS AND GEOGRAPHIC CHARTS ARE POWERED BY RECHARTS AND VISX/D3-GEO.",
+      "contentsImg": [
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/horizon-stay/content-01.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/horizon-stay/content-02.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/horizon-stay/content-03.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/horizon-stay/content-04.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/horizon-stay/content-05.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        }
+      ]
+    },
+    {
+      "id": "artisan-cafe",
+      "createdAt": "2021-12-26T02:45:28.885Z",
+      "updatedAt": "2023-01-12T15:32:43.315Z",
+      "publishedAt": "2021-12-26T02:51:45.802Z",
+      "revisedAt": "2023-01-12T15:32:43.315Z",
+      "title": {
+        "fieldId": "title",
+        "full": "ARTISAN CAFE",
+        "short": "ARTISAN"
+      },
+      "desc": "A COMMERCIAL WEBSITE FOR A CAFE FEATURING DYNAMIC MENU FILTERING, CART MANAGEMENT, AND SUPABASE RESERVATIONS.",
+      "siteLink": "https://cafe-site-five.vercel.app/",
+      "projectNum": {
+        "fieldId": "projectSectionNum",
+        "rotate": -6,
+        "xspeed": 0.14,
+        "yspeed": 0.17
+      },
+      "pickup": {
+        "fieldId": "pickup",
+        "pickupFlag": true,
+        "title": [
+          {
+            "fieldId": "textArray",
+            "text01": "ARTISAN CAFE IS A",
+            "text02": "COMMERCIAL WEB PLATFORM",
+            "text03": "WITH DYNAMIC MENU, CART,",
+            "text04": "AND SUPABASE TABLE",
+            "text05": "RESERVATIONS."
+          }
+        ],
+        "text": [
+          {
+            "fieldId": "textArray",
+            "text01": "DEVELOPED WITH NEXT.JS 15,",
+            "text02": "REACT 19, TAILWIND,",
+            "text03": "SUPABASE DATABASE,",
+            "text04": "AND LENIS MOTION.",
+            "text05": "",
+            "text06": ""
+          }
+        ],
+        "color01": "#b45309",
+        "color02": "#fbbf24"
+      },
+      "siteColor": {
+        "fieldId": "color",
+        "bodyContentsColor": "#d97706",
+        "allTextColor": "#451a03",
+        "mvTextColor": "#ffffff",
+        "shadowColor": "#451a03"
+      },
+      "hambergerMenuImg": {
+        "url": "/images/projects/artisan-cafe/thumbnail.webp",
+        "height": 720,
+        "width": 720
+      },
+      "aboutImages": {
+        "fieldId": "aboutImages",
+        "img01": {
+          "url": "/images/projects/artisan-cafe/about-01.webp",
+          "height": 820,
+          "width": 1120
+        },
+        "img02": {
+          "url": "/images/projects/artisan-cafe/about-02.webp",
+          "height": 820,
+          "width": 1120
+        }
+      },
+      "heroImg": {
+        "fieldId": "heroImages",
+        "pc": {
+          "url": "/images/projects/artisan-cafe/hero.webp",
+          "height": 1600,
+          "width": 2560
+        },
+        "sp": {
+          "url": "/images/projects/artisan-cafe/hero-sp.webp",
+          "height": 1106,
+          "width": 750
+        }
+      },
+      "detailsMainTextPc": {
+        "fieldId": "textArray",
+        "text01": "ARTISAN CAFE IS A",
+        "text02": "COMMERCIAL WEBSITE WITH",
+        "text03": "DYNAMIC MENU FILTERING,",
+        "text04": "AND SUPABASE RESERVATIONS.",
+        "text05": ""
+      },
+      "detailsMainTextSp": {
+        "fieldId": "textArray",
+        "text01": "ARTISAN CAFE IS A",
+        "text02": "COMMERCIAL PLATFORM",
+        "text03": "WITH DYNAMIC MENU",
+        "text04": "AND RESERVATIONS.",
+        "text05": ""
+      },
+      "detailsMainDescPc": {
+        "fieldId": "textArray",
+        "text01": "BUILT WITH NEXT.JS 15 (APP ROUTER), REACT 19, TAILWIND CSS, AND SUPABASE TO DELIVER ",
+        "text02": "RESPONSIVE PRODUCT BROWSING AND INQUIRY HANDLING."
+      },
+      "detailsMainDescSp": {
+        "fieldId": "textArray",
+        "text01": "BUILT WITH NEXT.JS 15, REACT 19,",
+        "text02": "TAILWIND CSS, AND SUPABASE",
+        "text03": "FOR DINING RESERVATIONS."
+      },
+      "client": "COMMERCIAL WEB APPLICATION",
+      "freeArea": "ARTISAN CAFE IS A COMMERCIAL WEB APPLICATION DEVELOPED WITH NEXT.JS 15 (APP ROUTER), REACT 19, AND TAILWIND CSS V3. IT FEATURES AN INTERACTIVE MENU WITH DYNAMIC CATEGORY FILTERING, A RESPONSIVE CART DRAWER, AND AN OPERATING HOURS BADGE THAT CALCULATES STORE STATUS FROM CURRENT TIME. INTEGRATED WITH SUPABASE DATABASE FOR TABLE RESERVATIONS, CONTACT INQUIRIES, AND NEWSLETTER SUBSCRIPTIONS, WITH LENIS PROVIDING SMOOTH PAGE SCROLLING.",
+      "contentsImg": [
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/artisan-cafe/content-01.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/artisan-cafe/content-02.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/artisan-cafe/content-03.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        },
+        {
+          "fieldId": "default",
+          "object": {
+            "url": "/images/projects/artisan-cafe/content-04.webp",
+            "height": 1225,
+            "width": 2000
+          }
+        }
+      ]
+    }
+  ],
+  "experienceData": [
+    {
+      "id": "exp-01",
+      "role": "FREELANCE WEB DEVELOPER",
+      "shortRole": "FREELANCE DEV",
+      "company": "SELF EMPLOYED",
+      "type": "FREELANCE / CONTRACT",
+      "period": "MAY 2026 — PRESENT",
+      "date": "MAY 2026 — PRESENT",
+      "location": "REMOTE / INDIA",
+      "skills": ["NEXT.JS", "REACT", "TYPESCRIPT", "TAILWIND CSS", "THREE.JS", "GSAP"],
+      "description": "Designing and engineering responsive, high-performance web applications and interactive creative digital experiences for global clients.",
+      "badge": "FREELANCE",
+      "modifier": "exp-current"
+    },
+    {
+      "id": "exp-02",
+      "role": "FRONTEND DEVELOPER",
+      "shortRole": "FRONTEND DEV",
+      "company": "SFORGER",
+      "type": "PART-TIME",
+      "period": "APR 2026 — PRESENT",
+      "date": "APR 2026 — PRESENT",
+      "location": "REMOTE",
+      "skills": ["REACT", "JAVASCRIPT", "UI/UX", "STATE MANAGEMENT", "CSS/SCSS", "REST APIS"],
+      "description": "Building modular frontend components, architecting client-side logic, and ensuring seamless responsive user experiences.",
+      "badge": "SFORGER",
+      "modifier": "exp-frontend"
+    },
+    {
+      "id": "exp-03",
+      "role": "FRONTEND DEVELOPER INTERN",
+      "shortRole": "FRONTEND INTERN",
+      "company": "FLICKERLINK TECHNOLOGIES (OPC) PVT LTD",
+      "type": "INTERNSHIP",
+      "period": "NOV 2025 — APR 2026",
+      "date": "NOV 2025 — APR 2026",
+      "location": "INDIA",
+      "skills": ["REACT", "JAVASCRIPT (ES6+)", "HTML5/CSS3", "GIT", "RESPONSIVE UI", "API INTEGRATION"],
+      "description": "Contributed to frontend product development, integrated RESTful APIs, resolved cross-browser compatibility issues, and elevated UI performance.",
+      "badge": "INTERN",
+      "modifier": "exp-intern"
+    },
+    {
+      "id": "exp-04",
+      "role": "B.TECH IN ECE",
+      "shortRole": "B.TECH ECE",
+      "company": "NIT SRINAGAR (NATIONAL INSTITUTE OF TECHNOLOGY)",
+      "type": "EDUCATION & ENGINEERING",
+      "period": "2020 — 2024",
+      "date": "2020 — 2024",
+      "location": "SRINAGAR, INDIA",
+      "skills": ["ELECTRONICS & COMM", "DATA STRUCTURES", "ALGORITHMS", "SIGNAL PROCESSING", "COMPUTING"],
+      "description": "Graduated in Electronics & Communication Engineering from NIT Srinagar with strong grounding in computational logic, circuits, and problem-solving.",
+      "badge": "NIT",
+      "modifier": "exp-edu"
+    }
+  ],
+  "experienceSummary": {
+    "years": "FREELANCE & INDUSTRY",
+    "focus": "FRONTEND & WEB DEV",
+    "education": "NIT SRINAGAR (2020-2024)"
+  }
+}
