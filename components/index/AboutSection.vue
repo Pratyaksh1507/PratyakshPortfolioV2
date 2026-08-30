@@ -31,7 +31,33 @@
               </span>
             </span>
             <span class="sp-only">
-              <span class="about-title-wrapper-sp about-title-wrapper-01-sp">WITH A STRONG BASE IN</span>FRONTEND DEVELOPMENT,<br />I FOCUS ON BUILDING MODERN<br />WEB PRODUCTS, EXPANDING<br />INTO BACKEND ENGINEERING,<br />& EXPLORING AI TO CREATE<br />RELIABLE, PRACTICAL<br />DIGITAL EXPERIENCES.
+              <span class="about-title-wrapper-sp about-title-wrapper-01-sp">
+                <AppTextAnimation :state="isTextSegmentState" :start="0" :rotate="$BASEROTATE.right" :text="'WITH A STRONG BASE IN'" :pc-animation="false" />
+              </span>
+              <span class="about-title-wrapper-sp about-title-wrapper-02-sp">
+                <AppTextAnimation :state="isTextSegmentState" :start="0.12" :rotate="$BASEROTATE.left" :text="'FRONTEND DEVELOPMENT,'" :pc-animation="false" />
+              </span>
+              <span class="about-title-wrapper-sp about-title-wrapper-03-sp">
+                <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" :text="'I FOCUS ON BUILDING'" :pc-animation="false" />
+              </span>
+              <span class="about-title-wrapper-sp about-title-wrapper-04-sp">
+                <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'MODERN WEB PRODUCTS,'" :pc-animation="false" />
+              </span>
+              <span class="about-title-wrapper-sp about-title-wrapper-05-sp">
+                <AppTextAnimation :state="isTextSegmentState" :start="0.48" :rotate="$BASEROTATE.right" :text="'EXPANDING INTO BACKEND'" :pc-animation="false" />
+              </span>
+              <span class="about-title-wrapper-sp about-title-wrapper-06-sp">
+                <AppTextAnimation :state="isTextSegmentState" :start="0.6" :rotate="$BASEROTATE.left" :text="'ENGINEERING, & EXPLORING'" :pc-animation="false" />
+              </span>
+              <span class="about-title-wrapper-sp about-title-wrapper-07-sp">
+                <AppTextAnimation :state="isTextSegmentState" :start="0.72" :rotate="$BASEROTATE.right" :text="'AI TO CREATE RELIABLE,'" :pc-animation="false" />
+              </span>
+              <span class="about-title-wrapper-sp about-title-wrapper-08-sp">
+                <AppTextAnimation :state="isTextSegmentState" :start="0.84" :rotate="$BASEROTATE.left" :text="'PRACTICAL DIGITAL'" :pc-animation="false" />
+              </span>
+              <span class="about-title-wrapper-sp about-title-wrapper-09-sp">
+                <AppTextAnimation :state="isTextSegmentState" :start="0.96" :rotate="$BASEROTATE.right" :text="'EXPERIENCES.'" :pc-animation="false" />
+              </span>
             </span>
             <span class="pc-only">
               <AppBounceLine :state="isTextUnderlineState" :start="0.6" :width="1000" :origin="'left'" :sp-animation="false" :modifier="'index-about'" />
@@ -171,8 +197,13 @@ export default {
   text-align: right;
 }
 
-.about-title-wrapper-01-sp {
+.about-title-wrapper-sp {
   display: block;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.about-title-wrapper-01-sp {
   text-align: right;
 }
 
@@ -194,20 +225,21 @@ export default {
   }
 
   @include sp() {
-    width: calc(270px + #{vw_sp(20)});
-    margin: 0 0 0 auto;
-    padding: 0 vw_sp(20);
-    font-size: 10px;
-    line-height: 1.3;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    line-height: 1.4;
+    text-align: left;
   }
 }
 
 .about-text-underline {
   position: absolute;
-  bottom: -34px;
-  right: vw_sp(20);
+  bottom: -20px;
+  left: 0;
   background-color: $darkBlue;
-  width: calc(100% - #{vw_sp(40)});
+  width: 100%;
   height: 1px;
 }
 </style>
