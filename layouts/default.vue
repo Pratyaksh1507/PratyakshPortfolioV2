@@ -40,8 +40,6 @@
     <!--canvas-->
     <div ref="CanvasFix" class="canvas-fix">
       <div ref="CanvasFixContents" class="canavs-fix-contents">
-        <!--metaball-->
-        <div ref="Webgl" class="webgl"></div>
         <!--particle-->
         <div class="particle"><canvas ref="Particle"></canvas></div>
       </div>
@@ -66,10 +64,7 @@
 
 <script>
 import Particle from '../components/canvas/index/pickup/particle'
-import Mesh from '../components/canvas/index/pickup/metaball'
-import Stage from '../components/canvas/stage'
 import { preEvent } from '../assets/js/preEvent'
-import { metaballSceneList } from '../assets/js/metaball'
 
 export default {
   data: () => {
@@ -140,143 +135,119 @@ export default {
       // アニメーション終わり
       else {
         this.onTransitionEnd()
-        this.$gsap.set(this.$refs.LayoutsNormalTransitionColorBg, {
+        this.$gsap.to(this.$refs.LayoutsNormalTransitionColorBg, {
+          duration: this.$SITECONFIG.baseDuration * 0.2,
           opacity: 0,
         })
       }
     },
 
     /**
-     * 画像が変わる遷移
+     * 画像が広がる遷移
      */
     imageTransitionState: function () {
       // アニメーション開始
       if (this.imageTransitionState) {
-        const index = this.imageTransitionIndex > this.getProjectData.length - 1 ? 0 : this.imageTransitionIndex
-
-        for (let i = 0; i < this.$refs.LayoutsNormalTransitionImg.length; i++) {
-          this.$gsap.set(this.$refs.LayoutsNormalTransitionImg[i], {
-            opacity: 0,
-          })
-        }
-        this.$gsap.set(this.$refs.LayoutsNormalTransitionImg[index], {
-          opacity: 1.0,
-        })
+        this.$gsap.set(
+          this.$refs.LayoutsNormalTransitionImg[this.imageTransitionIndex],
+          {
+            opacity: 1,
+          }
+        )
         this.onTransitionStart()
       }
       // アニメーション終わり
       else {
         this.onTransitionEnd()
-        for (let i = 0; i < this.$refs.LayoutsNormalTransitionImg.length; i++) {
-          this.$gsap.set(this.$refs.LayoutsNormalTransitionImg[i], {
-            opacity: 0,
-          })
-        }
+        setTimeout(() => {
+          this.$gsap.set(
+            this.$refs.LayoutsNormalTransitionImg[this.imageTransitionIndex],
+            {
+              opacity: 0,
+            }
+          )
+        }, this.$SITECONFIG.baseDuration)
       }
     },
 
     /**
-     * ハンバーガーメニュー
+     * ハンバーガーメニューが開いた時のスクロール制限
      */
     hambergerMenuState: function () {
-      // ハンバガーメニューが開いた時
       if (this.hambergerMenuState) {
-        this.$preDefaultEvent(false)
-        // 無効にしていたクリックエリアを有効にする
-        this.$refs.AsscrollContainerCover.style.pointerEvents = 'auto'
-
-        if (this.$SITECONFIG.isPc) {
-          this.$gsap.to(this.container, {
-            delay: 0.16,
-            duration: 0.3,
-            ease: this.$EASING.transform,
-            x: -560,
-          })
-        }
-
         if (this.$SITECONFIG.isTouch) {
-          // スクロール無効
-          setTimeout(() => {
-            this.$backfaceScroll(false)
-          }, 300)
-        } else if (this.$SITECONFIG.isNoTouch) {
-          // スクロール無効
+          // スマホの時
+          this.$backfaceScroll(false)
+        } else {
+          // PCの時
+          this.savePos = this.$asscroll.currentPos
           this.$asscroll.disable({ inputOnly: true })
-          // デフォルトのホイールイベントを戻す
-          window.removeEventListener('wheel', preEvent, { passive: false })
-        }
-      }
-      // ハンバガーメニューが閉じた時
-      else if (!this.hambergerMenuState) {
-        this.$refs.AsscrollContainerCover.style.pointerEvents = 'none'
-
-        if (this.$SITECONFIG.isPc) {
-          this.$gsap.to(this.container, {
-            delay: 0,
-            duration: 0.3,
-            ease: this.$EASING.transform,
-            x: 0,
-          })
-        }
-
-        if (this.$SITECONFIG.isTouch) {
-          /**
-           * ピックアップセクションだった場合はスクロール固定を解除しない
-           */
-          // if (this.indexPickupState) return;
-          this.$backfaceScroll(true)
-        } else if (this.$SITECONFIG.isNoTouch) {
           window.addEventListener('wheel', preEvent, { passive: false })
-          /**
-           * ピックアップセクションだった場合はasscrollを有効しない、それ以外は有効にする
-           */
-          if (this.indexPickupState || this.$route.name === 'archive') return
-          this.$asscroll.enable()
+          window.addEventListener('scroll', preEvent, { passive: false })
         }
-      }
-    },
-
-    /**
-     * ページ遷移のアニメーション発火管理
-     */
-    pickupTransitionState: function () {
-      const index = this.pickupCurrentNumber - 1.0
-
-      if (this.pickupTransitionState) {
-        this.particle.setNextPageStart()
-
-        this.meshList[index].setNextPageStart()
+        this.$gsap.set(this.$refs.AsscrollContainerCover, {
+          pointerEvents: 'auto',
+        })
       } else {
-        this.meshList[index].delete()
+        if (this.$SITECONFIG.isTouch) {
+          // スマホの時
+          this.$backfaceScroll(true)
+        } else {
+          // PCの時
+          this.$asscroll.enable({ reset: false, newPos: this.savePos })
+          window.removeEventListener('wheel', preEvent, { passive: false })
+          window.removeEventListener('scroll', preEvent, { passive: false })
+        }
+        this.$gsap.set(this.$refs.AsscrollContainerCover, {
+          pointerEvents: 'none',
+        })
       }
     },
+
     /**
-     * ピックアップ管理
+     * ピックアップセクションに侵入した時
+     */
+    indexPickupState: function () {
+      // current
+      if (this.indexPickupState) {
+        this.$gsap.to(this.$refs.CanvasFix, {
+          duration: this.$SITECONFIG.baseDuration,
+          ease: this.$EASING.transform,
+          opacity: 1,
+          visibility: 'visible',
+        })
+      }
+      // no current
+      else {
+        this.$gsap.to(this.$refs.CanvasFix, {
+          duration: this.$SITECONFIG.baseDuration,
+          ease: this.$EASING.transform,
+          opacity: 0,
+          visibility: 'hidden',
+        })
+      }
+    },
+
+    /**
+     * ピックアップのアニメーションが終了しているか判定する
      */
     indexPickupIsAnimation: function () {
-      const index = this.pickupCurrentNumber - 1.0
-
       // current
       if (this.indexPickupIsAnimation) {
         setTimeout(() => {
           this.$gsap.ticker.add(this.pRaf)
-          this.$gsap.ticker.add(this.mRaf)
-        }, 50) // メタボールの描画が残っている時があるので処理を0.05s遅らせる
+        }, 50)
       }
       // no current
       else {
         if (this.particle) this.particle.delete()
-        if (this.meshList[index]) this.meshList[index].delete()
-        window.removeEventListener('mousemove', this.m1Mouse)
-        window.removeEventListener('mousemove', this.m2Mouse)
-        window.removeEventListener('mousemove', this.m3Mouse)
 
         setTimeout(() => {
           this.$gsap.ticker.remove(this.pRaf)
-          this.$gsap.ticker.remove(this.mRaf)
-        }, 50) // メタボールの描画が残っている時があるので処理を0.05s遅らせる
+        }, 50)
       }
     },
+
     /**
      * ピックアップのシーン管理
      */
@@ -284,51 +255,27 @@ export default {
       switch (this.indexPickupScene) {
         case 'next01':
           this.particle.setSceneFirst(1)
-          this.meshList[0].setCenter()
-          window.addEventListener('mousemove', this.m1Mouse)
           break
         case 'next02':
           this.particle.setScene(2)
-          this.meshList[1].setCenter()
-          window.addEventListener('mousemove', this.m2Mouse)
-          this.meshList[0].setShrink()
-          window.removeEventListener('mousemove', this.m1Mouse)
           break
         case 'next03':
           this.particle.setScene(3)
-          this.meshList[2].setCenter()
-          window.addEventListener('mousemove', this.m3Mouse)
-          this.meshList[1].setShrink()
-          window.removeEventListener('mousemove', this.m2Mouse)
           break
         case 'next04':
           this.particle.setSceneEnd(3)
-          this.meshList[2].setShrink()
-          window.removeEventListener('mousemove', this.m3Mouse)
           break
         case 'prev00':
           this.particle.setSceneEnd(1)
-          this.meshList[0].setShrink()
-          window.removeEventListener('mousemove', this.m1Mouse)
           break
         case 'prev01':
           this.particle.setScene(1)
-          this.meshList[0].setCenter()
-          window.addEventListener('mousemove', this.m1Mouse)
-          this.meshList[1].setShrink()
-          window.removeEventListener('mousemove', this.m2Mouse)
           break
         case 'prev02':
           this.particle.setScene(2)
-          this.meshList[1].setCenter()
-          window.addEventListener('mousemove', this.m2Mouse)
-          this.meshList[2].setShrink()
-          window.removeEventListener('mousemove', this.m3Mouse)
           break
         case 'prev03':
           this.particle.setSceneFirst(3)
-          this.meshList[2].setCenter()
-          window.addEventListener('mousemove', this.m3Mouse)
           break
       }
     },
@@ -373,78 +320,10 @@ export default {
       this.particle._drawParticles()
     }
 
-    // metaball
-    const imgPath = []
-    imgPath.push(
-      {
-        pc: `${this.pickupData[0].heroImg.pc.url}`,
-        sp: `${this.pickupData[0].heroImg.sp.url}`,
-      },
-      {
-        pc: `${this.pickupData[1].heroImg.pc.url}`,
-        sp: `${this.pickupData[1].heroImg.sp.url}`,
-      },
-      {
-        pc: `${this.pickupData[2].heroImg.pc.url}`,
-        sp: `${this.pickupData[2].heroImg.sp.url}`,
-      }
-    )
-
-    const stage = new Stage(this.$refs.Webgl)
-    stage.init()
-
-    this.meshList = []
-
-    for (let i = 0; i < 3.0; i++) {
-      this.meshList.push(
-        (this.mesh = new Mesh(
-          this.$SITECONFIG,
-          stage,
-          metaballSceneList[i],
-          imgPath[i]
-        ))
-      )
-      this.meshList[i].init()
-    }
-
-    this.m1Mouse = (e) => {
-      if(this.hambergerMenuState) return;
-
-      this.meshList[0].onMouseMove(e)
-    }
-
-    this.m2Mouse = (e) => {
-      if(this.hambergerMenuState) return;
-
-      this.meshList[1].onMouseMove(e)
-    }
-
-    this.m3Mouse = (e) => {
-      if(this.hambergerMenuState) return;
-
-      this.meshList[2].onMouseMove(e)
-    }
-
-    window.addEventListener('resize', () => {
-      for (let i = 0; i < 3.0; i++) {
-        this.meshList[i].onResize()
-      }
-      stage.onResize()
-    })
-
-    this.mRaf = () => {
-      stage.onRaf()
-      for (let i = 0; i < 3.0; i++) {
-        this.meshList[i].onRaf()
-      }
-    }
-
     // pickupに侵入する時にかくつかないようにRAFを1秒間まわしておく
     this.$gsap.ticker.add(this.pRaf)
-    this.$gsap.ticker.add(this.mRaf)
     setTimeout(() => {
       this.$gsap.ticker.remove(this.pRaf)
-      this.$gsap.ticker.remove(this.mRaf)
     }, 1000)
 
     // ページ遷移のために要素を配列にまとめて取得しておく
@@ -647,21 +526,6 @@ export default {
   pointer-events: none;
   z-index: 2;
   overflow: hidden;
-}
-
-.webgl {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-
-  & canvas {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
 }
 
 .particle {
