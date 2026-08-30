@@ -106,7 +106,7 @@ export default {
   padding: 0 160px 0 40px;
 
   @include sp() {
-    padding: 0 vw_sp(20);
+    padding: 0;
   }
 }
 

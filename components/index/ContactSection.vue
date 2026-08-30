@@ -25,11 +25,9 @@
             <span class="sp-only">
               <span class="contact-title-wrapper contact-title-wrapper-01-sp"> I AM A SOFTWARE </span>
               <span class="contact-title-wrapper contact-title-wrapper-02-sp"> DEVELOPER </span>
-              <span class="contact-title-wrapper contact-title-wrapper-03-sp"> FOCUSED ON </span>
-              <span class="contact-title-wrapper contact-title-wrapper-04-sp"> BUILDING USEFUL </span>
-              <span class="contact-title-wrapper contact-title-wrapper-05-sp"> DIGITAL </span>
-              <span class="contact-title-wrapper contact-title-wrapper-06-sp"> EXPERIENCES </span>
-              <span class="contact-title-wrapper contact-title-wrapper-07-sp"> BASED IN INDIA. </span>
+              <span class="contact-title-wrapper contact-title-wrapper-03-sp"> BUILDING USEFUL </span>
+              <span class="contact-title-wrapper contact-title-wrapper-04-sp"> DIGITAL EXPERIENCES </span>
+              <span class="contact-title-wrapper contact-title-wrapper-05-sp"> BASED IN INDIA. </span>
             </span>
           </h2>
           <div class="contact-info-area">
@@ -247,7 +245,23 @@ export default {
 }
 
 .contact-title-wrapper-01-sp {
-  margin: 0 0 0 vw_sp(24);
+  margin: 0 0 8px 0;
+}
+
+.contact-title-wrapper-02-sp {
+  margin: 0 0 8px vw_sp(24);
+}
+
+.contact-title-wrapper-03-sp {
+  margin: 0 0 8px 0;
+}
+
+.contact-title-wrapper-04-sp {
+  margin: 0 0 8px vw_sp(24);
+}
+
+.contact-title-wrapper-05-sp {
+  margin: 0 0 0 vw_sp(48);
 }
 
 .contact-info-area {

@@ -192,7 +192,7 @@ export default {
   padding: 92px 0;
 
   @include sp() {
-    padding: 106px vw_sp(20);
+    padding: 106px 0;
   }
 }
 
@@ -220,6 +220,7 @@ export default {
 
   @include sp() {
     top: -24px;
+    left: 0;
     font-size: 10px;
   }
 }
@@ -282,7 +283,7 @@ export default {
   display: table;
   width: fit-content;
   max-width: 100%;
-  margin: 0 0 vw_sp(32) auto;
+  margin: 0 0 vw_sp(24) 0;
 }
 
 .hero-title-wrapper-02-sp {
@@ -296,7 +297,7 @@ export default {
   display: table;
   width: fit-content;
   max-width: 100%;
-  margin: 0 0 vw_sp(28) auto;
+  margin: 0 0 vw_sp(24) vw_sp(24);
 }
 
 .hero-title-wrapper-03-sp {
@@ -310,12 +311,12 @@ export default {
   display: table;
   width: fit-content;
   max-width: 100%;
-  margin: 0 0 vw_sp(24) vw_sp(60);
+  margin: 0 0 vw_sp(24) vw_sp(24);
 }
 
 .hero-title-wrapper-04-sp {
   position: relative;
-  margin: 0 0 vw_sp(56) vw_sp(30);
+  margin: 0 0 vw_sp(48) vw_sp(16);
   font-size: vw_sp(70);
   letter-spacing: 0.02em;
 }
@@ -324,7 +325,7 @@ export default {
   display: table;
   width: fit-content;
   max-width: 100%;
-  margin: 0 0 vw_sp(28) 0;
+  margin: 0 0 vw_sp(24) 0;
   font-size: vw_sp(170);
 }
 
@@ -332,7 +333,7 @@ export default {
   display: table;
   width: fit-content;
   max-width: 100%;
-  margin: 0 0 vw_sp(28) vw_sp(60);
+  margin: 0 0 vw_sp(24) vw_sp(24);
   font-size: vw_sp(170);
 }
 
@@ -340,7 +341,7 @@ export default {
   display: table;
   width: fit-content;
   max-width: 100%;
-  margin: 0 0 0 auto;
+  margin: 0 0 0 vw_sp(48);
   font-size: vw_sp(170);
 }
 

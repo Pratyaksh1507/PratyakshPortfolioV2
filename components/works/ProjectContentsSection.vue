@@ -82,11 +82,7 @@ export default {
 
 <style lang="scss" scoped>
 .contents-inner {
-  padding: 0 40px;
-
-  @include sp() {
-    padding: 0 vw_sp(20);
-  }
+  padding: 0;
 }
 
 .contents-info {

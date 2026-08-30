@@ -314,8 +314,9 @@ export default {
   right: 34.6%;
 
   @include sp() {
-    top: 3.8%;
-    right: 69.6%;
+    top: 4%;
+    left: 8%;
+    right: auto;
   }
 }
 
@@ -324,8 +325,9 @@ export default {
   left: 34.5%;
 
   @include sp() {
-    top: 25.3%;
-    left: 34.5%;
+    top: 22%;
+    right: 8%;
+    left: auto;
   }
 }
 
@@ -334,7 +336,9 @@ export default {
   left: 11%;
 
   @include sp() {
-    top: 36%;
+    top: 40%;
+    left: 8%;
+    right: auto;
   }
 }
 
@@ -343,8 +347,9 @@ export default {
   left: 3.4%;
 
   @include sp() {
-    top: 14%;
-    left: 20%;
+    top: 58%;
+    right: 8%;
+    left: auto;
   }
 }
 
@@ -353,8 +358,9 @@ export default {
   right: 27%;
 
   @include sp() {
-    top: 44.5%;
-    right: 30%;
+    top: 76%;
+    left: 8%;
+    right: auto;
   }
 }
 

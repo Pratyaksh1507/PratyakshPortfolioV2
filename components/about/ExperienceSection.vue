@@ -338,10 +338,10 @@ export default {
 }
 
 .experience-inner {
-  padding: 152px 40px;
+  padding: 152px 0;
 
   @include sp() {
-    padding: 63px vw_sp(20);
+    padding: 63px 0;
   }
 }
 

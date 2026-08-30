@@ -35,25 +35,19 @@
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-02-sp">
               <AppBounceLine :state="isTextUnderlineState" :start="0.176" :origin="'right'" :pc-animation="false" :width="670" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'PRATYAKSH'" :pc-animation="false" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.4" :rotate="$BASEROTATE.left" :text="'KALSI'" :pc-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'PRATYAKSH KALSI'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-03-sp">
               <AppBounceLine :state="isTextUnderlineState" :start="0.42" :origin="'left'" :pc-animation="false" :width="590" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.42" :rotate="$BASEROTATE.right" :text="'IS'" :pc-animation="false" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.42" :rotate="$BASEROTATE.right" :text="'SOFTWARE'" :pc-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.42" :rotate="$BASEROTATE.right" :text="'SOFTWARE DEVELOPER'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-04-sp">
               <AppBounceLine :state="isTextUnderlineState" :start="0.6" :origin="'right'" :pc-animation="false" :width="670" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.6" :rotate="$BASEROTATE.right" :text="'DEVELOPER'" :pc-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.6" :rotate="$BASEROTATE.right" :text="'BUILDING FOR'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-05-sp">
               <AppBounceLine :state="isTextUnderlineState" :start="0.72" :origin="'left'" :pc-animation="false" :width="573" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.72" :rotate="$BASEROTATE.right" :text="'BUILDING FOR'" :pc-animation="false" />
-            </span>
-            <span class="hero-title-wrapper hero-title-wrapper-06-sp">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.84" :origin="'right'" :pc-animation="false" :width="452" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.84" :rotate="$BASEROTATE.right" :text="'THE WEB & AI.'" :pc-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.72" :rotate="$BASEROTATE.right" :text="'THE WEB & AI.'" :pc-animation="false" />
             </span>
           </span>
         </h1>
@@ -199,12 +193,10 @@ export default {
   position: relative;
 
   @include sp() {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+    display: table;
+    width: fit-content;
     max-width: 100%;
-    margin: 0 auto 16px;
-    text-align: center;
+    margin: 0 0 16px 0;
     white-space: nowrap;
   }
 }
@@ -250,34 +242,15 @@ export default {
   }
 }
 
-.hero-title-wrapper-01-sp {
-  width: 100%;
-  max-width: 100%;
-}
-
-.hero-title-wrapper-02-sp {
-  width: 100%;
-  max-width: 100%;
-}
-
-.hero-title-wrapper-03-sp {
-  width: 100%;
-  max-width: 100%;
-}
-
-.hero-title-wrapper-04-sp {
-  width: 100%;
-  max-width: 100%;
-}
-
+.hero-title-wrapper-01-sp,
+.hero-title-wrapper-02-sp,
+.hero-title-wrapper-03-sp,
+.hero-title-wrapper-04-sp,
 .hero-title-wrapper-05-sp {
-  width: 100%;
+  display: table;
+  width: fit-content;
   max-width: 100%;
-}
-
-.hero-title-wrapper-06-sp {
-  width: 100%;
-  max-width: 100%;
+  margin: 0 0 vw_sp(24) 0;
 }
 
 .hero-text-underline {
