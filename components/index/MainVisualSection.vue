@@ -10,8 +10,8 @@
           </span>
           <span class="pc-only">
             <span class="hero-title-wrapper hero-title-wrapper-01">
-              <AppBounceLine :state="isTextUnderlineState" :origin="'left'" :sp-animation="false" :width="1060" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'FOLIO OF PRATYAKSH KALSI'" :sp-animation="false" />
+              <AppBounceLine :state="isTextUnderlineState" :origin="'left'" :sp-animation="false" :width="1220" :modifier="'index-hero'" />
+              <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'PORTFOLIO OF PRATYAKSH KALSI'" :sp-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-02">
               <AppBounceLine :state="isTextUnderlineState" :start="0.176" :origin="'right'" :width="1080" :sp-animation="false" :modifier="'index-hero'" />
@@ -31,8 +31,8 @@
           </span>
           <span class="sp-only">
             <span class="hero-title-wrapper hero-title-wrapper-01-sp">
-              <AppBounceLine :state="isTextUnderlineState" :origin="'left'" :pc-animation="false" :width="335" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'FOLIO OF'" :pc-animation="false" />
+              <AppBounceLine :state="isTextUnderlineState" :origin="'left'" :pc-animation="false" :width="450" :modifier="'index-hero'" />
+              <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'PORTFOLIO OF'" :pc-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-02-sp">
               <AppBounceLine :state="isTextUnderlineState" :start="0.176" :origin="'left'" :pc-animation="false" :width="650" :modifier="'index-hero'" />
@@ -239,10 +239,10 @@ export default {
   display: table;
   width: fit-content;
   max-width: 100%;
-  margin: 0 0 24px vw(100);
+  margin: 0 0 24px vw(220);
 
   @include tab-vertical() {
-    margin: 0 0 24px vw(40);
+    margin: 0 0 24px vw(180);
   }
 }
 
