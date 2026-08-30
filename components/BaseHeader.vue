@@ -100,24 +100,6 @@ export default {
         },
       })
     },
-    hambergerMenuState: function () {
-      // ハンバーガーメニューが開いて、PCだった時にロゴを動かす
-      if (this.hambergerMenuState && this.$SITECONFIG.isPc) {
-        this.$gsap.to(this.$refs.HeaderLogo, {
-          delay: 0.16,
-          duration: 0.3,
-          ease: this.$EASING.transform,
-          x: -560,
-        })
-      } else {
-        this.$gsap.to(this.$refs.HeaderLogo, {
-          delay: 0,
-          duration: 0.3,
-          ease: this.$EASING.transform,
-          x: 0,
-        })
-      }
-    },
   },
 
   mounted() {

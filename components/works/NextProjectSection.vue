@@ -103,7 +103,7 @@ export default {
 <style lang="scss" scoped>
 .next-inner {
   width: 100%;
-  padding: 0 160px 0 40px;
+  padding: 0 40px;
 
   @include sp() {
     padding: 0;

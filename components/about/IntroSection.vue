@@ -490,7 +490,7 @@ export default {
 .intro-title {
   position: fixed;
   top: 50%;
-  right: 158px;
+  right: 40px;
   transform: translate3d(0, -50%, 0);
   color: #eae0cc;
   font-size: vmin(128);
@@ -518,7 +518,7 @@ export default {
 .intro-note {
   position: absolute;
   bottom: 34px;
-  right: 158px;
+  right: 40px;
   left: 40px;
   color: #eae0cc;
   font-size: 12px;

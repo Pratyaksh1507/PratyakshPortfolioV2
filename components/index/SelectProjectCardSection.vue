@@ -264,7 +264,7 @@ export default {
 .project-loop-title-read-area {
   position: absolute;
   top: -96px;
-  right: 160px;
+  right: 40px;
   text-align: right;
 
   @include sp() {
@@ -285,7 +285,7 @@ export default {
 
 .project .l-container {
   height: 100%;
-  padding: 0 160px 0 40px;
+  padding: 0 40px;
 
   @include sp() {
     padding: 0 20px;
@@ -296,7 +296,7 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-  margin: 0 160px 0 0;
+  margin: 0;
 
   @include sp() {
     margin: 0;

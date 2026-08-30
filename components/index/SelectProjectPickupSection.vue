@@ -719,7 +719,7 @@ export default {
 .pickup-section-number {
   position: absolute;
   top: 0;
-  right: 155px;
+  right: 40px;
 
   @include sp() {
     right: 20px;

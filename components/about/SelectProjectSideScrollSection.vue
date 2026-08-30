@@ -360,7 +360,7 @@ export default {
 .project-inner {
   position: relative;
   width: 100%;
-  padding: 0 160px 0 40px;
+  padding: 0 40px;
   z-index: 1;
 
   @include sp() {
