@@ -582,7 +582,8 @@ export default {
     top: 42px;
     right: -10px;
     width: calc(100vw - 20px);
-    height: calc(var(--viewportHeight) - 52px - 20px);
+    height: calc(var(--viewportHeight, 100vh) - 52px - 20px);
+    border-radius: 10px;
     transform: scaleY(0);
     transform-origin: top;
   }
@@ -596,6 +597,8 @@ export default {
   height: 100%;
   padding: 50px 26px 50px 16px;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
   opacity: 0;
   pointer-events: none;
 

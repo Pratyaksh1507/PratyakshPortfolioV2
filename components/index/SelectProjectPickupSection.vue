@@ -592,8 +592,8 @@ export default {
      * シーンイベントをセットする
      */
     addSceneEvent() {
-      window.addEventListener('touchstart', this.setTouchY)
-      window.addEventListener('touchmove', this.pickupSceneTouchManager)
+      window.addEventListener('touchstart', this.setTouchY, { passive: true })
+      window.addEventListener('touchmove', this.pickupSceneTouchManager, { passive: true })
       window.addEventListener('wheel', this.pickupSceneWheelManager, {
         passive: false,
       })
@@ -617,8 +617,8 @@ export default {
      * シーンイベントを削除する
      */
     removeSceneEvent() {
-      window.removeEventListener('touchstart', this.setTouchY)
-      window.removeEventListener('touchmove', this.pickupSceneTouchManager)
+      window.removeEventListener('touchstart', this.setTouchY, { passive: true })
+      window.removeEventListener('touchmove', this.pickupSceneTouchManager, { passive: true })
       window.removeEventListener('wheel', this.pickupSceneWheelManager, {
         passive: false,
       })
