@@ -24,8 +24,9 @@
               <AppTextAnimation :state="isTextSegmentState" :start="0.6" :rotate="$BASEROTATE.right" :text="'DEVELOPER'" :sp-animation="false" />
             </span>
             <span class="hero-title-wrapper hero-title-wrapper-04">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.7" :origin="'right'" :sp-animation="false" :width="1200" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.7" :rotate="$BASEROTATE.right" :text="'BUILDING FOR THE WEB & EXPLORING AI'" :sp-animation="false" />
+              <AppBounceLine :state="isTextUnderlineState" :start="0.7" :origin="'right'" :sp-animation="false" :width="1040" :modifier="'about-hero'" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.7" :rotate="$BASEROTATE.right" :text="'BUILDING FOR THE WEB'" :sp-animation="false" />
+              <AppTextAnimation :state="isTextSegmentState" :start="0.82" :rotate="$BASEROTATE.left" :text="'& EXPLORING AI'" :sp-animation="false" />
             </span>
           </span>
           <span class="sp-only">
@@ -235,10 +236,13 @@ export default {
 }
 
 .hero-title-wrapper-04 {
-  width: vw(1077);
+  display: flex;
+  justify-content: space-between;
+  width: vw(1040);
+  max-width: 100%;
 
   @include tab-vertical() {
-    width: vw(934);
+    width: 100%;
   }
 }
 
