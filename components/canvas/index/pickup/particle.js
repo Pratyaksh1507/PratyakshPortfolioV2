@@ -4,7 +4,7 @@ export default class Particle {
   constructor(config, canvas, color) {
     this.canvas = canvas || null;
     this.ctx = this.canvas.getContext('2d') || null;
-    this.dpr = window.devicePixelRatio || 1.0;
+    this.dpr = typeof window !== 'undefined' ? Math.min(window.devicePixelRatio || 1.0, 2.0) : 1.0;
     // サイト共通の設定
     this.config = config || null;
     // 生成したパーティクルを入れておく空配列

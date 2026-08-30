@@ -14,8 +14,16 @@ body {
   }
 }
 
-* {
-  cursor: none !important;
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
 }
 
 *::selection {

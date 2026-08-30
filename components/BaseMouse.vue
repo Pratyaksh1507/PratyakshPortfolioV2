@@ -82,7 +82,7 @@ export default {
       }
     },
     mouseLoad() {
-      if (this.$SITECONFIG.isSp) return
+      if (this.$SITECONFIG.isMobile || this.$SITECONFIG.isTouch) return
 
       if (this.mouseLoad) {
         this.mouseLoading.classList.add('is-loading')

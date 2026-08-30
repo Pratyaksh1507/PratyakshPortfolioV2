@@ -78,9 +78,6 @@ export default {
         href: '/apple-touch-icon.png'
       },
     ],
-    bodyAttrs: {
-      oncontextmenu: 'return false'
-    },
     script: [
       {
         hid: 'GAsrc',

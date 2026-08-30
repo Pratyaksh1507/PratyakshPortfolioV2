@@ -25,7 +25,7 @@ export default class Stage {
     this.material = null;
     this.mesh = null;
     this.isInitialized = false;
-    this.devicePixelRatio = window.devicePixelRatio;
+    this.devicePixelRatio = typeof window !== 'undefined' ? Math.min(window.devicePixelRatio || 1, 2.0) : 1;
   }
 
   init() {
@@ -43,6 +43,7 @@ export default class Stage {
     this.renderer = new THREE.WebGLRenderer({
       antialias: true,
       alpha: true,
+      powerPreference: 'high-performance',
     });
     this.renderer.setPixelRatio(this.devicePixelRatio);
     this.renderer.setSize(this.renderParam.width, this.renderParam.height);

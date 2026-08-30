@@ -215,11 +215,15 @@ export default {
     },
 
     parallax() {
+      const top = this.root.getBoundingClientRect().top
+      const xVal = this.$SITECONFIG.isMobile ? 0 : top * this.xspeed
+      const yVal = top * (this.$SITECONFIG.isMobile ? this.yspeed * 0.5 : this.yspeed)
+
       this.$gsap.to(this.root, {
         duration: 0.333,
         ease: 'none',
-        x: this.root.getBoundingClientRect().top * this.xspeed,
-        y: this.root.getBoundingClientRect().top * this.yspeed,
+        x: xVal,
+        y: yVal,
       })
     },
 

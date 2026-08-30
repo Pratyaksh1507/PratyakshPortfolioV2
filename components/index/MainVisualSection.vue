@@ -281,23 +281,23 @@ export default {
 
 .hero-title-wrapper-03-sp {
   width: vw_sp(504);
-  margin: 0 0 vw_sp(28) 42px;
+  margin: 0 0 vw_sp(28) vw_sp(84);
 }
 
 .hero-title-wrapper-04-sp {
   position: relative;
-  margin: 0 0 vw_sp(76) 45px;
+  margin: 0 0 vw_sp(76) vw_sp(90);
   font-size: vw_sp(80);
 }
 
 .hero-title-wrapper-05-sp {
   width: vw_sp(398);
-  margin: 0 0 vw_sp(40) 18px;
+  margin: 0 0 vw_sp(40) vw_sp(36);
 }
 
 .hero-title-wrapper-06-sp {
   width: vw_sp(420);
-  margin: 0 0 vw_sp(40) 102px;
+  margin: 0 0 vw_sp(40) vw_sp(120);
 }
 
 .hero-title-wrapper-07-sp {

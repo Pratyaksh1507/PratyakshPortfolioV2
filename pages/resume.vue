@@ -286,6 +286,9 @@ export default {
   },
 
   mounted() {
+    if (this.$SITECONFIG && (this.$SITECONFIG.isMobile || this.$SITECONFIG.isTouch)) {
+      this.viewMode = 'digital'
+    }
     this.$nextTick(() => {
       if (this.defaultTransitionState) {
         this.$store.commit('bg-transition/end')

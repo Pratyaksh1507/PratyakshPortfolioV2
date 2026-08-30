@@ -72,11 +72,11 @@ export default {
       pickupSectionOldCurrentNum: 0,
       pickupSectionCurrentNum: 0,
       isScrollAnimation: false,
-      wheelInterval: 0.75,
-      disableTime: 1360,
+      wheelInterval: 0.5,
+      disableTime: 550,
       scrollBuffer: 0,
       wheelRatio: 5,
-      touchRatio: 50,
+      touchRatio: 30,
       prevTouchY: 0,
       isTextSegmentState: {
         1: '',
@@ -168,7 +168,7 @@ export default {
         // デフォルトのイベントをストップする
         this.stopDefaultPreEvent()
         // ホイールイベント不可、デフォルトの操作不可時間より長くしておく
-        this.disable(1700)
+        this.disable(600)
         // 既存の処理とバッティングするので、ハンバーガーメニューを操作不能にしておく
         this.$store.commit('hambergerMenu/disable')
         // ピックアップに入ったことを知らせる
@@ -232,7 +232,7 @@ export default {
       // if (this.$SITECONFIG.isTouch) this.$backfaceScroll(true)
       if (this.$SITECONFIG.isMobile) this.$gsap.ticker.remove(this.setHeight)
       // ホイールイベント不可、デフォルトの操作不可時間より長くしておく
-      this.disable(3000)
+      this.disable(800)
       // ハンバーガーメニューを操作不能にする
       this.$store.commit('hambergerMenu/disable')
       // ピックアップを出たことを知らせる
@@ -310,7 +310,7 @@ export default {
         // デフォルトのイベントをストップする
         this.stopDefaultPreEvent()
         // ホイールイベント不可、デフォルトの操作不可時間より長くしておく
-        this.disable(1700)
+        this.disable(600)
         // 既存の処理とバッティングするので、ハンバーガーメニューを操作不能にしておく
         this.$store.commit('hambergerMenu/disable')
         // ピックアップに入ったことを知らせる
@@ -329,10 +329,6 @@ export default {
             this.$asscroll.scrollTo(this.scroll.value)
           },
           onComplete: () => {
-            // タッチデバイスの時、背景固定
-            // setTimeout(() => {
-            //   if (this.$SITECONFIG.isTouch) this.$backfaceScroll(false)
-            // }, 100)
             // 前のシーンへ移動させる
             this.pickupScenePrev()
             // シーン用のイベントを付与する
@@ -364,11 +360,9 @@ export default {
      */
     pickupToBottomLeaveScroll() {
       if (this.pickupToBottomEnterScrollAnimation) this.pickupToBottomEnterScrollAnimation.kill()
-      // タッチデバイスの時、背景固定解除
-      // if (this.$SITECONFIG.isTouch) this.$backfaceScroll(true)
       if (this.$SITECONFIG.isMobile) this.$gsap.ticker.remove(this.setHeight)
       // ホイールイベント不可、デフォルトの操作不可時間より長くしておく
-      this.disable(3000)
+      this.disable(800)
       // ハンバーガーメニューを操作不能にする
       this.$store.commit('hambergerMenu/disable')
       // ピックアップを出たことを知らせる
@@ -764,10 +758,12 @@ export default {
   @include sp() {
     display: flex;
     justify-content: space-between;
-    bottom: 0;
+    align-items: flex-end;
+    bottom: 28px;
     left: 50%;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, 0, 0);
     width: vw_sp(670);
+    max-width: calc(100vw - 32px);
   }
 }
 
