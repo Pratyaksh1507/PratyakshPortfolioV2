@@ -107,6 +107,7 @@ export default {
     '~/plugins/asscroll-and-gsap.client.js',
     '~/plugins/constants.js',
     '~/plugins/check-device.client.js',
+    '~/plugins/vercel-analytics.client.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
