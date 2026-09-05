@@ -15,51 +15,24 @@
               <span class="intro-title-read-area">
                 <AppReadTitle :state="isTextSegmentState" :text="['・', 'ABOUT']" :modifier="'section'" />
               </span>
-              <span class="pc-only">
-                <span class="intro-title-wrapper intro-title-wrapper-01">
-                  <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'HI, I AM A SOFTWARE DEVELOPER'" :sp-animation="false" />
-                </span>
-                <span class="intro-title-wrapper intro-title-wrapper-02">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.12" :rotate="$BASEROTATE.left" :text="'BASED IN INDIA. BACKGROUND IN ELECTRONICS &'" :sp-animation="false" />
-                </span>
-                <span class="intro-title-wrapper intro-title-wrapper-03">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" :text="'COMMUNICATION FROM NIT SRINAGAR. I BUILT A'" :sp-animation="false" />
-                </span>
-                <span class="intro-title-wrapper intro-title-wrapper-04">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'STRONG BASE IN FRONTEND, AND AM EXPANDING'" :sp-animation="false" />
-                </span>
-                <span class="intro-title-wrapper intro-title-wrapper-05">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.48" :rotate="$BASEROTATE.right" :text="'INTO BACKEND ENGINEERING AND EXPLORING AI.'" :sp-animation="false" />
-                </span>
+              <span class="intro-title-wrapper intro-title-wrapper-01">
+                <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'HI, I AM A SOFTWARE DEVELOPER'" />
               </span>
-              <span class="sp-only">
-                <span class="intro-title-wrapper intro-title-wrapper-sp-01">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0" :rotate="$BASEROTATE.right" :text="'HI, I AM A'" :pc-animation="false" />
-                </span>
-                <span class="intro-title-wrapper intro-title-wrapper-sp-02">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.12" :rotate="$BASEROTATE.left" :text="'SOFTWARE DEVELOPER'" :pc-animation="false" />
-                </span>
-                <span class="intro-title-wrapper intro-title-wrapper-sp-03">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" :text="'BASED IN INDIA.'" :pc-animation="false" />
-                </span>
-                <span class="intro-title-wrapper intro-title-wrapper-sp-04">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'ECE NIT SRINAGAR.'" :pc-animation="false" />
-                </span>
-                <span class="intro-title-wrapper intro-title-wrapper-sp-05">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.48" :rotate="$BASEROTATE.right" :text="'FRONTEND, BACKEND'" :pc-animation="false"> </AppTextAnimation>
-                </span>
-                <span class="intro-title-wrapper intro-title-wrapper-sp-06">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.6" :rotate="$BASEROTATE.left" :text="'& EXPLORING AI.'" :pc-animation="false" />
-                </span>
+              <span class="intro-title-wrapper intro-title-wrapper-02">
+                <AppTextAnimation :state="isTextSegmentState" :start="0.12" :rotate="$BASEROTATE.left" :text="'BASED IN INDIA. BACKGROUND IN ELECTRONICS &'" />
+              </span>
+              <span class="intro-title-wrapper intro-title-wrapper-03">
+                <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" :text="'COMMUNICATION FROM NIT SRINAGAR. I BUILT A'" />
+              </span>
+              <span class="intro-title-wrapper intro-title-wrapper-04">
+                <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'STRONG BASE IN FRONTEND, AND AM EXPANDING'" />
+              </span>
+              <span class="intro-title-wrapper intro-title-wrapper-05">
+                <AppTextAnimation :state="isTextSegmentState" :start="0.48" :rotate="$BASEROTATE.right" :text="'INTO BACKEND ENGINEERING AND EXPLORING AI.'" />
               </span>
             </h2>
             <p class="intro-note">
-              <span class="pc-only">
-                I AM A SOFTWARE DEVELOPER WITH A BACKGROUND IN ELECTRONICS & COMMUNICATION ENGINEERING FROM NIT SRINAGAR. WITH A STRONG FOUNDATION IN FRONTEND DEVELOPMENT, I FOCUS ON BUILDING INTUITIVE, PRACTICAL WEB APPLICATIONS. I AM CURRENTLY EXPANDING MY SKILLS INTO BACKEND DEVELOPMENT AND EXPLORING GENERATIVE AI TECHNOLOGIES TO BUILD USEFUL, RELIABLE SOFTWARE.
-              </span>
-              <span class="sp-only">
-                I AM A SOFTWARE DEVELOPER WITH A BACKGROUND IN ECE FROM NIT SRINAGAR. GROUNDED IN FRONTEND DEVELOPMENT, EXPANDING INTO BACKEND AND EXPLORING GENERATIVE AI TO BUILD PRACTICAL DIGITAL PRODUCTS.
-              </span>
+              I AM A SOFTWARE DEVELOPER WITH A BACKGROUND IN ELECTRONICS & COMMUNICATION ENGINEERING FROM NIT SRINAGAR. WITH A STRONG FOUNDATION IN FRONTEND DEVELOPMENT, I FOCUS ON BUILDING INTUITIVE, PRACTICAL WEB APPLICATIONS. I AM CURRENTLY EXPANDING MY SKILLS INTO BACKEND DEVELOPMENT AND EXPLORING GENERATIVE AI TECHNOLOGIES TO BUILD USEFUL, RELIABLE SOFTWARE.
             </p>
           </div>
         </div>
@@ -402,13 +375,6 @@ export default {
   white-space: nowrap;
   line-height: 1;
   transform: translateX(vw(1280));
-
-  @include sp() {
-    width: vw_sp(2604);
-    height: vw_sp(365);
-    font-size: vw_sp(420);
-    transform: translateX(vw_sp(750));
-  }
 }
 
 .intro-bg {
@@ -428,13 +394,6 @@ export default {
   opacity: 0;
   pointer-events: none;
   will-change: width, height;
-
-  @include sp() {
-    width: vw_sp(81);
-    height: vw_sp(365);
-    border-radius: vw(36);
-    transform: translate(vw_sp(121), vw_sp(39));
-  }
 
   // & img {
   //   position: absolute;
@@ -506,15 +465,15 @@ export default {
   }
 
   @include sp() {
-    top: calc(50% - 20px);
-    right: 23px;
-    max-width: calc(100vw - 46px);
-    font-size: vmin(140);
+    right: 20px;
+    left: 20px;
+    max-width: calc(100vw - 40px);
+    font-size: clamp(32px, 8.8vw, 48px);
+    line-height: 1.05;
   }
 }
 
-.intro-title-wrapper-01,
-.intro-title-wrapper-sp-01 {
+.intro-title-wrapper-01 {
   text-align: right;
 }
 
@@ -523,6 +482,11 @@ export default {
   top: 0;
   left: 3px;
   color: $white;
+
+  @include sp() {
+    top: -24px;
+    left: 0;
+  }
 }
 
 .intro-note {
@@ -537,12 +501,12 @@ export default {
   letter-spacing: 0.02em;
 
   @include sp() {
-    right: 0;
-    bottom: 40px;
-    left: 0;
-    width: 100%;
-    padding: 0 20px;
-    font-size: 10px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    text-indent: 0;
+    font-size: clamp(11.5px, 3.2vw, 13px);
+    line-height: 1.5;
   }
 }
 
@@ -552,5 +516,9 @@ export default {
 
 .intro-note-text-01 {
   margin: 0 0 0 185px;
+
+  @include sp() {
+    margin: 0;
+  }
 }
 </style>

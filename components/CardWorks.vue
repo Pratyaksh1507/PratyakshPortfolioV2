@@ -9,10 +9,7 @@
         </span>
         <span class="card-title-wrapper-02"> <span class="card-title-wrapper-02-block">YOU CAN SEE PROJECT NAME IS LIVE. AND IF YOU SEE IT, COME BACK HERE</span></span>
         <span class="card-title-wrapper-03">
-          <span class="pc-only">
-            <AppTextAnimation :state="state" :rotate="$BASEROTATE.left" :text="'VISIT SITE'" :sp-animation="false" />
-          </span>
-          <span class="sp-only"> VISIT SITE </span>
+          <AppTextAnimation :state="state" :rotate="$BASEROTATE.left" :text="'VISIT SITE'" />
         </span>
       </span>
     </a>
@@ -51,12 +48,16 @@ export default {
   padding: 12px 13px;
   background-color: $white;
   border-radius: 7px;
+  box-sizing: border-box;
 }
 
 .card-inner {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   height: 100%;
+  width: 100%;
 }
 
 .card-link {
@@ -69,7 +70,8 @@ export default {
 
 .card-title-wrapper-01 {
   display: block;
-  margin: 0 0 10px 0;
+  margin: 0 0 8px 0;
+  z-index: 2;
 }
 
 .card-title-wrapper-01-block {
@@ -77,36 +79,41 @@ export default {
   font-size: 12px;
   font-family: $helvetica;
   line-height: 1.2;
+  white-space: nowrap;
 
   &:first-of-type {
-    font-size: 36px;
+    font-size: 32px;
     text-indent: -4px;
-    line-height: 0.6;
+    line-height: 0.7;
+    margin-bottom: 2px;
   }
 }
 
 .card-title-wrapper-02 {
-  font-size: 10px;
+  flex: 1;
+  min-height: 0;
+  z-index: 2;
 }
 
 .card-title-wrapper-02-block {
   display: block;
-  width: 110%;
-  font-size: 11px;
+  width: 100%;
+  font-size: 9px;
   font-family: $helvetica;
   letter-spacing: 0.02em;
-  line-height: 1.4;
-  transform: scale(0.82);
-  transform-origin: left;
+  line-height: 1.25;
 }
 
 .card-title-wrapper-03 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-  font-size: 50px;
+  font-size: 42px;
   font-family: $sixcaps;
+  line-height: 0.88;
+  margin-top: auto;
+  z-index: 1;
+  overflow: visible;
+  white-space: nowrap;
 }
 
 .card-shadow {

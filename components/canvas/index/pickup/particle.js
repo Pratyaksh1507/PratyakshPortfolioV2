@@ -291,12 +291,25 @@ export default class Particle {
     }
   }
 
+  getScaleFactor() {
+    if (typeof window === 'undefined') return 1.0;
+    if (this.config && this.config.isPc) {
+      return Math.min(Math.max(window.innerWidth / 1280, 0.7), 1.35);
+    } else if (this.config && this.config.isTab) {
+      return Math.min(Math.max(window.innerWidth / 1024, 0.65), 1.15);
+    } else {
+      return Math.min(Math.max(window.innerWidth / 375, 0.6), 1.25);
+    }
+  }
+
   _initParticles() {
+    this.particles = [];
+    const scale = this.getScaleFactor();
     for (let i = 0; i < this.num; i++) {
       let p = null;
       const color = this.particlesInit[i].color;
       const clipR = this.particlesInit[i].clipR;
-      const r = this.particlesInit[i].r;
+      const r = this.particlesInit[i].r * scale;
       const x = this.config.isPc ? (this.particlesInit[i].x / 1280) * window.innerWidth : (this.particlesInit[i].x / 750) * window.innerWidth;
       const y = this.config.isPc ? (this.particlesInit[i].y / 800) * window.innerHeight : (this.particlesInit[i].y / 1100) * window.innerHeight;
       const s = Math.random() * this.speed;
@@ -338,6 +351,19 @@ export default class Particle {
     this.canvas.style.height = height + 'px'
   }
 
+  updateParticleScale() {
+    const scale = this.getScaleFactor();
+    for (let i = 0; i < this.particles.length; i++) {
+      const oldR = this.particles[i].r;
+      const newR = this.particlesInit[i].r * scale;
+      this.particles[i].r = newR;
+      this.particles[i].mass = newR;
+      if (this.particles[i].clipR > 0 && oldR > 0) {
+        this.particles[i].clipR = (this.particles[i].clipR / oldR) * newR;
+      }
+    }
+  }
+
   init() {
     this._setCanvasSize();
     this._initParticles();
@@ -345,6 +371,7 @@ export default class Particle {
 
   onResize() {
     this._setCanvasSize();
+    this.updateParticleScale();
   }
 
   /**
@@ -372,7 +399,7 @@ export default class Particle {
         duration: this.setParticleDuration(i),
         delay: this.setParticleDelay(i),
         ease: this.config.transform,
-        clipR: this.particlesInit[i].r,
+        clipR: this.particles[i].r,
       })
     }
   }
@@ -441,7 +468,7 @@ export default class Particle {
             duration: this.setParticleDuration(i),
             delay: this.setParticleDelay(i),
             ease: this.config.transform,
-            clipR: this.particlesInit[i].r,
+            clipR: this.particles[i].r,
           });
           this.setSceneReverseAnimations.push(setSceneReverseAnimation);
         }

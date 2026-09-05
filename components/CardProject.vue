@@ -12,12 +12,7 @@
           <span class="card-title-wrapper-02-block">{{ desc }}</span>
         </span>
         <span class="card-title-wrapper-03">
-          <span class="pc-only">
-            <AppTextAnimation :state="state" :rotate="$BASEROTATE.left" :text="title" :sp-animation="false" />
-          </span>
-          <span class="sp-only">
-            {{ title }}
-          </span>
+          <AppTextAnimation :state="state" :rotate="$BASEROTATE.left" :text="title" />
         </span>
       </span>
     </component>
@@ -110,21 +105,30 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 28px 18px;
+  padding: 22px 16px 14px 16px;
   background-color: $white;
   color: $black;
-  border-radius: 14px;
+  border-radius: 12px;
+  box-sizing: border-box;
+
+  @include tab-vertical() {
+    padding: 18px 14px 12px 14px;
+    border-radius: 9px;
+  }
 
   @include sp() {
-    padding: 20px 16px;
-    border-radius: 7px;
+    padding: 14px 12px 10px 12px;
+    border-radius: 8px;
   }
 }
 
 .card-inner {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   height: 100%;
+  width: 100%;
 }
 
 .card-link {
@@ -137,63 +141,103 @@ export default {
 
 .card-title-wrapper-01 {
   display: block;
-  margin: 0 0 60px 0;
+  margin: 0 0 16px 0;
+  z-index: 2;
+
+  @include tab-vertical() {
+    margin: 0 0 12px 0;
+  }
 
   @include sp() {
-    margin: 0 0 40px 0;
+    margin: 0 0 8px 0;
   }
 }
 
 .card-title-wrapper-01-block {
   display: block;
-  font-size: 20px;
+  font-size: 16px;
   font-family: $helvetica;
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+
+  @include tab-vertical() {
+    font-size: 13px;
+  }
 
   @include sp() {
-    font-size: 17px;
+    font-size: 11px;
   }
 
   &:first-of-type {
-    font-size: 36px;
-    text-indent: -4px;
-    line-height: 1;
+    font-size: 28px;
+    text-indent: -3px;
+    line-height: 0.95;
+    margin-bottom: 2px;
+
+    @include tab-vertical() {
+      font-size: 22px;
+      text-indent: -2px;
+    }
 
     @include sp() {
       display: inline-block;
-      margin: 0 0 0 -4px;
-      font-size: 28px;
+      margin: 0 0 0 -2px;
+      font-size: 16px;
       line-height: 0.9;
       text-indent: 0;
     }
   }
 }
 
+.card-title-wrapper-02 {
+  flex: 1;
+  min-height: 0;
+  z-index: 2;
+  margin-bottom: 6px;
+}
+
 .card-title-wrapper-02-block {
   display: block;
-  width: 200px;
-  font-size: 12px;
+  width: 100%;
+  max-width: 100%;
+  font-size: 11px;
   font-family: $helvetica;
   letter-spacing: 0.02em;
-  line-height: 1.24;
+  line-height: 1.32;
+
+  @include tab-vertical() {
+    font-size: 10px;
+    line-height: 1.28;
+  }
 
   @include sp() {
-    width: 180px;
-    font-size: 10px;
+    font-size: clamp(9px, 2.5vw, 10px);
+    line-height: 1.25;
   }
 }
 
 .card-title-wrapper-03 {
-  position: absolute;
-  bottom: -11px;
-  left: 0;
+  position: relative;
   width: 100%;
-  font-size: 120px;
+  font-size: 96px;
   font-family: $sixcaps;
+  line-height: 0.88;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;
+  overflow: visible;
+  white-space: nowrap;
+
+  @include tab-vertical() {
+    font-size: 76px;
+  }
 
   @include sp() {
-    bottom: -5px;
-    font-size: 80px;
+    font-size: 52px;
   }
 }
 

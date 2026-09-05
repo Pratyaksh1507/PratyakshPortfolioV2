@@ -442,8 +442,8 @@ export default {
   z-index: 2;
 
   @include sp() {
-    margin: 0 0 46px 0;
-    font-size: vw_sp(216);
+    margin: 0 0 36px 0;
+    font-size: clamp(72px, 20vw, 108px);
   }
 }
 
@@ -453,7 +453,7 @@ export default {
   z-index: 2;
 
   @include sp() {
-    margin: 0 0 34px 0;
+    margin: 0 0 24px 0;
   }
 }
 
@@ -498,8 +498,8 @@ export default {
   text-align: center;
 
   @include sp() {
-    margin: 0 0 12px 0;
-    font-size: vw_sp(96);
+    margin: -6px 0 8px 0;
+    font-size: clamp(38px, 10vw, 48px);
   }
 }
 
@@ -510,6 +510,11 @@ export default {
   line-height: 1.3;
   letter-spacing: 0.02em;
   text-align: center;
+
+  @include sp() {
+    font-size: clamp(10.5px, 2.9vw, 11.5px);
+    line-height: 1.4;
+  }
 }
 
 .hambergerMenu-item-img {

@@ -1,6 +1,6 @@
 <template>
   <div class="card-article">
-    <a :href="link" target="_blank" rel="noopener" class="card-link">
+    <AppPageTransitionBg url="/about" color="#000000" class="card-link">
       <span class="card-inner">
         <span class="card-title-wrapper-01">
           <span v-for="(char, index) of name" :key="index" class="card-title-wrapper-01-block" v-text="char"></span>
@@ -9,26 +9,18 @@
           <span v-for="(char, index) of desc" :key="index" class="card-title-wrapper-02-block" v-text="char"></span>
         </span>
         <span class="card-title-wrapper-03">
-          <AppTextAnimation :state="state" :rotate="$BASEROTATE.left" :text="title" />
+          <span>{{ title }}</span>
           <span class="card-sub-title">
-            <AppTextAnimation :state="state" :start="0.28" :rotate="$BASEROTATE.left" :text="subtitle" />
+            <span>{{ subtitle }}</span>
           </span>
         </span>
       </span>
-    </a>
+    </AppPageTransitionBg>
   </div>
 </template>
 
 <script>
 export default {
-  /**
-   * name : 会社名
-   * title : 会社タイトル
-   * subTitle : 会社サブタイトル
-   * link : 会社URL
-   * desc : 会社説明
-   * state : テキストアニメーションの状態を変更するprops
-   */
   props: {
     name: {
       type: Array,
@@ -39,10 +31,6 @@ export default {
       required: true,
     },
     subtitle: {
-      type: String,
-      required: true,
-    },
-    link: {
       type: String,
       required: true,
     },
@@ -64,10 +52,12 @@ export default {
   width: 100%;
   height: 100%;
   padding: 22px 16px 14px 16px;
-  background-color: #d9d9d9;
+  background-color: #fbf8f3;
   color: $black;
   border-radius: 12px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
   box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   @include tab-vertical() {
     padding: 18px 14px 12px 14px;
@@ -174,7 +164,7 @@ export default {
   }
 
   @include sp() {
-    font-size: clamp(8px, 2.3vw, 9.5px);
+    font-size: clamp(8.5px, 2.4vw, 9.5px);
     line-height: 1.25;
   }
 }

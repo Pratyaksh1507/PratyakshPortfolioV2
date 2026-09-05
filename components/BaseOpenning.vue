@@ -452,10 +452,15 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0) scale(0);
-  width: 900px;
-  height: 900px;
+  width: vw(900);
+  height: vw(900);
   border-radius: 50%;
   border: solid 1px $black;
+
+  @include sp() {
+    width: vw_sp(680);
+    height: vw_sp(680);
+  }
 }
 
 .openning-bg-circle-container {
@@ -476,92 +481,155 @@ export default {
 
 .openning-bg-circle-color-01 {
   position: absolute;
-  top: -607px;
-  left: 146px;
-  width: 597px;
-  height: 597px;
+  top: vw(-607);
+  left: vw(146);
+  width: vw(597);
+  height: vw(597);
   background-color: $lightBlue;
   border-radius: 50%;
+
+  @include sp() {
+    top: vw_sp(-360);
+    left: vw_sp(80);
+    width: vw_sp(380);
+    height: vw_sp(380);
+  }
 }
 
 .openning-bg-circle-color-02 {
   position: absolute;
-  top: -346px;
-  left: 86px;
-  width: 296px;
-  height: 296px;
+  top: vw(-346);
+  left: vw(86);
+  width: vw(296);
+  height: vw(296);
   background-color: $thinPink;
   border-radius: 50%;
+
+  @include sp() {
+    top: vw_sp(-200);
+    left: vw_sp(40);
+    width: vw_sp(190);
+    height: vw_sp(190);
+  }
 }
 
 .openning-bg-circle-color-03 {
   position: absolute;
-  bottom: -381px;
-  left: 406px;
-  width: 311px;
-  height: 311px;
+  bottom: vw(-381);
+  left: vw(406);
+  width: vw(311);
+  height: vw(311);
   background-color: $yellow;
   border-radius: 50%;
+
+  @include sp() {
+    bottom: vw_sp(-220);
+    left: vw_sp(240);
+    width: vw_sp(200);
+    height: vw_sp(200);
+  }
 }
 
 .openning-bg-circle-color-04 {
   position: absolute;
-  bottom: -452px;
-  left: 276px;
-  width: 402px;
-  height: 402px;
+  bottom: vw(-452);
+  left: vw(276);
+  width: vw(402);
+  height: vw(402);
   background-color: $thinPink;
   border-radius: 50%;
+
+  @include sp() {
+    bottom: vw_sp(-260);
+    left: vw_sp(160);
+    width: vw_sp(260);
+    height: vw_sp(260);
+  }
 }
 
 .openning-bg-circle-color-05 {
   position: absolute;
-  bottom: -300px;
-  left: 122px;
-  width: 296px;
-  height: 296px;
+  bottom: vw(-300);
+  left: vw(122);
+  width: vw(296);
+  height: vw(296);
   background-color: $lightBlue;
   border-radius: 50%;
+
+  @include sp() {
+    bottom: vw_sp(-180);
+    left: vw_sp(60);
+    width: vw_sp(190);
+    height: vw_sp(190);
+  }
 }
 
 .openning-bg-circle-color-06 {
   position: absolute;
-  bottom: -660px;
-  right: 440px;
-  width: 331px;
-  height: 331px;
+  bottom: vw(-660);
+  right: vw(440);
+  width: vw(331);
+  height: vw(331);
   background-color: $thinPink;
   border-radius: 50%;
+
+  @include sp() {
+    bottom: vw_sp(-380);
+    right: vw_sp(250);
+    width: vw_sp(210);
+    height: vw_sp(210);
+  }
 }
 
 .openning-bg-circle-color-07 {
   position: absolute;
-  bottom: -647px;
-  right: 186px;
-  width: 597px;
-  height: 597px;
+  bottom: vw(-647);
+  right: vw(186);
+  width: vw(597);
+  height: vw(597);
   background-color: $yellow;
   border-radius: 50%;
+
+  @include sp() {
+    bottom: vw_sp(-370);
+    right: vw_sp(100);
+    width: vw_sp(380);
+    height: vw_sp(380);
+  }
 }
 
 .openning-bg-circle-color-08 {
   position: absolute;
-  bottom: -547px;
-  right: 210px;
-  width: 296px;
-  height: 296px;
+  bottom: vw(-547);
+  right: vw(210);
+  width: vw(296);
+  height: vw(296);
   background-color: $blue;
   border-radius: 50%;
+
+  @include sp() {
+    bottom: vw_sp(-310);
+    right: vw_sp(120);
+    width: vw_sp(190);
+    height: vw_sp(190);
+  }
 }
 
 .openning-bg-circle-color-09 {
   position: absolute;
-  bottom: -270px;
-  right: 6px;
-  width: 241px;
-  height: 241px;
+  bottom: vw(-270);
+  right: vw(6);
+  width: vw(241);
+  height: vw(241);
   background-color: $thinPink;
   border-radius: 50%;
+
+  @include sp() {
+    bottom: vw_sp(-150);
+    right: vw_sp(4);
+    width: vw_sp(150);
+    height: vw_sp(150);
+  }
 }
 
 .openning-bg-circle {

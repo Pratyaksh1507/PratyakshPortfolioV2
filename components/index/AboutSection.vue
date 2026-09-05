@@ -3,13 +3,13 @@
     <div class="about-bg">
       <div class="about-inner">
         <div class="l-container">
-          <h2 ref="AboutTitle" class="about-title">
-            <span class="about-title-read-area">
-              <AppReadTitle :state="isTextSegmentState" :text="['・', 'ABOUT']" :sp-animation="false" :modifier="'section'" />
-            </span>
-            <span class="pc-only">
+          <div class="about-content">
+            <h2 ref="AboutTitle" class="about-title">
+              <span class="about-title-read-area">
+                <AppReadTitle :state="isTextSegmentState" :text="['・', 'ABOUT']" :modifier="'section'" />
+              </span>
               <span class="about-title-wrapper about-title-wrapper-01">
-                <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'WITH A STRONG BASE IN FRONTEND DEVELOPMENT,'" :sp-animation="false" />
+                <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'WITH A STRONG BASE IN FRONTEND DEVELOPMENT,'" />
               </span>
               <span class="about-title-wrapper about-title-wrapper-02">
                 <AppTextAnimation
@@ -17,72 +17,50 @@
                   :start="0.12"
                   :rotate="$BASEROTATE.left"
                   :text="'I FOCUS ON BUILDING MODERN WEB PRODUCTS,'"
-                  :sp-animation="false"
                 />
               </span>
               <span class="about-title-wrapper about-title-wrapper-03">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" :text="'EXPANDING INTO BACKEND ENGINEERING,'" :sp-animation="false" />
+                <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" :text="'EXPANDING INTO BACKEND ENGINEERING,'" />
               </span>
               <span class="about-title-wrapper about-title-wrapper-04">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'AND EXPLORING AI TO CREATE RELIABLE,'" :sp-animation="false" />
+                <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'AND EXPLORING AI TO CREATE RELIABLE,'" />
               </span>
               <span class="about-title-wrapper about-title-wrapper-05">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.48" :rotate="$BASEROTATE.right" :text="'PRACTICAL DIGITAL EXPERIENCES.'" :sp-animation="false" />
+                <AppTextAnimation :state="isTextSegmentState" :start="0.48" :rotate="$BASEROTATE.right" :text="'PRACTICAL DIGITAL EXPERIENCES.'" />
               </span>
-            </span>
-            <span class="sp-only">
-              <span class="about-title-wrapper-sp about-title-wrapper-01-sp">
-                <AppTextAnimation :state="isTextSegmentState" :start="0" :rotate="$BASEROTATE.right" :text="'WITH A STRONG BASE IN'" :pc-animation="false" />
-              </span>
-              <span class="about-title-wrapper-sp about-title-wrapper-02-sp">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.12" :rotate="$BASEROTATE.left" :text="'FRONTEND DEVELOPMENT,'" :pc-animation="false" />
-              </span>
-              <span class="about-title-wrapper-sp about-title-wrapper-03-sp">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" :text="'I FOCUS ON BUILDING'" :pc-animation="false" />
-              </span>
-              <span class="about-title-wrapper-sp about-title-wrapper-04-sp">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'MODERN WEB PRODUCTS,'" :pc-animation="false" />
-              </span>
-              <span class="about-title-wrapper-sp about-title-wrapper-05-sp">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.48" :rotate="$BASEROTATE.right" :text="'EXPANDING INTO BACKEND'" :pc-animation="false" />
-              </span>
-              <span class="about-title-wrapper-sp about-title-wrapper-06-sp">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.6" :rotate="$BASEROTATE.left" :text="'ENGINEERING, & EXPLORING'" :pc-animation="false" />
-              </span>
-              <span class="about-title-wrapper-sp about-title-wrapper-07-sp">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.72" :rotate="$BASEROTATE.right" :text="'AI TO CREATE RELIABLE,'" :pc-animation="false" />
-              </span>
-              <span class="about-title-wrapper-sp about-title-wrapper-08-sp">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.84" :rotate="$BASEROTATE.left" :text="'PRACTICAL DIGITAL'" :pc-animation="false" />
-              </span>
-              <span class="about-title-wrapper-sp about-title-wrapper-09-sp">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.96" :rotate="$BASEROTATE.right" :text="'EXPERIENCES.'" :pc-animation="false" />
-              </span>
-            </span>
-            <span class="pc-only">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.6" :width="1000" :origin="'left'" :sp-animation="false" :modifier="'index-about'" />
-            </span>
-            <span class="sp-only">
-              <span class="about-text-underline"></span>
-            </span>
-          </h2>
-          <p class="about-read-text">
-            <span class="pc-only">
-              <AppReadTitle
-                :state="isTextSegmentState"
-                :start="0.48"
-                :text="[
-                  'STARTED IN SOFTWARE DEVELOPMENT THROUGH FRONTEND ENGINEERING AND MODERN WEB FRAMEWORKS,',
-                  'NOW GROWING INTO BACKEND ARCHITECTURE AND EXPLORING GENERATIVE AI',
-                  'TO BUILD PRACTICAL, USEFUL DIGITAL PRODUCTS.',
-                ]"
-                :sp-animation="false"
+              <AppBounceLine :state="isTextUnderlineState" :start="0.6" :width="1000" :origin="'left'" :modifier="'index-about'" />
+            </h2>
+            <div class="about-card-item">
+              <AppCard
+                :component-name="'about'"
+                :name="['・', 'PRATYAKSH KALSI']"
+                :title="'ABOUT'"
+                :subtitle="'(STORY & STACK)'"
+                :desc="['SOFTWARE DEVELOPER,', 'BUILDING FOR WEB & AI,', 'BASED IN INDIA,', 'CLICK TO READ STORY →']"
+                :rotate="8"
+                :xspeed="0.01"
+                :yspeed="0.12"
+                :view-animation="false"
               />
-            </span>
-            <span class="sp-only"
-              >STARTED IN SOFTWARE DEVELOPMENT THROUGH FRONTEND ENGINEERING AND MODERN WEB FRAMEWORKS, NOW GROWING INTO BACKEND ARCHITECTURE AND EXPLORING GENERATIVE AI TO BUILD PRACTICAL, USEFUL DIGITAL PRODUCTS.</span
-            >
-          </p>
+            </div>
+          </div>
+          <div class="about-read-text">
+            <AppReadTitle
+              :state="isTextSegmentState"
+              :start="0.48"
+              :text="[
+                'BASED IN INDIA · B.TECH ECE AT NIT SRINAGAR.',
+                'BUILDING HIGH-PERFORMANCE WEB APPS & EXPLORING GENAI.',
+                'CLICK CARD OR BUTTON BELOW TO EXPLORE FULL PROFILE.',
+              ]"
+            />
+            <div class="about-bio-link-wrap">
+              <AppPageTransitionBg url="/about" color="#000000" class="about-bio-link">
+                <span>VIEW FULL ABOUT & RESUME</span>
+                <span class="about-bio-link-arrow">→</span>
+              </AppPageTransitionBg>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -132,15 +110,20 @@ export default {
 }
 
 .about-inner {
-  padding: 333px 0 568px 0;
+  padding: 220px 0 320px 0;
 
   @include tab-vertical() {
-    padding: 213px 0 448px 0;
+    padding: 160px 0 240px 0;
   }
 
   @include sp() {
-    padding: 118px 0 340px;
+    padding: 100px 0 180px 0;
   }
+}
+
+.about-content {
+  position: relative;
+  width: 100%;
 }
 
 .about-title {
@@ -165,27 +148,26 @@ export default {
   }
 
   @include sp() {
-    width: 100%;
-    margin: 0 0 54px 0;
-    padding: 0;
-    font-size: vw_sp(84);
-    white-space: normal;
-    line-height: 1.06;
+    font-size: clamp(34px, 8.8vw, 50px);
+    line-height: 1.05;
+    padding: 0 20px;
+    margin: 0 0 48px 0;
   }
 }
 
 .about-title-read-area {
   position: absolute;
-  top: -4px;
-  left: 42px;
+  bottom: calc(100% + 16px);
+  left: 40px;
   color: $white;
 
   @include tab-vertical() {
-    left: vw(46);
+    left: vw(40);
   }
 
   @include sp() {
-    left: 9px;
+    left: 20px;
+    bottom: calc(100% + 12px);
   }
 }
 
@@ -194,20 +176,39 @@ export default {
 }
 
 .about-title-wrapper-01 {
-  text-align: right;
+  text-align: left;
 }
 
-.about-title-wrapper-sp {
-  display: block;
-  width: fit-content;
-  max-width: 100%;
-}
+.about-card-item {
+  position: absolute;
+  top: -10px;
+  right: 60px;
+  transform: rotate(8deg);
+  z-index: 100;
 
-.about-title-wrapper-01-sp {
-  text-align: right;
+  @include tab {
+    right: 20px;
+    top: 0;
+  }
+
+  @include tab-vertical() {
+    right: 16px;
+  }
+
+  @include sp() {
+    position: relative;
+    top: 0;
+    right: auto;
+    margin: 30px auto 60px auto;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .about-read-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   width: 100%;
   max-width: 100%;
   color: $darkBlue;
@@ -225,21 +226,58 @@ export default {
   }
 
   @include sp() {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 11px;
-    line-height: 1.4;
+    align-items: flex-start;
     text-align: left;
+    padding: 0 20px;
+    margin-top: 20px;
+    font-size: clamp(11.5px, 3.2vw, 13px);
+    line-height: 1.5;
   }
 }
 
-.about-text-underline {
-  position: absolute;
-  bottom: -20px;
-  left: 0;
+.about-bio-link-wrap {
+  margin: 22px 0 0 auto;
+
+  @include sp() {
+    margin: 20px 0 0 0;
+  }
+}
+
+.about-bio-link-arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.about-bio-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
   background-color: $darkBlue;
-  width: 100%;
-  height: 1px;
+  color: $white;
+  border-radius: 999px;
+  font-family: $helvetica;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+
+  @include sp() {
+    font-size: 12px;
+    padding: 11px 20px;
+  }
+
+  &:hover {
+    background-color: $black;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+
+    .about-bio-link-arrow {
+      transform: translateX(4px);
+    }
+  }
 }
 </style>

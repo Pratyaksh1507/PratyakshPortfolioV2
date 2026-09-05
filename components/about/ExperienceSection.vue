@@ -34,12 +34,6 @@
                 <h3 class="experience-role">{{ exp.role }}</h3>
                 <div class="experience-company-wrapper">
                   <p class="experience-company">{{ exp.company }}</p>
-                  <p class="experience-location sp-only">{{ exp.location }}</p>
-                  <div class="experience-sp-skills sp-only">
-                    <span v-for="(skill, sIdx) in exp.skills.slice(0, 3)" :key="sIdx" class="experience-sp-skill-pill">
-                      {{ skill }}
-                    </span>
-                  </div>
                 </div>
               </div>
               <div class="experience-list-bottom-line">
@@ -47,13 +41,11 @@
               </div>
             </div>
           </div>
-          <div class="pc-only">
-            <ul v-if="experienceSummary" class="experience-total-list">
-              <li class="experience-total-item">EXPERIENCE * {{ experienceSummary.years }}</li>
-              <li class="experience-total-item">CORE STACK * {{ experienceSummary.focus }}</li>
-              <li class="experience-total-item">EDUCATION * {{ experienceSummary.education }}</li>
-            </ul>
-          </div>
+          <ul v-if="experienceSummary" class="experience-total-list">
+            <li class="experience-total-item">EXPERIENCE * {{ experienceSummary.years }}</li>
+            <li class="experience-total-item">CORE STACK * {{ experienceSummary.focus }}</li>
+            <li class="experience-total-item">EDUCATION * {{ experienceSummary.education }}</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -353,6 +345,10 @@ export default {
   height: 330px;
   pointer-events: none;
   z-index: 3;
+
+  @include sp() {
+    display: none;
+  }
 }
 
 .experience-card-item {
@@ -429,12 +425,12 @@ export default {
   margin: 0 0 4px 0;
 
   @include tab-vertical() {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   @include sp() {
     margin: 0;
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 
@@ -446,10 +442,10 @@ export default {
   text-transform: uppercase;
 
   @include sp() {
-    font-size: 8.5px;
-    padding: 1px 6px;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 3px;
+    font-size: 9.5px;
+    padding: 2px 7px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
   }
 }
 
@@ -469,8 +465,8 @@ export default {
   @include sp() {
     width: auto;
     margin: 0 0 8px 0;
-    font-size: vw_sp(84);
-    line-height: 1.1;
+    font-size: clamp(38px, 10vw, 48px);
+    line-height: 1.05;
   }
 }
 
@@ -489,7 +485,7 @@ export default {
   }
 
   @include sp() {
-    font-size: 12px;
+    font-size: 13px;
     margin: 0 0 6px 0;
   }
 }
@@ -499,6 +495,10 @@ export default {
   color: $gray;
   letter-spacing: 0.02em;
   margin: 0 0 6px 0;
+
+  @include sp() {
+    font-size: 11px;
+  }
 }
 
 .experience-sp-skills {
@@ -514,6 +514,11 @@ export default {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 3px;
   color: #d1d5db;
+
+  @include sp() {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
 }
 
 .experience-list-bottom-line {
@@ -528,6 +533,11 @@ export default {
   color: $gray;
   font-size: 12px;
   letter-spacing: 0.02em;
+
+  @include sp() {
+    font-size: 12px;
+    line-height: 1.5;
+  }
 
   &:not(:last-of-type) {
     margin: 0 0 4px 0;

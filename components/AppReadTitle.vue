@@ -49,11 +49,11 @@ export default {
   line-height: 1.04;
 
   @include tab-vertical() {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   @include sp() {
-    font-size: 10px;
+    font-size: clamp(11px, 2.8vw, 12px);
   }
 }
 
@@ -100,7 +100,7 @@ export default {
   text-align: right;
 
   @include sp() {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   & .app-read-title-wrapper-00 {
@@ -146,7 +146,7 @@ export default {
     }
 
     @include sp() {
-      font-size: 10px;
+      font-size: 12px;
     }
   }
 }
@@ -169,7 +169,7 @@ export default {
     font-size: 14px;
 
     @include sp() {
-      font-size: 10px;
+      font-size: 11px;
     }
   }
 }
@@ -195,7 +195,7 @@ export default {
     font-size: 14px;
 
     @include sp() {
-      font-size: 10px;
+      font-size: 11px;
     }
   }
 }
@@ -204,7 +204,7 @@ export default {
   font-size: 14px;
 
   @include sp() {
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.1;
   }
 

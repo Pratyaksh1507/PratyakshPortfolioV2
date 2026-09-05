@@ -100,16 +100,16 @@ export default {
   @include sp() {
     display: block;
     width: 100%;
-    margin: 0 0 118px 0;
-    padding: 22px 0 0 0;
-    font-size: 10px;
+    margin: 0 0 80px 0;
+    padding: 24px 0 0 0;
+    font-size: clamp(12px, 3.4vw, 13px);
   }
 }
 
 .contents-info-client {
   flex-shrink: 0;
   width: 250px;
-  line-height: 1.2;
+  line-height: 1.4;
 
   @include tab-vertical() {
     width: 170px;
@@ -117,13 +117,14 @@ export default {
 
   @include sp() {
     width: 100%;
-    margin: 0 0 33px 0;
+    margin: 0 0 24px 0;
   }
 }
 
 .contents-info-desc {
   margin: -2px 0 0 0;
-  line-height: 1.36;
+  line-height: 1.55;
+  letter-spacing: 0.02em;
 }
 
 .contents-img-wrapper {

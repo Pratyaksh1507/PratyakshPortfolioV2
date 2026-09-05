@@ -746,7 +746,8 @@ export default {
   @include sp() {
     left: 0;
     width: 100%;
-    font-size: 10px;
+    font-size: clamp(11.5px, 3.2vw, 12.5px);
+    line-height: 1.45;
   }
 }
 

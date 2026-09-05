@@ -1,4 +1,3 @@
-import { reload } from "../assets/js/reload"
 import { preEvent } from "../assets/js/preEvent"
 
 const SITECONFIG = {
@@ -17,18 +16,9 @@ const SITECONFIG = {
   firstAccess: false,
 }
 
-// 767以上のデバイスはPCをtrueにする
-if (window.innerWidth >= SITECONFIG.breakPoint) {
-  SITECONFIG.isPc = true;
-}
-// 767以下のデバイスはSPをtrueにする
-if(window.innerWidth <= SITECONFIG.breakPoint){
-  SITECONFIG.isMobile = true;
-}
-// 768以上の1280以下のデバイスはTABをtrueにする
-if (window.innerWidth <= 1280 && window.innerWidth >= SITECONFIG.breakPoint) {
-  SITECONFIG.isTab = true;
-}
+// Keep PC layout active across all screen sizes
+SITECONFIG.isPc = true;
+SITECONFIG.isMobile = false;
 
 // タッチイベント判定
 if ('ontouchstart' in document.documentElement) {
@@ -63,9 +53,9 @@ if (SITECONFIG.isNoTouch) {
   window.addEventListener('wheel', preEvent, { passive: false })
 }
 
-// ブレイクポイントを跨いだ時に強制的にロードさせる
-const mediaQuery = window.matchMedia('(max-width: 767px)')
-mediaQuery.addEventListener('change', reload)
+// Disable forced reload on crossing breakpoint so resize is smooth
+// const mediaQuery = window.matchMedia('(max-width: 767px)')
+// mediaQuery.addEventListener('change', reload)
 
 // セッションストレージで訪問済みかを判定する
 if(sessionStorage.getItem('visited')){

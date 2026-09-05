@@ -15,6 +15,7 @@
       <CardProject v-else-if="componentName === 'project'" :id="id" :type="type" :index="index" :name="name" :title="title" :desc="desc" :state="state" />
       <CardContact v-else-if="componentName === 'contact'" :name="name" :title="title" :info="info" :state="state" />
       <CardCompany v-else-if="componentName === 'company'" :name="name" :title="title" :subtitle="subtitle" :link="link" :desc="desc" :state="state" />
+      <CardAbout v-else-if="componentName === 'about'" :name="name" :title="title" :subtitle="subtitle" :desc="desc" :state="state" />
       <CardWorks v-else-if="componentName === 'works'" :shadow-color="shadowColor" :external-link="externalLink" :state="state" />
     </div>
     <!-- intersectionObserverで監視する用の空dom -->
@@ -286,12 +287,26 @@ export default {
 }
 
 .app-card-wrapper {
-  width: 293px;
-  height: 400px;
+  width: clamp(250px, 20vw, 293px);
+  aspect-ratio: 293 / 400;
+  height: auto;
+
+  @include tab-vertical() {
+    width: clamp(200px, 24vw, 250px);
+    aspect-ratio: 293 / 400;
+    height: auto;
+  }
 
   @include sp() {
-    width: 212px;
-    height: 302px;
+    width: clamp(170px, 48vw, 215px);
+    aspect-ratio: 293 / 400;
+    height: auto;
+  }
+
+  @media (max-width: 375px) {
+    width: clamp(165px, 48vw, 190px);
+    aspect-ratio: 293 / 400;
+    height: auto;
   }
 }
 
@@ -304,8 +319,8 @@ export default {
   position: absolute;
   top: -14px;
   left: 0;
-  width: 293px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
 }
 </style>

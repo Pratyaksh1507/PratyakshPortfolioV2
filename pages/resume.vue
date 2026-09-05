@@ -142,7 +142,7 @@
                 </div>
                 <div class="resume-doc-entry-meta">
                   <span class="resume-doc-entry-badge">PART-TIME</span>
-                  <span class="resume-doc-entry-date">APR 2026 — PRESENT</span>
+                  <span class="resume-doc-entry-date">APR 2026 — SEPT 2026</span>
                 </div>
               </div>
               <ul class="resume-doc-bullets">

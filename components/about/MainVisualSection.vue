@@ -3,70 +3,41 @@
     <div class="hero-inner">
       <div class="l-container">
         <h1 ref="HeroTitle" class="hero-title">
-          <span class="pc-only">
-            <span class="hero-title-read-area">
-              <AppReadTitle :state="isTextSegmentState" :text="['・', 'TECHNOLOGIES', 'HTML / CSS / JAVASCRIPT', 'REACT / NEXT.JS / TYPESCRIPT / NODE', 'AI / GENERATIVE AI']" :sp-animation="false" :modifier="'section'" />
-            </span>
+          <span class="hero-title-read-area">
+            <AppReadTitle :state="isTextSegmentState" :text="['・', 'TECHNOLOGIES', 'HTML / CSS / JAVASCRIPT', 'REACT / NEXT.JS / TYPESCRIPT / NODE', 'AI / GENERATIVE AI']" :modifier="'section'" />
           </span>
-          <span class="pc-only">
-            <span class="hero-title-wrapper hero-title-wrapper-01">
-              <AppBounceLine :state="isTextUnderlineState" :origin="'left'" :sp-animation="false" :width="470" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'HELLO, WORLD'" :sp-animation="false" />
-            </span>
-            <span class="hero-title-wrapper hero-title-wrapper-02">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.176" :origin="'right'" :sp-animation="false" :width="820" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'PRATYAKSH'" :sp-animation="false" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.4" :rotate="$BASEROTATE.left" :text="'KALSI'" :sp-animation="false" />
-            </span>
-            <span class="hero-title-wrapper hero-title-wrapper-03">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.42" :origin="'left'" :sp-animation="false" :width="900" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.42" :rotate="$BASEROTATE.right" :text="'IS  SOFTWARE'" :sp-animation="false" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.6" :rotate="$BASEROTATE.right" :text="'DEVELOPER'" :sp-animation="false" />
-            </span>
-            <span class="hero-title-wrapper hero-title-wrapper-04">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.7" :origin="'right'" :sp-animation="false" :width="1040" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.7" :rotate="$BASEROTATE.right" :text="'BUILDING FOR THE WEB'" :sp-animation="false" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.82" :rotate="$BASEROTATE.left" :text="'& EXPLORING AI'" :sp-animation="false" />
-            </span>
+          <span class="hero-title-wrapper hero-title-wrapper-01">
+            <AppBounceLine :state="isTextUnderlineState" :origin="'left'" :width="470" :modifier="'about-hero'" />
+            <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'HELLO, WORLD'" />
           </span>
-          <span class="sp-only">
-            <span class="hero-title-wrapper hero-title-wrapper-01-sp">
-              <AppBounceLine :state="isTextUnderlineState" :origin="'left'" :pc-animation="false" :width="547" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'HELLO, WORLD'" :pc-animation="false" />
-            </span>
-            <span class="hero-title-wrapper hero-title-wrapper-02-sp">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.176" :origin="'right'" :pc-animation="false" :width="670" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'PRATYAKSH KALSI'" :pc-animation="false" />
-            </span>
-            <span class="hero-title-wrapper hero-title-wrapper-03-sp">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.42" :origin="'left'" :pc-animation="false" :width="590" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.42" :rotate="$BASEROTATE.right" :text="'SOFTWARE DEVELOPER'" :pc-animation="false" />
-            </span>
-            <span class="hero-title-wrapper hero-title-wrapper-04-sp">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.6" :origin="'right'" :pc-animation="false" :width="670" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.6" :rotate="$BASEROTATE.right" :text="'BUILDING FOR'" :pc-animation="false" />
-            </span>
-            <span class="hero-title-wrapper hero-title-wrapper-05-sp">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.72" :origin="'left'" :pc-animation="false" :width="573" :modifier="'about-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.72" :rotate="$BASEROTATE.right" :text="'THE WEB & AI.'" :pc-animation="false" />
-            </span>
+          <span class="hero-title-wrapper hero-title-wrapper-02">
+            <AppBounceLine :state="isTextUnderlineState" :start="0.176" :origin="'right'" :width="820" :modifier="'about-hero'" />
+            <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'PRATYAKSH'" />
+            <AppTextAnimation :state="isTextSegmentState" :start="0.4" :rotate="$BASEROTATE.left" :text="'KALSI'" />
+          </span>
+          <span class="hero-title-wrapper hero-title-wrapper-03">
+            <AppBounceLine :state="isTextUnderlineState" :start="0.42" :origin="'left'" :width="900" :modifier="'about-hero'" />
+            <AppTextAnimation :state="isTextSegmentState" :start="0.42" :rotate="$BASEROTATE.right" :text="'IS  SOFTWARE'" />
+            <AppTextAnimation :state="isTextSegmentState" :start="0.6" :rotate="$BASEROTATE.right" :text="'DEVELOPER'" />
+          </span>
+          <span class="hero-title-wrapper hero-title-wrapper-04">
+            <AppBounceLine :state="isTextUnderlineState" :start="0.7" :origin="'right'" :width="1040" :modifier="'about-hero'" />
+            <AppTextAnimation :state="isTextSegmentState" :start="0.7" :rotate="$BASEROTATE.right" :text="'BUILDING FOR THE WEB'" />
+            <AppTextAnimation :state="isTextSegmentState" :start="0.82" :rotate="$BASEROTATE.left" :text="'& EXPLORING AI'" />
           </span>
         </h1>
-        <div class="pc-only">
-          <div class="hero-card-item">
-            <AppCard
-              :component-name="'company'"
-              :name="['・', 'PRATYAKSH KALSI']"
-              :title="'PRTYKSH'"
-              :subtitle="'(PORTFOLIO)'"
-              :link="'https://pratyakshkalsi.com'"
-              :desc="['SOFTWARE DEVELOPER,', 'BUILDING FOR WEB & AI,', 'BASED IN INDIA,', 'OPEN TO COLLABORATION,', '& OPPORTUNITIES.']"
-              :rotate="8"
-              :xspeed="0.01"
-              :yspeed="0.14"
-              :sp-animation="false"
-            />
-          </div>
+        <div class="hero-card-item">
+          <AppCard
+            :component-name="'company'"
+            :name="['・', 'PRATYAKSH KALSI']"
+            :title="'PRTYKSH'"
+            :subtitle="'(PORTFOLIO)'"
+            :link="'https://pratyakshkalsi.com'"
+            :desc="['SOFTWARE DEVELOPER,', 'BUILDING FOR WEB & AI,', 'BASED IN INDIA,', 'OPEN TO COLLABORATION,', '& OPPORTUNITIES.']"
+            :rotate="8"
+            :xspeed="0.01"
+            :yspeed="0.14"
+          />
         </div>
       </div>
     </div>
@@ -157,8 +128,12 @@ export default {
 .hero-inner {
   padding: 92px 0 333px;
 
+  @include tab-vertical() {
+    padding: 80px 0 240px;
+  }
+
   @include sp() {
-    padding: 106px 0 48px;
+    padding: 40px 0 180px;
   }
 }
 
@@ -168,14 +143,14 @@ export default {
   font-size: vw(180);
   font-family: $sixcaps;
   letter-spacing: -0.002em;
+  line-height: 0.94;
 
   @include tab-vertical() {
-    font-size: vw(154);
+    font-size: clamp(72px, 11vw, 120px);
   }
 
   @include sp() {
-    font-size: vw_sp(170);
-    line-height: 0.94;
+    font-size: clamp(42px, 13.5vw, 68px);
   }
 }
 
@@ -186,29 +161,36 @@ export default {
 
   @include tab-vertical() {
     left: 20px;
+    top: 4px;
+  }
+
+  @include sp() {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 24px;
+    display: block;
   }
 }
 
 .hero-title-wrapper {
   display: block;
   position: relative;
-
-  @include sp() {
-    display: table;
-    width: fit-content;
-    max-width: 100%;
-    margin: 0 0 16px 0;
-    white-space: nowrap;
-  }
 }
 
 .hero-title-wrapper-01 {
   width: vw(450);
+  max-width: 100%;
   margin: 0 0 24px vw(310);
 
   @include tab-vertical() {
     width: vw(394);
-    margin: 0 0 24px vw(270);
+    margin: 0 0 20px vw(240);
+  }
+
+  @include sp() {
+    width: fit-content;
+    margin: 0 0 18px 0;
   }
 }
 
@@ -216,11 +198,20 @@ export default {
   display: flex;
   justify-content: space-between;
   width: vw(987);
+  max-width: 100%;
   margin: 0 0 24px vw(46);
   padding: 0 26px 0 34px;
 
   @include tab-vertical() {
-    margin: 0 0 24px vw(-24);
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 0 10px;
+  }
+
+  @include sp() {
+    width: 100%;
+    margin: 0 0 18px 0;
+    padding: 0;
   }
 }
 
@@ -228,10 +219,17 @@ export default {
   display: flex;
   justify-content: space-between;
   width: vw(860);
+  max-width: 100%;
   margin: 0 0 24px vw(112);
 
   @include tab-vertical() {
-    margin: 0 0 24px vw(34);
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  @include sp() {
+    width: 100%;
+    margin: 0 0 18px 0;
   }
 }
 
@@ -244,17 +242,10 @@ export default {
   @include tab-vertical() {
     width: 100%;
   }
-}
 
-.hero-title-wrapper-01-sp,
-.hero-title-wrapper-02-sp,
-.hero-title-wrapper-03-sp,
-.hero-title-wrapper-04-sp,
-.hero-title-wrapper-05-sp {
-  display: table;
-  width: fit-content;
-  max-width: 100%;
-  margin: 0 0 vw_sp(24) 0;
+  @include sp() {
+    width: 100%;
+  }
 }
 
 .hero-text-underline {
@@ -272,5 +263,18 @@ export default {
   left: 33%;
   transform: rotate(-10deg);
   z-index: 101;
+
+  @include tab-vertical() {
+    top: 105%;
+    left: 28%;
+  }
+
+  @include sp() {
+    top: 90%;
+    bottom: auto;
+    right: 15px;
+    left: auto;
+    transform: rotate(-6deg);
+  }
 }
 </style>

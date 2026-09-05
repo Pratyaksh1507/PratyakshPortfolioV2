@@ -8,26 +8,17 @@
             <span class="contact-title-read-area">
               <AppReadTitle :state="isTextSegmentState" :text="['・', 'SAY HI']" :modifier="'section'" />
             </span>
-            <span class="pc-only">
-              <span class="contact-title-wrapper contact-title-wrapper-01">
-                <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'I AM A SOFTWARE DEVELOPER'" :sp-animation="false" />
-              </span>
-              <span class="contact-title-wrapper contact-title-wrapper-02">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.12" :rotate="$BASEROTATE.left" :text="'FOCUSED ON BUILDING USEFUL'" :sp-animation="false" />
-              </span>
-              <span class="contact-title-wrapper contact-title-wrapper-03">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" :text="'DIGITAL EXPERIENCES'" :sp-animation="false" />
-              </span>
-              <span class="contact-title-wrapper contact-title-wrapper-04">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'BASED IN INDIA.'" :sp-animation="false" />
-              </span>
+            <span class="contact-title-wrapper contact-title-wrapper-01">
+              <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'I AM A SOFTWARE DEVELOPER'" />
             </span>
-            <span class="sp-only">
-              <span class="contact-title-wrapper contact-title-wrapper-01-sp"> I AM A SOFTWARE </span>
-              <span class="contact-title-wrapper contact-title-wrapper-02-sp"> DEVELOPER </span>
-              <span class="contact-title-wrapper contact-title-wrapper-03-sp"> BUILDING USEFUL </span>
-              <span class="contact-title-wrapper contact-title-wrapper-04-sp"> DIGITAL EXPERIENCES </span>
-              <span class="contact-title-wrapper contact-title-wrapper-05-sp"> BASED IN INDIA. </span>
+            <span class="contact-title-wrapper contact-title-wrapper-02">
+              <AppTextAnimation :state="isTextSegmentState" :start="0.12" :rotate="$BASEROTATE.left" :text="'FOCUSED ON BUILDING USEFUL'" />
+            </span>
+            <span class="contact-title-wrapper contact-title-wrapper-03">
+              <AppTextAnimation :state="isTextSegmentState" :start="0.24" :rotate="$BASEROTATE.right" :text="'DIGITAL EXPERIENCES'" />
+            </span>
+            <span class="contact-title-wrapper contact-title-wrapper-04">
+              <AppTextAnimation :state="isTextSegmentState" :start="0.36" :rotate="$BASEROTATE.left" :text="'BASED IN INDIA.'" />
             </span>
           </h2>
           <div class="contact-info-area">
@@ -49,43 +40,10 @@
               </ul>
             </div>
             <div class="contact-info-name-area">
-              <span class="pc-only">
-                <span class="contact-name">
-                  <AppTextAnimation :state="isTextSegmentState" :start="0.48" :rotate="$BASEROTATE.right" :text="'PRATYAKSH KALSI'" :sp-animation="false" />
-                </span>
-              </span>
-              <span class="sp-only">
-                <span class="contact-name"> PRATYAKSH<br />KALSI </span>
+              <span class="contact-name">
+                <AppTextAnimation :state="isTextSegmentState" :start="0.48" :rotate="$BASEROTATE.right" :text="'PRATYAKSH KALSI'" />
               </span>
             </div>
-          </div>
-          <div class="contact-card-item-01">
-            <AppCard
-              :component-name="'contact'"
-              :name="['・', 'DESIGNED BY', '(PRATYAKSH KALSI)']"
-              :info="[
-                {
-                  link: contactData[1].list01.link,
-                  text: contactData[1].list01.text,
-                },
-                {
-                  link: contactData[1].list02.link,
-                  text: contactData[1].list02.text,
-                },
-                {
-                  link: contactData[1].list03.link,
-                  text: contactData[1].list03.text,
-                },
-              ]"
-              :title="{
-                text: contactData[1].mainTitle.title,
-                link: '',
-                subtext: '',
-              }"
-              :rotate="-10"
-              :xspeed="-0.08"
-              :yspeed="0.2"
-            />
           </div>
           <div class="contact-card-item-02">
             <AppCard
@@ -179,7 +137,7 @@ export default {
   }
 
   @include sp() {
-    padding: 225px 0 80px 0;
+    padding: 180px 0 60px 0;
   }
 }
 
@@ -199,9 +157,9 @@ export default {
   }
 
   @include sp() {
-    margin: 0 0 58px 0;
-    font-size: vw_sp(145);
-    line-height: 0.96;
+    font-size: clamp(48px, 13.5vw, 76px);
+    line-height: 1.05;
+    margin: 0 0 60px 0;
   }
 }
 
@@ -212,20 +170,14 @@ export default {
   color: $white;
 
   @include sp() {
-    top: 2px;
-    left: 0;
+    position: static;
+    display: block;
+    margin-bottom: 16px;
   }
 }
 
 .contact-title-wrapper {
   display: block;
-
-  @include sp() {
-    display: table;
-    width: fit-content;
-    max-width: 100%;
-    white-space: nowrap;
-  }
 }
 
 .contact-title-wrapper-01 {
@@ -234,34 +186,26 @@ export default {
   @include tab {
     padding: 0 0 0 vw(290);
   }
+
+  @include sp() {
+    padding: 0;
+  }
 }
 
 .contact-title-wrapper-02 {
   padding: 0 0 0 33px;
+
+  @include sp() {
+    padding: 0;
+  }
 }
 
 .contact-title-wrapper-04 {
   padding: 0 0 0 40px;
-}
 
-.contact-title-wrapper-01-sp {
-  margin: 0 0 8px 0;
-}
-
-.contact-title-wrapper-02-sp {
-  margin: 0 0 8px vw_sp(24);
-}
-
-.contact-title-wrapper-03-sp {
-  margin: 0 0 8px 0;
-}
-
-.contact-title-wrapper-04-sp {
-  margin: 0 0 8px vw_sp(24);
-}
-
-.contact-title-wrapper-05-sp {
-  margin: 0 0 0 vw_sp(48);
+  @include sp() {
+    padding: 0;
+  }
 }
 
 .contact-info-area {
@@ -269,7 +213,7 @@ export default {
   align-items: flex-start;
 
   @include sp() {
-    justify-content: space-between;
+    display: block;
   }
 }
 
@@ -282,7 +226,7 @@ export default {
   }
 
   @include sp() {
-    margin: 10px 20px 0 0;
+    margin: 0 0 32px 0;
   }
 }
 
@@ -295,23 +239,22 @@ export default {
   }
 
   @include sp() {
-    margin: 0 0 59px 0;
+    margin: 0 0 16px 0;
   }
 }
 
 .contact-info-list {
   font-size: 12px;
+  line-height: 1.6;
 
   @include sp() {
-    font-size: 10px;
+    font-size: clamp(12px, 3.4vw, 13.5px);
+    line-height: 1.7;
   }
 }
 
 .contact-info-item {
-  @include sp() {
-    display: block;
-    margin: 0 0 2px 0;
-  }
+  display: block;
 }
 
 .contact-info-name-area {
@@ -337,22 +280,10 @@ export default {
   }
 
   @include sp() {
-    font-size: vw_sp(360);
-    white-space: nowrap;
-  }
-}
-
-.contact-card-item-01 {
-  position: absolute;
-  top: 69.5%;
-  left: 24%;
-  transform: rotate(-10deg);
-  width: 0;
-  height: 0;
-
-  @include sp() {
-    top: 48%;
-    left: 38%;
+    margin: 10px 0 0 0;
+    font-size: clamp(52px, 16vw, 84px);
+    white-space: normal;
+    line-height: 0.98;
   }
 }
 
@@ -365,8 +296,7 @@ export default {
   height: 0;
 
   @include sp() {
-    top: 46%;
-    right: 50%;
+    display: none;
   }
 }
 </style>

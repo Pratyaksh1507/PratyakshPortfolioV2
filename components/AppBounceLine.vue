@@ -160,25 +160,38 @@ export default {
 
 .app-bounce-line--index-hero {
   position: absolute;
-  top: vw(-100);
+  top: calc(-50% - 6px);
   left: 0;
   stroke: $white;
 
+  @include tab-vertical() {
+    top: calc(-50% - 5px);
+  }
+
   @include sp() {
-    top: vw_sp(-124);
+    top: calc(-50% - 4px);
   }
 }
 
 .app-bounce-line--index-about {
-  top: vw(190);
+  top: 100%;
+  bottom: auto;
+  margin-top: -68px;
+  height: 160px;
   left: 40px;
-  width: calc(100% - 56px - 40px);
+  width: calc(100% - 80px);
   stroke: $darkBlue;
 
   @include tab {
-    top: vw(220);
-    left: vw(40);
-    width: calc(100% - #{vw(56)} - 40px);
+    left: 40px;
+    width: calc(100% - 80px);
+    margin-top: -68px;
+  }
+
+  @include sp() {
+    left: 20px;
+    width: calc(100% - 40px);
+    margin-top: -68px;
   }
 }
 
@@ -211,12 +224,17 @@ export default {
 }
 
 .app-bounce-line--about-hero {
-  top: vw(-106);
+  position: absolute;
+  top: calc(-50% - 6px);
   left: 0;
   stroke: $black;
 
+  @include tab-vertical() {
+    top: calc(-50% - 5px);
+  }
+
   @include sp() {
-    top: vw_sp(-122);
+    top: calc(-50% - 4px);
   }
 }
 

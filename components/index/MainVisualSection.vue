@@ -8,51 +8,24 @@
           <span class="hero-title-read-area">
             <AppReadTitle :state="isTextSegmentState" :text="['・', 'AUTHOR : PRATYAKSH KALSI', 'ROLE : SOFTWARE DEVELOPER', 'FOCUS : WEB & AI']" :modifier="'section'" />
           </span>
-          <span class="pc-only">
-            <span class="hero-title-wrapper hero-title-wrapper-01">
-              <AppBounceLine :state="isTextUnderlineState" :origin="'left'" :sp-animation="false" :width="1220" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'PORTFOLIO OF PRATYAKSH KALSI'" :sp-animation="false" />
-            </span>
-            <span class="hero-title-wrapper hero-title-wrapper-02">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.176" :origin="'right'" :width="1080" :sp-animation="false" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'SOFTWARE DEVELOPER'" :sp-animation="false" />
-              <span class="hero-title-wrapper-02-base-area">
-                <AppTextAnimation :state="isTextSegmentState" :start="0.264" :rotate="$BASEROTATE.left" :text="'( BASED IN INDIA )'" :sp-animation="false" />
-              </span>
-            </span>
-            <span class="hero-title-wrapper hero-title-wrapper-03">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.4" :origin="'left'" :width="700" :sp-animation="false" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.4" :rotate="$BASEROTATE.right" :text="'BUILDING FOR THE WEB'" :sp-animation="false" />
-            </span>
-            <span class="hero-title-wrapper hero-title-wrapper-04">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.42" :width="280" :origin="'right'" :sp-animation="false" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.42" :rotate="$BASEROTATE.left" :text="'& EXPLORING AI'" :sp-animation="false" />
+          <span class="hero-title-wrapper hero-title-wrapper-01">
+            <AppBounceLine :state="isTextUnderlineState" :origin="'left'" :width="700" :modifier="'index-hero'" />
+            <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'PRATYAKSH KALSI'" />
+          </span>
+          <span class="hero-title-wrapper hero-title-wrapper-02">
+            <AppBounceLine :state="isTextUnderlineState" :start="0.176" :origin="'right'" :width="1080" :modifier="'index-hero'" />
+            <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'SOFTWARE DEVELOPER'" />
+            <span class="hero-title-wrapper-02-base-area">
+              <AppTextAnimation :state="isTextSegmentState" :start="0.264" :rotate="$BASEROTATE.left" :text="'( BASED IN INDIA )'" />
             </span>
           </span>
-          <span class="sp-only">
-            <span class="hero-title-wrapper hero-title-wrapper-01-sp">
-              <AppBounceLine :state="isTextUnderlineState" :origin="'left'" :pc-animation="false" :width="450" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :rotate="$BASEROTATE.right" :text="'PORTFOLIO OF'" :pc-animation="false" />
-            </span>
-            <span class="hero-title-wrapper hero-title-wrapper-02-sp">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.176" :origin="'left'" :pc-animation="false" :width="650" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.176" :rotate="$BASEROTATE.left" :text="'PRATYAKSH KALSI'" :pc-animation="false" />
-            </span>
-            <span class="hero-title-wrapper hero-title-wrapper-03-sp">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.28" :origin="'left'" :pc-animation="false" :width="750" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.28" :rotate="$BASEROTATE.right" :text="'SOFTWARE DEVELOPER'" :pc-animation="false" />
-            </span>
-            <span class="hero-title-wrapper hero-title-wrapper-04-sp">
-              <AppTextAnimation :state="isTextSegmentState" :start="0.38" :rotate="$BASEROTATE.left" :text="'( BASED IN INDIA )'" :pc-animation="false" />
-            </span>
-            <span class="hero-title-wrapper hero-title-wrapper-05-sp">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.52" :origin="'left'" :pc-animation="false" :width="780" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.52" :rotate="$BASEROTATE.right" :text="'BUILDING FOR THE WEB'" :pc-animation="false" />
-            </span>
-            <span class="hero-title-wrapper hero-title-wrapper-06-sp">
-              <AppBounceLine :state="isTextUnderlineState" :start="0.64" :origin="'left'" :pc-animation="false" :width="580" :modifier="'index-hero'" />
-              <AppTextAnimation :state="isTextSegmentState" :start="0.64" :rotate="$BASEROTATE.left" :text="'& EXPLORING AI'" :pc-animation="false" />
-            </span>
+          <span class="hero-title-wrapper hero-title-wrapper-03">
+            <AppBounceLine :state="isTextUnderlineState" :start="0.4" :origin="'left'" :width="700" :modifier="'index-hero'" />
+            <AppTextAnimation :state="isTextSegmentState" :start="0.4" :rotate="$BASEROTATE.right" :text="'BUILDING FOR THE WEB'" />
+          </span>
+          <span class="hero-title-wrapper hero-title-wrapper-04">
+            <AppBounceLine :state="isTextUnderlineState" :start="0.42" :width="280" :origin="'right'" :modifier="'index-hero'" />
+            <AppTextAnimation :state="isTextSegmentState" :start="0.42" :rotate="$BASEROTATE.left" :text="'& EXPLORING AI'" />
           </span>
         </h1>
         <div ref="HeroCardItem" class="hero-card-item">
@@ -60,7 +33,7 @@
             :component-name="'mv'"
             :name="['・', 'PRATYAKSH KALSI']"
             :title="'PRTYKSH'"
-            :subtitle="'(ABOUT ME)'"
+            :subtitle="'[ABOUT ME]'"
             :desc="['YOU CAN CLICK AND,', 'SHOW ABOUT ME.', 'BY THE WAY,', 'YOU CAN THROW', 'THIS CARD AWAY']"
             :rotate="8"
             :xspeed="0.01"
@@ -176,11 +149,24 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.hero {
+  position: relative;
+}
+
+.hero .l-container {
+  position: relative;
+}
+
 .hero-inner {
+  position: relative;
   padding: 92px 0;
 
+  @include tab-vertical() {
+    padding: 70px 0;
+  }
+
   @include sp() {
-    padding: 106px 0;
+    padding: 40px 0 140px 0;
   }
 }
 
@@ -189,14 +175,14 @@ export default {
   font-size: vw(180);
   font-family: $sixcaps;
   letter-spacing: -0.002em;
+  line-height: 0.94;
 
   @include tab-vertical() {
-    font-size: vw(140);
+    font-size: clamp(72px, 11vw, 120px);
   }
 
   @include sp() {
-    font-size: vw_sp(125);
-    line-height: 0.94;
+    font-size: clamp(44px, 13.6vw, 68px);
   }
 }
 
@@ -206,52 +192,58 @@ export default {
   left: 2px;
   font-family: $helvetica;
 
+  @include tab-vertical() {
+    top: 4px;
+    left: 2px;
+  }
+
   @include sp() {
     position: relative;
     top: 0;
     left: 0;
-    margin: 0 0 28px 0;
-    font-size: 10px;
-  }
-}
-
-.hero-title-read-block-sp {
-  display: block;
-
-  &:nth-of-type(1) {
-    display: inline-block;
-    margin: 0 0 0 -4px;
-    font-size: 32px;
+    margin-bottom: 24px;
+    display: block;
   }
 }
 
 .hero-title-wrapper {
   display: block;
   position: relative;
-
-  @include sp() {
-    margin: 0 0 16px 0;
-    white-space: nowrap;
-  }
 }
 
 .hero-title-wrapper-01 {
   display: table;
   width: fit-content;
   max-width: 100%;
-  margin: 0 0 24px vw(160);
+  margin: 0 0 24px unquote("max(240px, #{vw(240)})");
 
   @include tab-vertical() {
-    margin: 0 0 24px vw(130);
+    margin: 0 0 20px unquote("max(190px, #{vw(190)})");
+  }
+
+  @include sp() {
+    margin: 0 0 18px 0;
   }
 }
 
 .hero-title-wrapper-02 {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   width: vw(1040);
   max-width: 100%;
   margin: 0 0 24px 0;
+
+  @include tab-vertical() {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  @include sp() {
+    display: block;
+    width: 100%;
+    margin: 0 0 18px 0;
+  }
 }
 
 .hero-title-wrapper-03 {
@@ -261,7 +253,11 @@ export default {
   margin: 0 0 22px vw(320);
 
   @include tab-vertical() {
-    margin: 0 0 22px vw(160);
+    margin: 0 0 20px vw(160);
+  }
+
+  @include sp() {
+    margin: 0 0 18px clamp(12px, 4vw, 24px);
   }
 }
 
@@ -274,24 +270,10 @@ export default {
   @include tab-vertical() {
     margin: 0 0 0 vw(80);
   }
-}
 
-.hero-title-wrapper-01-sp,
-.hero-title-wrapper-02-sp,
-.hero-title-wrapper-03-sp,
-.hero-title-wrapper-05-sp,
-.hero-title-wrapper-06-sp {
-  display: table;
-  width: fit-content;
-  max-width: 100%;
-  margin: 0 0 vw_sp(20) 0;
-}
-
-.hero-title-wrapper-04-sp {
-  position: relative;
-  margin: 0 0 vw_sp(32) vw_sp(4);
-  font-size: 13px;
-  letter-spacing: 0.04em;
+  @include sp() {
+    margin: 0 0 0 clamp(6px, 2vw, 14px);
+  }
 }
 
 .hero-title-wrapper-02-base-area {
@@ -299,6 +281,21 @@ export default {
   padding: 12px 0 0 0;
   font-size: vw(80);
   letter-spacing: 0.0025em;
+
+  @include tab-vertical() {
+    font-size: clamp(30px, 5vw, 54px);
+    padding-top: 6px;
+  }
+
+  @include sp() {
+    display: block;
+    font-size: clamp(11px, 3.2vw, 14px);
+    font-family: $helvetica;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding-top: 4px;
+    opacity: 0.85;
+  }
 }
 
 .hero-text-underline {
@@ -320,14 +317,6 @@ export default {
   border-radius: 50%;
   pointer-events: none;
   transform: scale(0);
-
-  @include sp() {
-    top: vw_sp(-184);
-    right: auto;
-    left: 9px;
-    width: vw_sp(1046);
-    height: vw_sp(1046);
-  }
 }
 
 .hero-bg-circle-02 {
@@ -340,27 +329,26 @@ export default {
   border-radius: 50%;
   pointer-events: none;
   transform: scale(0);
-
-  @include sp() {
-    top: vw_sp(650);
-    left: vw_sp(-610);
-    width: vw_sp(1345);
-    height: vw_sp(1345);
-  }
 }
 
 .hero-card-item {
   position: absolute;
-  top: 18%;
-  left: 9%;
+  top: 130px;
+  left: 60px;
   transform: translateX(-600px) rotate(240deg);
   z-index: 2;
 
-  @include sp() {
-    top: 28%;
-    right: 6%;
+  @include tab-vertical() {
+    top: 240px;
+    right: 20px;
     left: auto;
-    transform: translateX(400px) rotate(180deg);
+  }
+
+  @include sp() {
+    top: auto;
+    bottom: -100px;
+    right: 20px;
+    left: auto;
   }
 }
 </style>
